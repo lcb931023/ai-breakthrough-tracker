@@ -168,7 +168,7 @@ a {{ color:#2563eb; }}
 </style></head><body>
 <h1>AI Breakthrough Tracker</h1>
 <p class="lede">A watchlist for "breakthrough" claims — especially outsider claims — re-checked against
-scientific consensus at 1 week, 1 month, 3 / 6 / 12 months. Auto-updated weekly.</p>
+scientific consensus at 1 week, 1 month, 3 / 6 / 12 months. Auto-updated daily.</p>
 <div class="stats">
   <div><b>{total}</b><span>tracked</span></div>
   <div><b>{open_n}</b><span>still open</span></div>
