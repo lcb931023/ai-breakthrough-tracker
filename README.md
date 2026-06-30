@@ -1,10 +1,11 @@
 # AI Breakthrough Tracker
 
-A watchlist for "breakthrough" claims — especially ones made by **outsiders** to
-a field, where whether the finding actually *holds up* is the open question.
-Each claim is logged when it surfaces, then re-checked against what the
-scientific community says at fixed intervals: **1 week, 1 month, 3 months,
-6 months, 1 year**.
+A watchlist for **AI-powered** "breakthrough" claims — results where a frontier
+AI model or AI tool was the *engine* of the discovery (often made by
+**outsiders** to a field, since AI lowers the barrier to entry), and where
+whether the finding actually *holds up* is the open question. Each claim is
+logged when it surfaces, then re-checked against what the scientific community
+says at fixed intervals: **1 week, 1 month, 3 months, 6 months, 1 year**.
 
 A daily cloud agent (Claude Code routine) does two things: re-checks any claims
 that are due (researching current consensus, updating the files, rebuilding the
