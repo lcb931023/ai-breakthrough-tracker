@@ -71,7 +71,9 @@ details { margin-top:.7rem; }
 summary { cursor:pointer; color:var(--mut); font-size:.82rem; font-family:var(--mono); }
 summary:focus-visible, a:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
 details[open] summary { margin-bottom:.6rem; }
-details :is(h2,h3,h4,p,li,blockquote) { font-family:var(--mono); font-size:.86rem; }
+details :is(h2,h3,h4,p,li,blockquote) { font-family:var(--mono); font-size:.86rem; line-height:1.5; }
+details :is(p,li) { margin:.5em 0; }
+details ul { margin:.5em 0; padding-left:1.3em; }
 .log { list-style:none; padding-left:0; } .log .done { color:var(--mut); }
 mark { background:#d9c98f; color:#1a1a1a; padding:0 .15rem; }
 blockquote { border-left:3px solid var(--line-strong); margin:.5rem 0; padding-left:.8rem; color:var(--mut); }
@@ -102,48 +104,20 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
   <div class="ticker"><span class="tick future" title="2026-07-13"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-06"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-06"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-06"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-06"><i class="dot"></i>1y</span></div>
   
   <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Giorgio Parisi (Nobel laureate) and Francesco Zamponi, both at La Sapienza</p>
-<p>University of Rome, report that <strong>Claude</strong> generated the essentially correct</p>
-<p>core idea for proving a conjecture the two of them first observed in 2014: that</p>
-<p>two critical exponents (<strong>a</strong> and <strong>b</strong>) in their mean-field model of <strong>jamming</strong></p>
-<p>— the transition where a fluid-like system of particles abruptly becomes rigid —</p>
-<p>always sum to one, an identity that had gone unproven for over a decade.</p>
+<p>Giorgio Parisi (Nobel laureate) and Francesco Zamponi, both at La Sapienza University of Rome, report that <strong>Claude</strong> generated the essentially correct core idea for proving a conjecture the two of them first observed in 2014: that two critical exponents (<strong>a</strong> and <strong>b</strong>) in their mean-field model of <strong>jamming</strong> — the transition where a fluid-like system of particles abruptly becomes rigid — always sum to one, an identity that had gone unproven for over a decade.</p>
 <p>Specifics:</p>
 <ul>
-<li>Claude was first asked to <strong>reproduce the earlier numerical calculations</strong>,</li>
+<li>Claude was first asked to <strong>reproduce the earlier numerical calculations</strong>, then to <strong>explain why</strong> the a + b = 1 relationship holds.</li>
+<li>Per Zamponi: "Quite quickly, Claude came up with an initial idea that was essentially correct." The researchers then revised/tightened it into a full proof; the final solution turned out <strong>simpler than expected</strong>.</li>
+<li>The proof confirms that two independent theoretical routes to jamming yield the same physical law.</li>
+<li>Published <strong>1 July 2026</strong> in the *Journal of Statistical Mechanics: Theory and Experiment* (JSTAT), "A proof of an identity for the critical exponents of jamming."</li>
 </ul>
-<p>  then to <strong>explain why</strong> the a + b = 1 relationship holds.</p>
-<ul>
-<li>Per Zamponi: "Quite quickly, Claude came up with an initial idea that was</li>
-</ul>
-<p>  essentially correct." The researchers then revised/tightened it into a full</p>
-<p>  proof; the final solution turned out <strong>simpler than expected</strong>.</p>
-<ul>
-<li>The proof confirms that two independent theoretical routes to jamming yield</li>
-</ul>
-<p>  the same physical law.</p>
-<ul>
-<li>Published <strong>1 July 2026</strong> in the *Journal of Statistical Mechanics: Theory and</li>
-</ul>
-<p>  Experiment* (JSTAT), "A proof of an identity for the critical exponents of</p>
-<p>  jamming."</p>
-<p>Reported via <a href="https://www.eurekalert.org/news-releases/1133306">EurekAlert</a>,</p>
-<p>July 2026.</p>
+<p>Reported via <a href="https://www.eurekalert.org/news-releases/1133306">EurekAlert</a>, July 2026.</p>
 <h3>Why it needs watching</h3>
 <ul>
-<li><strong>Not the usual outsider profile</strong> — the authors are among the most senior</li>
+<li><strong>Not the usual outsider profile</strong> — the authors are among the most senior physicists in the field (Parisi won the 2021 Nobel partly for spin-glass / complex-systems work). This is AI-as-engine used *by* domain experts, so the "does the community accept it" test is weaker: the proof is already peer- reviewed and published in JSTAT. The open question is narrower — whether the AI-originated argument holds up under scrutiny and how much of the intellectual work was actually Claude's vs. the authors' revision.</li>
+<li>Distinguish the *result* (already published, peer-reviewed identity) from the *narrative* (AI produced the key idea). The former is likely solid; the latter is the marketing-sensitive part worth re-checking as commentary accumulates.</li>
 </ul>
-<p>  physicists in the field (Parisi won the 2021 Nobel partly for spin-glass /</p>
-<p>  complex-systems work). This is AI-as-engine used *by* domain experts, so the</p>
-<p>  "does the community accept it" test is weaker: the proof is already peer-</p>
-<p>  reviewed and published in JSTAT. The open question is narrower — whether the</p>
-<p>  AI-originated argument holds up under scrutiny and how much of the intellectual</p>
-<p>  work was actually Claude's vs. the authors' revision.</p>
-<ul>
-<li>Distinguish the *result* (already published, peer-reviewed identity) from the</li>
-</ul>
-<p>  *narrative* (AI produced the key idea). The former is likely solid; the latter</p>
-<p>  is the marketing-sensitive part worth re-checking as commentary accumulates.</p>
 <h3>Review log</h3>
 <ul class=log>
 <li class=todo>☐ <strong>+1 week</strong> (2026-07-13) —</li>
@@ -152,8 +126,8 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+6 months</strong> (2027-01-06) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-06) —</li>
 </ul>
-<blockquote>Auto-checked findings get appended here at each milestone, wrapped in</blockquote>
-<blockquote><mark>highlight</mark> so AI-written text stays distinct.</blockquote></details>
+<quote>Auto-checked findings get appended here at each milestone, wrapped in</quote>
+<quote><mark>highlight</mark> so AI-written text stays distinct.</quote></details>
 </article>
 <article class="entry ">
   <header>
@@ -167,41 +141,21 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
   <div class="ticker"><span class="tick done" title="2026-07-03"><i class="dot"></i>1w</span><span class="tick future" title="2026-07-26"><i class="dot"></i>1mo</span><span class="tick future" title="2026-09-26"><i class="dot"></i>3mo</span><span class="tick future" title="2026-12-26"><i class="dot"></i>6mo</span><span class="tick future" title="2027-06-26"><i class="dot"></i>1y</span></div>
   
   <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Tom Di Mino, a self-taught AI engineer and amateur linguist in the Hudson</p>
-<p>Valley, claims to have deciphered <strong>Linear A</strong> — the Bronze Age Minoan script</p>
-<p>undeciphered for over a century. He proposes it maps to an **extinct Semitic</p>
-<p>language** predating Biblical Hebrew, Arabic, and Aramaic.</p>
+<p>Tom Di Mino, a self-taught AI engineer and amateur linguist in the Hudson Valley, claims to have deciphered <strong>Linear A</strong> — the Bronze Age Minoan script undeciphered for over a century. He proposes it maps to an **extinct Semitic language** predating Biblical Hebrew, Arabic, and Aramaic.</p>
 <p>Specifics:</p>
 <ul>
 <li>Proposed readings for ~40 script signs, including 13 previously unknown.</li>
 <li>A lexicon of <strong>408 Linear A terms</strong> translated into English.</li>
-<li>Identifies a verb root "nawaya" ("to dwell"); claims his solution also</li>
+<li>Identifies a verb root "nawaya" ("to dwell"); claims his solution also resolves open problems in the (already-deciphered) Linear B.</li>
+<li>Built a suite of Python scripts <strong>using Claude Code</strong> to query and cross-reference the digitized Linear A corpus for systematic hypothesis testing. Has a draft 9-page manuscript.</li>
 </ul>
-<p>  resolves open problems in the (already-deciphered) Linear B.</p>
-<ul>
-<li>Built a suite of Python scripts <strong>using Claude Code</strong> to query and</li>
-</ul>
-<p>  cross-reference the digitized Linear A corpus for systematic hypothesis</p>
-<p>  testing. Has a draft 9-page manuscript.</p>
-<p>Reported via <a href="https://aiclambake.com/clamtakes/linear-a/">AI Clambake</a> and</p>
-<p><a href="https://news.ycombinator.com/item?id=48600107">discussed on Hacker News</a>,</p>
-<p>June 2026.</p>
+<p>Reported via <a href="https://aiclambake.com/clamtakes/linear-a/">AI Clambake</a> and <a href="https://news.ycombinator.com/item?id=48600107">discussed on Hacker News</a>, June 2026.</p>
 <h3>Why it needs watching</h3>
 <ul>
-<li>Classic outsider profile: amateur linguist + AI tooling, no academic</li>
+<li>Classic outsider profile: amateur linguist + AI tooling, no academic affiliation. Linear A decipherment claims are a magnet for cranks — the test is whether epigraphers/Semiticists endorse it.</li>
+<li>Author's claimed validation ("under review by linguistics experts at Rutgers and Cambridge") is unverified and not yet peer-reviewed.</li>
+<li>Expert skepticism already raised: the corpus is tiny and fragmentary; we can't be sure all "Linear A" texts share one language; if it were Semitic, Greek substrate words should already show Semitic etymologies and largely don't (per commentary on HN).</li>
 </ul>
-<p>  affiliation. Linear A decipherment claims are a magnet for cranks — the test</p>
-<p>  is whether epigraphers/Semiticists endorse it.</p>
-<ul>
-<li>Author's claimed validation ("under review by linguistics experts at Rutgers</li>
-</ul>
-<p>  and Cambridge") is unverified and not yet peer-reviewed.</p>
-<ul>
-<li>Expert skepticism already raised: the corpus is tiny and fragmentary; we</li>
-</ul>
-<p>  can't be sure all "Linear A" texts share one language; if it were Semitic,</p>
-<p>  Greek substrate words should already show Semitic etymologies and largely</p>
-<p>  don't (per commentary on HN).</p>
 <h3>Review log</h3>
 <ul class=log>
 <li class=done>☑ <strong>+1 week</strong> (2026-07-03) — ==No expert engagement yet. No credentialed epigrapher, Semiticist, or Aegean-script scholar (searched by name, e.g. Silvia Ferrara, Torsten Meissner, John Younger) has publicly commented, endorsed, or debunked the claim. The "under review at Rutgers/Cambridge" line remains sourced only to Di Mino himself — no named reviewer has confirmed it. Coverage is still confined to the original late-June cluster (<a href="https://aiclambake.com/clamtakes/linear-a/">AI Clambake</a>, <a href="https://news.ycombinator.com/item?id=48600107">HN thread</a>, <a href="https://news.ycombinator.com/item?id=48602132">Di Mino's HN follow-up</a>, plus aggregator pickup on <a href="https://hyper.ai/en/stories/5b0846176d48378da1a582f8a6ac7712">HyperAI</a>, <a href="https://spokenpast.com/articles/can-ai-crack-linear-a-script/">Spoken Past</a> and others); nothing dated after ~June 27. No preprint or public manuscript found (arXiv/Academia.edu/Zenodo checked). Anthropic's Boris Cherny <a href="https://x.com/bcherny/status/2068064304503660962">amplified it approvingly on X</a>, but that's social buzz, not expert validation. Non-expert HN/forum commenters raised the standard methodological objection: with so few attested Linear A sign-sequences, a search algorithm can be tuned to "prove" almost any language-family fit, and the lexicon/manuscript still isn't public so the claim can't be independently checked. Status held at unverified rather than bumped to contested, since no domain expert has actually weighed in either way.==</li>
@@ -210,8 +164,8 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+6 months</strong> (2026-12-26) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-06-26) —</li>
 </ul>
-<blockquote>Auto-checked findings get appended here at each milestone, wrapped in</blockquote>
-<blockquote><mark>highlight</mark> so AI-written text stays distinct.</blockquote></details>
+<quote>Auto-checked findings get appended here at each milestone, wrapped in</quote>
+<quote><mark>highlight</mark> so AI-written text stays distinct.</quote></details>
 </article>
-<footer>Last built 2026-07-07 10:47 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-07-07 10:57 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 </body></html>

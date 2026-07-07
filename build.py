@@ -32,43 +32,59 @@ def parse_claim(text):
 
 
 def md_to_html(md):
-    """Minimal markdown: headings, checkboxes, quotes, lists, bold, links."""
-    out, in_list = [], False
+    """Minimal markdown: headings, checkboxes, quotes, lists, bold, links.
+
+    Source files are hard-wrapped at ~80 cols for readable diffs, so
+    soft-wrapped continuation lines are merged back into their block —
+    only a blank line or a new block marker starts a new paragraph/item.
+    """
+    blocks = []  # [type, text], type one of h2/h3/h4/p/quote/li/li-done/li-todo
+    open_block = None  # index of the block that can still absorb continuation lines
     for raw in md.splitlines():
-        line = raw.rstrip()
+        line = raw.strip()
         if not line:
-            if in_list:
-                out.append("</ul>"); in_list = False
+            open_block = None
             continue
         line = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', line)
         line = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", line)
         line = re.sub(r"==([^=]+)==", r"<mark>\1</mark>", line)
         if line.startswith("### "):
-            tag = ("h4", line[4:])
+            blocks.append(["h4", line[4:]]); open_block = None
         elif line.startswith("## "):
-            tag = ("h3", line[3:])
+            blocks.append(["h3", line[3:]]); open_block = None
         elif line.startswith("# "):
-            tag = ("h2", line[2:])
+            blocks.append(["h2", line[2:]]); open_block = None
         elif line.startswith("> "):
-            tag = ("blockquote", line[2:])
+            blocks.append(["quote", line[2:]]); open_block = len(blocks) - 1
         elif re.match(r"- \[[ xX]\] ", line):
-            done = line[3] in "xX"
-            box = "☑" if done else "☐"
-            if not in_list:
-                out.append("<ul class=log>"); in_list = True
-            out.append(f"<li class={'done' if done else 'todo'}>{box} {line[6:]}</li>")
-            continue
+            blocks.append(["li-done" if line[3] in "xX" else "li-todo", line[6:]])
+            open_block = len(blocks) - 1
         elif line.startswith("- "):
-            if not in_list:
-                out.append("<ul>"); in_list = True
-            out.append(f"<li>{line[2:]}</li>")
-            continue
+            blocks.append(["li", line[2:]]); open_block = len(blocks) - 1
+        elif open_block is not None:
+            blocks[open_block][1] += " " + line
         else:
-            tag = ("p", line)
-        if in_list:
-            out.append("</ul>"); in_list = False
-        out.append(f"<{tag[0]}>{tag[1]}</{tag[0]}>")
-    if in_list:
+            blocks.append(["p", line]); open_block = len(blocks) - 1
+
+    out, in_ul = [], None
+    for typ, text in blocks:
+        if typ in ("li", "li-done", "li-todo"):
+            want = "plain" if typ == "li" else "log"
+            if in_ul != want:
+                if in_ul:
+                    out.append("</ul>")
+                out.append("<ul class=log>" if want == "log" else "<ul>")
+                in_ul = want
+            if typ == "li":
+                out.append(f"<li>{text}</li>")
+            else:
+                box = "☑" if typ == "li-done" else "☐"
+                out.append(f"<li class={'done' if typ == 'li-done' else 'todo'}>{box} {text}</li>")
+            continue
+        if in_ul:
+            out.append("</ul>"); in_ul = None
+        out.append(f"<{typ}>{text}</{typ}>")
+    if in_ul:
         out.append("</ul>")
     return "\n".join(out)
 
@@ -236,7 +252,9 @@ details {{ margin-top:.7rem; }}
 summary {{ cursor:pointer; color:var(--mut); font-size:.82rem; font-family:var(--mono); }}
 summary:focus-visible, a:focus-visible {{ outline:2px solid var(--teal); outline-offset:2px; }}
 details[open] summary {{ margin-bottom:.6rem; }}
-details :is(h2,h3,h4,p,li,blockquote) {{ font-family:var(--mono); font-size:.86rem; }}
+details :is(h2,h3,h4,p,li,blockquote) {{ font-family:var(--mono); font-size:.86rem; line-height:1.5; }}
+details :is(p,li) {{ margin:.5em 0; }}
+details ul {{ margin:.5em 0; padding-left:1.3em; }}
 .log {{ list-style:none; padding-left:0; }} .log .done {{ color:var(--mut); }}
 mark {{ background:#d9c98f; color:#1a1a1a; padding:0 .15rem; }}
 blockquote {{ border-left:3px solid var(--line-strong); margin:.5rem 0; padding-left:.8rem; color:var(--mut); }}
