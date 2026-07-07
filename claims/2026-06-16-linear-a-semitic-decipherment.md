@@ -46,4 +46,5 @@ June 2026.
 - [ ] **+1 year** (2027-06-26) —
 
 > Auto-checked findings get appended here at each milestone, wrapped in
-> ==highlight== so AI-written text stays distinct.
+> ==highlight== to flag that they land unsupervised — unlike this entry,
+> which a human reviewed before logging.
