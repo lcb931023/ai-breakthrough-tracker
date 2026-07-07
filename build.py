@@ -47,7 +47,6 @@ def md_to_html(md):
             continue
         line = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', line)
         line = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", line)
-        line = re.sub(r"==([^=]+)==", r"<mark>\1</mark>", line)
         if line.startswith("### "):
             blocks.append(["h4", line[4:]]); open_block = None
         elif line.startswith("## "):
@@ -256,7 +255,6 @@ details :is(h2,h3,h4,p,li,blockquote) {{ font-family:var(--mono); font-size:.86r
 details :is(p,li) {{ margin:.5em 0; }}
 details ul {{ margin:.5em 0; padding-left:1.3em; }}
 .log {{ list-style:none; padding-left:0; }} .log .done {{ color:var(--mut); }}
-mark {{ background:#d9c98f; color:#1a1a1a; padding:0 .15rem; }}
 blockquote {{ border-left:3px solid var(--line-strong); margin:.5rem 0; padding-left:.8rem; color:var(--mut); }}
 
 footer {{ margin-top:3rem; color:var(--mut); font-size:.78rem; font-family:var(--mono);

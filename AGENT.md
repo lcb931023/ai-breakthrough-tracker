@@ -19,10 +19,8 @@ NOT add them yourself — the human curates).
    original claim and of breathless coverage.
 3. Update the claim file:
    - Append a concise findings paragraph to the matching milestone line in the
-     **Review log** and tick its checkbox (`- [ ]` → `- [x]`). Wrap the findings
-     text in `==highlight==` to flag that it lands unsupervised — unlike the
-     original entry, which a human reviewed before it was logged. Cite sources
-     as inline markdown links.
+     **Review log** and tick its checkbox (`- [ ]` → `- [x]`). Cite sources as
+     inline markdown links.
    - Update `status` (`partially-confirmed`, `contested`, `confirmed`,
      `debunked`, or keep `unverified`).
    - Advance `next_review` to the next milestone (1w → 1m → 3m → 6m → 1y from

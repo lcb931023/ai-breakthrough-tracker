@@ -49,7 +49,3 @@ July 2026.
 - [ ] **+3 months** (2026-10-06) —
 - [ ] **+6 months** (2027-01-06) —
 - [ ] **+1 year** (2027-07-06) —
-
-> Auto-checked findings get appended here at each milestone, wrapped in
-> ==highlight== to flag that they land unsupervised — unlike this entry,
-> which a human reviewed before logging.
