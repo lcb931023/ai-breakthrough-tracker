@@ -80,31 +80,62 @@ def days_until(d):
         return None
 
 
+MILESTONES = [("1 week", "1w"), ("1 month", "1mo"), ("3 months", "3mo"),
+              ("6 months", "6mo"), ("1 year", "1y")]
+
+
+def milestone_ticks(body, settled):
+    """Read the review-log checkboxes to derive each milestone's state
+    (done / overdue / upcoming) for the verification-timeline ticker."""
+    logged = {}
+    for m in re.finditer(r"\[([ xX])\]\s*\*\*\+(1 week|1 month|3 months|6 months|1 year)\*\*\s*\(([\d-]+)\)", body):
+        logged[m.group(2)] = (m.group(1).lower() == "x", m.group(3))
+    ticks = []
+    for label, short in MILESTONES:
+        done, d = logged.get(label, (False, ""))
+        if done:
+            state = "done"
+        elif settled:
+            state = "closed"
+        else:
+            dd = days_until(d) if d else None
+            state = "overdue" if (dd is not None and dd <= 0) else "future"
+        ticks.append((short, state, d))
+    return ticks
+
+
+def ticker_html(ticks):
+    dots = []
+    for short, state, d in ticks:
+        title = f' title="{html.escape(d)}"' if d else ""
+        dots.append(f'<span class="tick {state}"{title}><i class="dot"></i>{short}</span>')
+    return f'<div class="ticker">{"".join(dots)}</div>'
+
+
 def card(meta, body):
     status = meta.get("status", "unverified")
+    settled = status in ("confirmed", "debunked")
     nr = meta.get("next_review", "")
     du = days_until(nr)
-    due = du is not None and du <= 0 and status not in ("confirmed", "debunked")
-    when = "" if du is None else (f"in {du}d" if du > 0 else f"{-du}d overdue" if du < 0 else "today")
+    overdue = du is not None and du <= 0 and not settled
     outsider = "outsider" if str(meta.get("outsider", "")).lower() == "true" else "insider"
-    due_badge = '<span class="tag duebadge">review due</span>' if due else ""
-    when_html = f"<em>({when})</em>" if when else ""
     src = html.escape(meta["source"]) if meta.get("source") else ""
-    src_html = f'· source: <a href="{src}">link</a>' if src else ""
-    verdict_html = (f'<p class="verdict"><strong>Verdict:</strong> '
+    src_html = f' <a href="{src}">source →</a>' if src else ""
+    verdict_html = (f'<p class="verdict"><span class="stamp-label">Verdict</span> '
                     f'{html.escape(meta["verdict"])}</p>') if meta.get("verdict") else ""
-    return f"""<article class="card {'due' if due else ''}">
+    flag_html = '<span class="flag">review due</span>' if overdue else ""
+    return f"""<article class="entry {'overdue' if overdue else ''}">
   <header>
-    <span class="badge s-{status}">{html.escape(status)}</span>
+    <span class="stamp s-{status}">{html.escape(status)}</span>
     <span class="tag">{html.escape(meta.get('field','—'))}</span>
     <span class="tag {outsider}">{outsider}</span>
-    {due_badge}
+    {flag_html}
   </header>
   <h2>{html.escape(meta.get('claim','(untitled)'))}</h2>
-  <p class="meta">added {html.escape(meta.get('added','?'))} ·
-     next review {html.escape(nr) or '—'} {when_html} {src_html}</p>
+  <p class="meta">filed {html.escape(meta.get('added','?'))}{src_html}</p>
+  {ticker_html(milestone_ticks(body, settled))}
   {verdict_html}
-  <details><summary>Review log</summary>{md_to_html(body)}</details>
+  <details><summary>Full review log</summary>{md_to_html(body)}</details>
 </article>"""
 
 
@@ -137,38 +168,88 @@ PAGE = """<!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI Breakthrough Tracker</title>
 <style>
-:root {{ color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --mut:#666; --line:#e5e5e5; --card:#fafafa; }}
-@media (prefers-color-scheme:dark){{ :root{{ --bg:#15171a; --fg:#e8e8e8; --mut:#9aa0a6; --line:#2a2d31; --card:#1c1f23; }} }}
+:root {{
+  color-scheme: light dark;
+  --bg:#eef2ea; --ink:#1f2a22; --mut:#5c6b5f; --line:#c9d4c3; --line-strong:#a9b8a4;
+  --flag:#b3402a; --amber:#a5680f; --teal:#0f766e; --green:#2f7d4f; --gray:#6b7280;
+  --serif: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono: ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}}
+@media (prefers-color-scheme:dark){{
+  :root{{ --bg:#141a13; --ink:#dfe6d6; --mut:#8b9a86; --line:#2b352a; --line-strong:#3b4a38;
+          --flag:#e2734f; --amber:#d99a3d; --teal:#2dd4c7; --green:#5fbf82; --gray:#98a29a; }}
+}}
 * {{ box-sizing:border-box; }}
-body {{ font:16px/1.6 system-ui,-apple-system,sans-serif; max-width:52rem; margin:0 auto; padding:2rem 1.2rem 4rem; background:var(--bg); color:var(--fg); }}
-h1 {{ font-size:1.7rem; margin:0 0 .3rem; }}
-.lede {{ color:var(--mut); margin:0 0 1.5rem; }}
-.stats {{ display:flex; gap:1.5rem; margin:1.5rem 0; padding:1rem; border:1px solid var(--line); border-radius:.6rem; }}
-.stats b {{ display:block; font-size:1.6rem; }}
-.stats span {{ color:var(--mut); font-size:.85rem; }}
-.card {{ border:1px solid var(--line); border-radius:.6rem; padding:1rem 1.2rem; margin:1rem 0; background:var(--card); }}
-.card.due {{ border-color:#d97706; }}
-.card h2 {{ font-size:1.15rem; margin:.4rem 0; }}
-.card header {{ display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }}
-.badge,.tag {{ font-size:.74rem; padding:.15rem .55rem; border-radius:1rem; font-weight:600; }}
-.tag {{ background:transparent; border:1px solid var(--line); color:var(--mut); font-weight:500; }}
-.tag.outsider {{ border-color:#a855f7; color:#a855f7; }}
-.duebadge {{ border-color:#d97706; color:#d97706; }}
-.badge {{ color:#fff; }}
-.s-unverified{{background:#6b7280;}} .s-contested{{background:#d97706;}}
-.s-partially-confirmed{{background:#0891b2;}} .s-confirmed{{background:#16a34a;}} .s-debunked{{background:#dc2626;}}
-.meta {{ color:var(--mut); font-size:.85rem; margin:.3rem 0; }}
-.verdict {{ font-size:.92rem; }}
-details {{ margin-top:.6rem; }} summary {{ cursor:pointer; color:var(--mut); font-size:.9rem; }}
+body {{ font:16px/1.6 var(--sans); max-width:44rem; margin:0 auto; padding:3rem 1.2rem 4rem;
+        background:var(--bg); color:var(--ink); }}
+.eyebrow {{ font:.72rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }}
+h1 {{ font-family:var(--serif); font-weight:600; font-size:2.1rem; margin:.35rem 0 .6rem; }}
+.lede {{ color:var(--mut); margin:0 0 1.6rem; max-width:38rem; }}
+.stats {{ display:flex; gap:2rem; margin:0 0 2.2rem; padding:.8rem 0; border-top:1px solid var(--ink);
+          border-bottom:1px solid var(--line-strong); font-family:var(--mono); }}
+.stats b {{ display:block; font-size:1.5rem; font-weight:600; font-variant-numeric:tabular-nums; }}
+.stats span {{ color:var(--mut); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; }}
+
+.entry {{ border-top:1px solid var(--line); padding:1.5rem 0; }}
+.entry:first-of-type {{ border-top:1px solid var(--ink); }}
+.entry.overdue {{ border-left:3px solid var(--flag); padding-left:1rem; margin-left:-1rem; }}
+.entry header {{ display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }}
+.entry h2 {{ font-family:var(--serif); font-weight:600; font-size:1.28rem; line-height:1.35; margin:.6rem 0 .3rem; }}
+
+.stamp,.tag {{ font-family:var(--mono); font-size:.68rem; letter-spacing:.03em; text-transform:uppercase; }}
+.stamp {{ border:1.5px solid; border-radius:3px; padding:.1rem .5rem; font-weight:700; transform:rotate(-1deg); display:inline-block; }}
+.tag {{ color:var(--mut); }}
+.tag.outsider {{ color:var(--flag); }}
+.tag.outsider::before {{ content:"◆ "; }}
+.tag.insider::before {{ content:"◇ "; }}
+.s-unverified{{ color:var(--gray); border-color:var(--gray); }}
+.s-contested{{ color:var(--amber); border-color:var(--amber); }}
+.s-partially-confirmed{{ color:var(--teal); border-color:var(--teal); }}
+.s-confirmed{{ color:var(--green); border-color:var(--green); }}
+.s-debunked{{ color:var(--flag); border-color:var(--flag); }}
+.flag {{ font-family:var(--mono); font-size:.68rem; letter-spacing:.03em; text-transform:uppercase;
+         color:var(--flag); font-weight:700; }}
+.flag::before {{ content:"▸ "; }}
+
+.meta {{ color:var(--mut); font-size:.85rem; margin:.2rem 0; font-family:var(--mono); }}
+.meta a {{ color:var(--mut); }}
+
+.ticker {{ position:relative; display:flex; justify-content:space-between; margin:1rem 0 .4rem; padding-top:.7rem; max-width:22rem; }}
+.ticker::before {{ content:""; position:absolute; top:.95rem; left:.3rem; right:.3rem; height:1px; background:var(--line-strong); }}
+.tick {{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:.35rem;
+         font-family:var(--mono); font-size:.66rem; color:var(--mut); }}
+.tick .dot {{ width:.6rem; height:.6rem; border-radius:50%; background:var(--bg); border:1.5px solid var(--line-strong); display:block; }}
+.tick.done .dot {{ background:var(--ink); border-color:var(--ink); }}
+.tick.done {{ color:var(--ink); }}
+.tick.overdue .dot {{ background:var(--flag); border-color:var(--flag); animation:pulse 2.2s ease-in-out infinite; }}
+.tick.overdue {{ color:var(--flag); font-weight:700; }}
+.tick.closed .dot {{ opacity:.3; }}
+.tick.closed {{ opacity:.5; }}
+@media (prefers-reduced-motion:reduce){{ .tick.overdue .dot {{ animation:none; }} }}
+@keyframes pulse {{ 0%,100%{{ box-shadow:0 0 0 0 rgba(179,64,42,.35); }} 50%{{ box-shadow:0 0 0 4px rgba(179,64,42,0); }} }}
+
+.verdict {{ font-size:.92rem; margin:.8rem 0 .2rem; padding:.5rem .7rem; border:1px solid var(--line-strong); border-radius:2px; }}
+.stamp-label {{ font-family:var(--mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.05em; color:var(--mut); }}
+
+details {{ margin-top:.7rem; }}
+summary {{ cursor:pointer; color:var(--mut); font-size:.82rem; font-family:var(--mono); }}
+summary:focus-visible, a:focus-visible {{ outline:2px solid var(--teal); outline-offset:2px; }}
+details[open] summary {{ margin-bottom:.6rem; }}
+details :is(h2,h3,h4,p,li,blockquote) {{ font-family:var(--mono); font-size:.86rem; }}
 .log {{ list-style:none; padding-left:0; }} .log .done {{ color:var(--mut); }}
-mark {{ background:#fde68a; color:#1a1a1a; padding:0 .15rem; }}
-blockquote {{ border-left:3px solid var(--line); margin:.5rem 0; padding-left:.8rem; color:var(--mut); }}
-footer {{ margin-top:3rem; color:var(--mut); font-size:.8rem; border-top:1px solid var(--line); padding-top:1rem; }}
-a {{ color:#2563eb; }}
+mark {{ background:#d9c98f; color:#1a1a1a; padding:0 .15rem; }}
+blockquote {{ border-left:3px solid var(--line-strong); margin:.5rem 0; padding-left:.8rem; color:var(--mut); }}
+
+footer {{ margin-top:3rem; color:var(--mut); font-size:.78rem; font-family:var(--mono);
+          border-top:1px solid var(--line); padding-top:1rem; }}
+a {{ color:var(--teal); }}
 </style></head><body>
+<p class="eyebrow">Watchlist — claims pending verification</p>
 <h1>AI Breakthrough Tracker</h1>
-<p class="lede">A watchlist for "breakthrough" claims — especially outsider claims — re-checked against
-scientific consensus at 1 week, 1 month, 3 / 6 / 12 months. Auto-updated daily.</p>
+<p class="lede">"Breakthrough" claims where an AI model was the engine of discovery — often
+made by outsiders to the field. Each is re-checked against scientific consensus at
+1 week, 1 month, 3 / 6 / 12 months, and the docket updates automatically.</p>
 <div class="stats">
   <div><b>{total}</b><span>tracked</span></div>
   <div><b>{open_n}</b><span>still open</span></div>
