@@ -99,13 +99,36 @@ If anything changed (reviewed claims and/or new `proposed.md` entries):
     did not land.
 
 ## D. Email the digest
-Send to the address given in your invocation prompt, via the Gmail tool.
+Send to the address given in your invocation prompt, via the **Resend API**.
 **Only send an email if there is something to report** — i.e. at least one claim
 reviewed, at least one new candidate proposed, OR a push/commit failure (section
 C). If nothing was due, no new candidates were found, and everything pushed
 cleanly, send nothing (no daily empty email).
 
-Subject: `AI Breakthrough Tracker — YYYY-MM-DD`. Body, two sections:
+To send: write the JSON payload to a temp file (avoids shell-quoting issues with
+the HTML body), then POST it:
+```sh
+curl -sS https://api.resend.com/emails \
+  -H "Authorization: Bearer ${RESEND_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d @/tmp/digest.json
+```
+Payload shape:
+```json
+{
+  "from": "AI Breakthrough Tracker <tracker@changbai.li>",
+  "to": ["<address from invocation prompt>"],
+  "subject": "AI Breakthrough Tracker — YYYY-MM-DD",
+  "html": "<simple HTML body>"
+}
+```
+A successful response contains an `"id"` field — check for it. If
+`RESEND_API_KEY` is unset or the call fails, report the raw error response in
+your session output so the failure is visible from the routine's run log (there
+is no other email channel to fall back to). Never commit the API key — this
+repo is public.
+
+Subject: `AI Breakthrough Tracker — YYYY-MM-DD`. Body (simple HTML), two sections:
 - **Reviewed today** — per claim: name, new status, 1–3 sentence summary of what
   the community said, source links.
 - **New candidates to consider** — per candidate: one-line claim, field, source
