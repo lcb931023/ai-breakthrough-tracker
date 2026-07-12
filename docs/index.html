@@ -87,20 +87,20 @@ a { color:var(--teal); }
 made by outsiders to the field. Each is re-checked against scientific consensus at
 1 week, 1 month, 3 / 6 / 12 months, and the docket updates automatically.</p>
 <div class="stats">
-  <div><b>2</b><span>tracked</span></div>
-  <div><b>2</b><span>still open</span></div>
+  <div><b>3</b><span>tracked</span></div>
+  <div><b>3</b><span>still open</span></div>
   <div><b>0</b><span>review due</span></div>
 </div>
-<article class="entry ">
+<article class="entry overdue">
   <header>
     <span class="stamp s-unverified">unverified</span>
     <span class="tag">Statistical physics (jamming / complex systems)</span>
     <span class="tag insider">insider</span>
-    
+    <span class="flag">review due</span>
   </header>
   <h2>Claude produced the core proof of a decade-old jamming critical-exponent identity (a + b = 1)</h2>
   <p class="meta">filed 2026-07-06 <a href="https://www.eurekalert.org/news-releases/1133306">source →</a></p>
-  <div class="ticker"><span class="tick future" title="2026-07-13"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-06"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-06"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-06"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-06"><i class="dot"></i>1y</span></div>
+  <div class="ticker"><span class="tick overdue" title="2026-07-13"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-06"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-06"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-06"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-06"><i class="dot"></i>1y</span></div>
   
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Giorgio Parisi (Nobel laureate) and Francesco Zamponi, both at La Sapienza University of Rome, report that <strong>Claude</strong> generated the essentially correct core idea for proving a conjecture the two of them first observed in 2014: that two critical exponents (<strong>a</strong> and <strong>b</strong>) in their mean-field model of <strong>jamming</strong> — the transition where a fluid-like system of particles abruptly becomes rigid — always sum to one, an identity that had gone unproven for over a decade.</p>
@@ -124,6 +124,42 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+3 months</strong> (2026-10-06) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-01-06) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-06) —</li>
+</ul></details>
+</article>
+<article class="entry ">
+  <header>
+    <span class="stamp s-unverified">unverified</span>
+    <span class="tag">Mathematics / graph theory</span>
+    <span class="tag insider">insider</span>
+    
+  </header>
+  <h2>GPT-5.6 Sol Ultra produced a complete proof of the Cycle Double Cover Conjecture</h2>
+  <p class="meta">filed 2026-07-13 <a href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf">source →</a></p>
+  <div class="ticker"><span class="tick future" title="2026-07-20"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-13"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-13"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-13"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-13"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>OpenAI reports that <strong>GPT-5.6 Sol Ultra</strong>, running **64 parallel subagents for ~1 hour<strong>, generated a complete proof of the </strong>Cycle Double Cover Conjecture** — a ~50-year-old open problem in graph theory (posed by Seymour, 1979): every bridgeless graph admits a collection of cycles such that every edge lies in exactly two of them.</p>
+<p>Specifics:</p>
+<ul>
+<li>The proof PDF, published on OpenAI's CDN (10 July 2026), attributes authorship <strong>entirely to the model</strong>.</li>
+<li>The argument reportedly reduces the problem via the <strong>8-flow theorem</strong> and linear algebra over <strong>GF(3)</strong> (the three-element field).</li>
+<li>OpenAI also released the <a href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_prompt.pdf">prompt used</a>.</li>
+</ul>
+<p>Reported via OpenAI and covered on <a href="https://news.ycombinator.com/item?id=48863490">Hacker News</a>, <a href="https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/">The Decoder</a>, and others, July 2026.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Not the outsider profile</strong> — this is a flagship OpenAI lab announcement, AI used by its own makers as a marketing demonstration. The interesting question is narrow: does the proof actually hold?</li>
+<li><strong>No formal verification.</strong> Unlike the Fable-5 QAOA proof (mechanically checked end-to-end in Lean 4), this proof is **not peer-reviewed and not machine- verified** — it's a natural-language argument the community must check by hand, expected to take days to weeks.</li>
+<li><strong>Authorship dispute already brewing.</strong> Mathematicians are flagging possible gaps and questioning how much of the reasoning was the model's own vs. baked into the human prompter's search-guiding constraints (see the released prompt).</li>
+<li><strong>The conjecture is a graveyard.</strong> The Cycle Double Cover Conjecture has a history of announced "proofs" that later collapsed — strong prior for skepticism until specialists sign off.</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=todo>☐ <strong>+1 week</strong> (2026-07-20) —</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-08-13) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-10-13) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-01-13) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-07-13) —</li>
 </ul></details>
 </article>
 <article class="entry ">
@@ -162,5 +198,5 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-06-26) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-07-12 01:10 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-07-12 16:37 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 </body></html>
