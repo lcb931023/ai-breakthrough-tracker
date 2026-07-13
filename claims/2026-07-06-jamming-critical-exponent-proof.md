@@ -4,8 +4,8 @@ source: https://www.eurekalert.org/news-releases/1133306
 field: Statistical physics (jamming / complex systems)
 outsider: false
 added: 2026-07-06
-status: unverified
-next_review: 2026-07-13
+status: partially-confirmed
+next_review: 2026-08-06
 verdict:
 ---
 ## The claim
@@ -44,7 +44,7 @@ July 2026.
   is the marketing-sensitive part worth re-checking as commentary accumulates.
 
 ## Review log
-- [ ] **+1 week** (2026-07-13) —
+- [x] **+1 week** (2026-07-13) — The underlying physics result is on solid ground: the paper is formally published and peer-reviewed in [JSTAT](https://iopscience.iop.org/article/10.1088/1742-5468/ae7bd7) (1 July 2026), and no domain physicist has challenged the a+b=1 identity itself. What remains open is the *narrative* about Claude's role — every account traced ([phys.org](https://phys.org/news/2026-06-physicists-ai-claude-collaborate-year.html), [EurekAlert](https://www.eurekalert.org/news-releases/1133306), [Gizmodo](https://gizmodo.com/claudes-solution-to-decades-long-math-mystery-is-essentially-correct-physicists-say-2000780104), [4m4.it analysis](https://4m4.it/posts/when-a-nobel-laureate-uses-an-llm-to-prove-a-theorem/)) traces back to Zamponi's own characterization ("essentially derived the proof by itself, with minimal supervision"), not an independent read of the released [Zenodo conversation logs](https://zenodo.org/records/20633432). The one outside domain voice found, Princeton mathematician Will Sawin, offered a more measured take: AI is "definitely effective at searching the literature and finding patterns," which is a narrower claim than "generated the proof." No formal critique or retraction signal. Status moved to partially-confirmed: the physics is confirmed, the AI-as-engine framing is still resting on self-report.
 - [ ] **+1 month** (2026-08-06) —
 - [ ] **+3 months** (2026-10-06) —
 - [ ] **+6 months** (2027-01-06) —
