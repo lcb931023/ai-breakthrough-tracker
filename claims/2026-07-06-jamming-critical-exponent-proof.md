@@ -13,8 +13,8 @@ Giorgio Parisi (Nobel laureate) and Francesco Zamponi, both at La Sapienza
 University of Rome, report that **Claude** generated the essentially correct
 core idea for proving a conjecture the two of them first observed in 2014: that
 two critical exponents (**a** and **b**) in their mean-field model of **jamming**
-— the transition where a fluid-like system of particles abruptly becomes rigid —
-always sum to one, an identity that had gone unproven for over a decade.
+— the transition where a fluid-like system of particles abruptly becomes rigid
+— always sum to one, an identity that had gone unproven for over a decade.
 
 Specifics:
 - Claude was first asked to **reproduce the earlier numerical calculations**,
