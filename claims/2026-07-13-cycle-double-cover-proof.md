@@ -4,8 +4,8 @@ source: https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proo
 field: Mathematics / graph theory
 outsider: false
 added: 2026-07-13
-status: unverified
-next_review: 2026-07-20
+status: partially-confirmed
+next_review: 2026-08-13
 verdict:
 ---
 ## The claim
@@ -43,7 +43,7 @@ and others, July 2026.
   skepticism until specialists sign off.
 
 ## Review log
-- [ ] **+1 week** (2026-07-20) —
+- [x] **+1 week** (2026-07-20) — First real domain-expert engagement: Thomas Bloom (mathematician, University of Manchester) [reviewed the proof on X](https://x.com/thomasfbloom/status/2075855061494706240) and called it "a very nice proof" — short, elementary, and combining only known tools in a way "that could have been discovered in the 1980s," with the interesting part being a small counterintuitive twist a human might have abandoned early. That's a positive signal from a credentialed outsider-to-the-hype-cycle reviewer, not a rubber stamp: Bloom also flagged that the proof omits citation to a foundational 1983 Bermond–Jackson–Jaeger paper whose ideas appear to underlie the core reduction — an attribution gap, not (so far) a correctness gap. No formal peer review, journal submission, or independent full line-by-line verification has happened yet, and — contrary to some aggregator claims — [no Lean/Coq formalization exists](https://dev.to/jamilxt/gpt-56-claims-to-solve-a-50-year-old-math-problem-nobody-can-confirm-it-50f7): commentary notes current Lean graph-theory libraries (e.g. Graphlib) aren't mature enough for a proof at this level, so it remains a natural-language argument the community must check by hand. Given the conjecture's history of collapsed "proofs," one favorable spot-check from one mathematician is meaningful but not sufficient. Status moved to partially-confirmed: a specialist read it and found the mathematics plausible/elementary rather than crankish, but full verification is still pending.
 - [ ] **+1 month** (2026-08-13) —
 - [ ] **+3 months** (2026-10-13) —
 - [ ] **+6 months** (2027-01-13) —
