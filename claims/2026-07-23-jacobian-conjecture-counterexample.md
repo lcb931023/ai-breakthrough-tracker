@@ -4,8 +4,8 @@ source: https://x.com/__alpoge__/status/2079028340955197566
 field: Mathematics / algebraic geometry
 outsider: false
 added: 2026-07-23
-status: unverified
-next_review: 2026-07-30
+status: partially-confirmed
+next_review: 2026-08-23
 verdict:
 ---
 ## The claim
@@ -72,7 +72,7 @@ July 2026.
   the "AI found it" framing?
 
 ## Review log
-- [ ] **+1 week** (2026-07-30) —
+- [x] **+1 week** (2026-07-30) — The core arithmetic is now widely reproduced and effectively settled: multiple mathematicians independently re-verified the determinant (≡ −2) and the three-point collision using SymPy, Sage, and Wolfram, and a [Secret Blogging Seminar](https://sbseminar.wordpress.com/2026/07/20/the-new-counterexample-to-the-jacobian-conjecture/) thread reports "two separately implemented exact verifiers agree, including the nilpotence certificate." Working mathematicians (Will Sawin, Jared Duker Lichtman) have gone further, giving a conceptual/geometric reformulation and building extensions to related conjectures (Dixmier, Hessian, vanishing) rather than pushing back — see [Lichtman's thread](https://x.com/jdlichtman/status/2079066717762863249). This is a strong positive signal that dimension ≥3 is settled, though the central two-variable case remains open. What is still *not* resolved: no formal journal peer review yet, and per [kingy.ai's rundown](https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/), "the full prompt history, model version and human workflow have not been released" — so the AI-provenance question (autonomous discovery vs. heavy human steering by Alpöge/Mathew) still cannot be independently audited. A "verification preprint" exists (referenced by [explainx.ai](https://www.explainx.ai/blog/fable-5-jacobian-conjecture-counterexample-alpoge-july-2026)) but no arXiv listing was found. Moving to partially-confirmed: the math looks settled, the AI-origin story does not yet have independent verification.
 - [ ] **+1 month** (2026-08-23) —
 - [ ] **+3 months** (2026-10-23) —
 - [ ] **+6 months** (2027-01-23) —
