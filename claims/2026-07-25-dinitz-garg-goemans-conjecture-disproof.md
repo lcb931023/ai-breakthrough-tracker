@@ -4,8 +4,8 @@ source: https://x.com/DmitryRybin1/status/2079904005652893709
 field: Mathematics / graph theory & combinatorial optimization (network flows)
 outsider: false
 added: 2026-07-25
-status: unverified
-next_review: 2026-08-01
+status: partially-confirmed
+next_review: 2026-08-25
 verdict:
 ---
 ## The claim
@@ -64,7 +64,7 @@ and others, July 2026.
   reading)? Any correction or retraction from Rybin?
 
 ## Review log
-- [ ] **+1 week** (2026-08-01) —
+- [x] **+1 week** (2026-08-01) — No named academic specialist in unsplittable-flow/approximation algorithms has weighed in, and no arXiv preprint or formal writeup from Rybin has appeared, but the claim has spread widely (Hacker News front page, r/singularity) without a retraction. The most substantive independent check is crowd-level rather than institutional: X user [Hensen Juang](https://x.com/basedjensen/status/2080020575968543230) generalized Rybin's 7-node graph into an infinite 3-parameter family reproducing the same cost gap, implying the arithmetic holds up to at least one independent reviewer. Tracker site [VibeMathed](https://vibemathed.com/problem/dinitz-garg-goemans-unsplittable-flow) labels it "Announced (unreviewed)" and references a separately-found "restricted counterexample: planar, four terminals" attributed to someone named Protti, though details are thin. One useful clarification circulating: this only threatens Goemans' cost-augmented conjecture — the original 1999 Dinitz–Garg–Goemans congestion-only theorem is untouched, and some coverage has conflated the two. Status moved to partially-confirmed: independent arithmetic checks exist, but no domain-expert or peer review yet.
 - [ ] **+1 month** (2026-08-25) —
 - [ ] **+3 months** (2026-10-25) —
 - [ ] **+6 months** (2027-01-25) —

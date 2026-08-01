@@ -93,82 +93,6 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </div>
 <article class="entry ">
   <header>
-    <span class="stamp s-unverified">unverified</span>
-    <span class="tag">Mathematics / graph theory &amp; combinatorial optimization (network flows)</span>
-    <span class="tag insider">insider</span>
-    
-  </header>
-  <h2>GPT-5.6 Pro produced a counterexample disproving Goemans&#x27; cost conjecture on unsplittable flow (the Dinitz–Garg–Goemans conjecture)</h2>
-  <p class="meta">filed 2026-07-25 <a href="https://x.com/DmitryRybin1/status/2079904005652893709">source →</a></p>
-  <div class="ticker"><span class="tick future" title="2026-08-01"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-25"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-25"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-25"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-25"><i class="dot"></i>1y</span></div>
-  
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Dmitry Rybin — an ML PhD (CUHK), math BSc (HSE), math-olympiad medalist (IMC gold, national olympiad gold), and cofounder of a Shenzhen AI-for-math startup — announced on X on 22 July 2026 that he used <strong>OpenAI's GPT-5.6 Pro</strong> to construct an explicit counterexample disproving <strong>Goemans' cost conjecture</strong> on single-source unsplittable flow, informally called the <strong>Dinitz–Garg–Goemans conjecture</strong>, open for roughly 30 years.</p>
-<p>Background: Dinitz, Garg, and Goemans proved in 1999 that any fractional flow respecting capacity constraints can be converted into an <strong>unsplittable</strong> flow (each demand routed along a single path) that violates capacities by at most the largest single demand. Goemans then conjectured a stronger <strong>cost</strong> version: that such an unsplittable flow could always be found without increasing total routing cost above the fractional solution's cost. That is the conjecture now claimed false.</p>
-<p>Specifics:</p>
-<ul>
-<li>Rybin says he used only <strong>4 prompts, 58 words total</strong>, across the entire session — including instructions like "do a breakthrough" and "enough of partial results, let's finish" — and **published the full chat transcript publicly**, so the model's reasoning can be read end-to-end rather than taken on faith.</li>
-<li>The counterexample: a fractional solution costing <strong>58</strong>, while every unsplittable solution respecting the allowed capacity violation costs **at least 60** — a gap of 2, sufficient to break the conjecture.</li>
-<li>Rybin himself has flagged that the result is **not yet independently verified** by outside mathematicians.</li>
-<li>The minimal, high-level prompting — with the model apparently doing most of the actual mathematical construction rather than being guided step-by-step — is itself the notable/scrutinized part of the claim.</li>
-</ul>
-<p>Reported via <a href="https://x.com/DmitryRybin1/status/2079904005652893709">Rybin's announcement</a>, <a href="https://x.com/DmitryRybin1/status/2079907499545919968">his follow-up explaining the result</a>, and covered by <a href="https://officechai.com/ai/mathematician-says-gpt-5-6-disproved-the-30-year-old-dinitz-garg-goemans-conjecture-with-4-simple-prompts/">officechai</a> and others, July 2026.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Not the outsider profile.</strong> Rybin has math-adjacent training (ML PhD, math BSc, olympiad medals) and runs an AI-for-math startup, so he has both the expertise to construct/vet such a counterexample himself and an incentive to publicize an AI-math win.</li>
-<li><strong>The full transcript being public is a real plus for scrutiny</strong> — contrast with the Jacobian-conjecture claim already tracked here, where no transcript was released. It should be straightforward for outside mathematicians to judge exactly how much of the reasoning was the model's own vs. Rybin's framing/steering.</li>
-<li>The core numeric claim (fractional cost 58 vs. unsplittable minimum cost 60) is concrete and checkable by hand or computer — worth confirming an independent party has actually verified the arithmetic/graph construction, not just cited Rybin's own characterization of it.</li>
-<li>Track: does a combinatorial-optimization / network-flow specialist confirm the counterexample is valid and that it falsifies the *cost* conjecture as Goemans originally stated it (as opposed to a weaker or differently-scoped reading)? Any correction or retraction from Rybin?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=todo>☐ <strong>+1 week</strong> (2026-08-01) —</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-08-25) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-10-25) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-01-25) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-07-25) —</li>
-</ul></details>
-</article>
-<article class="entry ">
-  <header>
-    <span class="stamp s-unverified">unverified</span>
-    <span class="tag">Mathematics / graph theory (spectral graph theory)</span>
-    <span class="tag outsider">outsider</span>
-    
-  </header>
-  <h2>Grok 4.5, running as the autonomous &quot;Capy&quot; agent, found a counterexample refuting Graffiti Conjecture 284</h2>
-  <p class="meta">filed 2026-07-25 <a href="https://x.com/justinsunyt/status/2080116559352316409">source →</a></p>
-  <div class="ticker"><span class="tick future" title="2026-08-01"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-25"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-25"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-25"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-25"><i class="dot"></i>1y</span></div>
-  
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Capy is a YC-backed autonomous AI-software-engineering agent (cofounded by Nalin Semwal and Justin Sun) built to triage issues and ship code changes on its own. On 23 July 2026, during an internal Slack discussion unrelated to its usual job, someone shared <strong>Graffiti Conjecture 284</strong> — one of many conjectures mechanically generated in the 1980s–90s by Siemion Fajtlowicz's automated "Graffiti" program, open for roughly 30 years. It states that in any connected graph with girth ≥ 5, the minimum <strong>dual degree</strong> (average degree of a vertex's neighbors) is bounded above by minus the smallest eigenvalue of the graph's distance matrix.</p>
-<p>Specifics:</p>
-<ul>
-<li>Capy, running on <strong>Grok 4.5 Medium</strong>, was not assigned the problem — it decided on its own to take a shot at it, and produced a counterexample in about <strong>8 minutes</strong>.</li>
-<li>The counterexample is the well-known <strong>Hoffman–Singleton graph</strong> (50 vertices, 7-regular, girth 5, diameter 2), which violates the conjectured inequality.</li>
-<li>Per Capy co-founder Justin Sun's account, the agent internally spawned adversarial review tasks using other models (referred to as "Sol" and "Fable") to try to break its own counterexample; both reportedly confirmed the Hoffman–Singleton graph does violate the bound.</li>
-<li>Elon Musk amplified the claim on X: "Grok 4.5 just solved a graph theory conjecture that has been open for ~30 years."</li>
-<li>No named spectral-graph-theory specialist has publicly reviewed or confirmed the counterexample as of writing.</li>
-</ul>
-<p>Reported via <a href="https://x.com/justinsunyt/status/2080116559352316409">Justin Sun's X thread</a>, amplified by <a href="https://x.com/elonmusk/status/2080165738464280725">Elon Musk</a>, and covered by <a href="https://windowsnews.ai/article/ai-generated-counterexample-could-overturn-30-year-graph-theory-conjectureif-it-holds-up.440161">Windows News AI</a>, July 2026.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Strong outsider signal on two levels.</strong> The human, Justin Sun, is a software/startup founder (Capy, YC-backed), not a professional mathematician. And the discovery wasn't a directed research task — the agent chose to attempt an open problem on its own initiative during an unrelated Slack conversation.</li>
-<li><strong>Verification so far is AI-on-AI.</strong> The "adversarial review" that checked the counterexample was other AI models, not an independent human graph theorist — a materially lower bar than expert peer review.</li>
-<li><strong>Graffiti conjectures have a mixed, decades-long track record</strong> — several papers over the years have specifically hunted for and found counterexamples to Graffiti's automatically-generated conjectures (e.g. "A computational attack on the conjectures of Graffiti"). Worth checking whether Conjecture 284 specifically was already known to be resolved, refuted, or narrowed in the prior literature before crediting this as a first refutation.</li>
-<li>Track: does a credentialed spectral/algebraic graph theorist confirm the Hoffman–Singleton graph actually violates the inequality as Conjecture 284 states it (vs. a misreading of the conjecture's exact hypotheses)? Does any prior paper already cover this case?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=todo>☐ <strong>+1 week</strong> (2026-08-01) —</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-08-25) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-10-25) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-01-25) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-07-25) —</li>
-</ul></details>
-</article>
-<article class="entry ">
-  <header>
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Statistical physics (jamming / complex systems)</span>
     <span class="tag insider">insider</span>
@@ -277,6 +201,82 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </article>
 <article class="entry ">
   <header>
+    <span class="stamp s-partially-confirmed">partially-confirmed</span>
+    <span class="tag">Mathematics / graph theory &amp; combinatorial optimization (network flows)</span>
+    <span class="tag insider">insider</span>
+    
+  </header>
+  <h2>GPT-5.6 Pro produced a counterexample disproving Goemans&#x27; cost conjecture on unsplittable flow (the Dinitz–Garg–Goemans conjecture)</h2>
+  <p class="meta">filed 2026-07-25 <a href="https://x.com/DmitryRybin1/status/2079904005652893709">source →</a></p>
+  <div class="ticker"><span class="tick done" title="2026-08-01"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-25"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-25"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-25"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-25"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Dmitry Rybin — an ML PhD (CUHK), math BSc (HSE), math-olympiad medalist (IMC gold, national olympiad gold), and cofounder of a Shenzhen AI-for-math startup — announced on X on 22 July 2026 that he used <strong>OpenAI's GPT-5.6 Pro</strong> to construct an explicit counterexample disproving <strong>Goemans' cost conjecture</strong> on single-source unsplittable flow, informally called the <strong>Dinitz–Garg–Goemans conjecture</strong>, open for roughly 30 years.</p>
+<p>Background: Dinitz, Garg, and Goemans proved in 1999 that any fractional flow respecting capacity constraints can be converted into an <strong>unsplittable</strong> flow (each demand routed along a single path) that violates capacities by at most the largest single demand. Goemans then conjectured a stronger <strong>cost</strong> version: that such an unsplittable flow could always be found without increasing total routing cost above the fractional solution's cost. That is the conjecture now claimed false.</p>
+<p>Specifics:</p>
+<ul>
+<li>Rybin says he used only <strong>4 prompts, 58 words total</strong>, across the entire session — including instructions like "do a breakthrough" and "enough of partial results, let's finish" — and **published the full chat transcript publicly**, so the model's reasoning can be read end-to-end rather than taken on faith.</li>
+<li>The counterexample: a fractional solution costing <strong>58</strong>, while every unsplittable solution respecting the allowed capacity violation costs **at least 60** — a gap of 2, sufficient to break the conjecture.</li>
+<li>Rybin himself has flagged that the result is **not yet independently verified** by outside mathematicians.</li>
+<li>The minimal, high-level prompting — with the model apparently doing most of the actual mathematical construction rather than being guided step-by-step — is itself the notable/scrutinized part of the claim.</li>
+</ul>
+<p>Reported via <a href="https://x.com/DmitryRybin1/status/2079904005652893709">Rybin's announcement</a>, <a href="https://x.com/DmitryRybin1/status/2079907499545919968">his follow-up explaining the result</a>, and covered by <a href="https://officechai.com/ai/mathematician-says-gpt-5-6-disproved-the-30-year-old-dinitz-garg-goemans-conjecture-with-4-simple-prompts/">officechai</a> and others, July 2026.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Not the outsider profile.</strong> Rybin has math-adjacent training (ML PhD, math BSc, olympiad medals) and runs an AI-for-math startup, so he has both the expertise to construct/vet such a counterexample himself and an incentive to publicize an AI-math win.</li>
+<li><strong>The full transcript being public is a real plus for scrutiny</strong> — contrast with the Jacobian-conjecture claim already tracked here, where no transcript was released. It should be straightforward for outside mathematicians to judge exactly how much of the reasoning was the model's own vs. Rybin's framing/steering.</li>
+<li>The core numeric claim (fractional cost 58 vs. unsplittable minimum cost 60) is concrete and checkable by hand or computer — worth confirming an independent party has actually verified the arithmetic/graph construction, not just cited Rybin's own characterization of it.</li>
+<li>Track: does a combinatorial-optimization / network-flow specialist confirm the counterexample is valid and that it falsifies the *cost* conjecture as Goemans originally stated it (as opposed to a weaker or differently-scoped reading)? Any correction or retraction from Rybin?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=done>☑ <strong>+1 week</strong> (2026-08-01) — No named academic specialist in unsplittable-flow/approximation algorithms has weighed in, and no arXiv preprint or formal writeup from Rybin has appeared, but the claim has spread widely (Hacker News front page, r/singularity) without a retraction. The most substantive independent check is crowd-level rather than institutional: X user <a href="https://x.com/basedjensen/status/2080020575968543230">Hensen Juang</a> generalized Rybin's 7-node graph into an infinite 3-parameter family reproducing the same cost gap, implying the arithmetic holds up to at least one independent reviewer. Tracker site <a href="https://vibemathed.com/problem/dinitz-garg-goemans-unsplittable-flow">VibeMathed</a> labels it "Announced (unreviewed)" and references a separately-found "restricted counterexample: planar, four terminals" attributed to someone named Protti, though details are thin. One useful clarification circulating: this only threatens Goemans' cost-augmented conjecture — the original 1999 Dinitz–Garg–Goemans congestion-only theorem is untouched, and some coverage has conflated the two. Status moved to partially-confirmed: independent arithmetic checks exist, but no domain-expert or peer review yet.</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-08-25) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-10-25) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-01-25) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-07-25) —</li>
+</ul></details>
+</article>
+<article class="entry ">
+  <header>
+    <span class="stamp s-partially-confirmed">partially-confirmed</span>
+    <span class="tag">Mathematics / graph theory (spectral graph theory)</span>
+    <span class="tag outsider">outsider</span>
+    
+  </header>
+  <h2>Grok 4.5, running as the autonomous &quot;Capy&quot; agent, found a counterexample refuting Graffiti Conjecture 284</h2>
+  <p class="meta">filed 2026-07-25 <a href="https://x.com/justinsunyt/status/2080116559352316409">source →</a></p>
+  <div class="ticker"><span class="tick done" title="2026-08-01"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-25"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-25"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-25"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-25"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Capy is a YC-backed autonomous AI-software-engineering agent (cofounded by Nalin Semwal and Justin Sun) built to triage issues and ship code changes on its own. On 23 July 2026, during an internal Slack discussion unrelated to its usual job, someone shared <strong>Graffiti Conjecture 284</strong> — one of many conjectures mechanically generated in the 1980s–90s by Siemion Fajtlowicz's automated "Graffiti" program, open for roughly 30 years. It states that in any connected graph with girth ≥ 5, the minimum <strong>dual degree</strong> (average degree of a vertex's neighbors) is bounded above by minus the smallest eigenvalue of the graph's distance matrix.</p>
+<p>Specifics:</p>
+<ul>
+<li>Capy, running on <strong>Grok 4.5 Medium</strong>, was not assigned the problem — it decided on its own to take a shot at it, and produced a counterexample in about <strong>8 minutes</strong>.</li>
+<li>The counterexample is the well-known <strong>Hoffman–Singleton graph</strong> (50 vertices, 7-regular, girth 5, diameter 2), which violates the conjectured inequality.</li>
+<li>Per Capy co-founder Justin Sun's account, the agent internally spawned adversarial review tasks using other models (referred to as "Sol" and "Fable") to try to break its own counterexample; both reportedly confirmed the Hoffman–Singleton graph does violate the bound.</li>
+<li>Elon Musk amplified the claim on X: "Grok 4.5 just solved a graph theory conjecture that has been open for ~30 years."</li>
+<li>No named spectral-graph-theory specialist has publicly reviewed or confirmed the counterexample as of writing.</li>
+</ul>
+<p>Reported via <a href="https://x.com/justinsunyt/status/2080116559352316409">Justin Sun's X thread</a>, amplified by <a href="https://x.com/elonmusk/status/2080165738464280725">Elon Musk</a>, and covered by <a href="https://windowsnews.ai/article/ai-generated-counterexample-could-overturn-30-year-graph-theory-conjectureif-it-holds-up.440161">Windows News AI</a>, July 2026.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Strong outsider signal on two levels.</strong> The human, Justin Sun, is a software/startup founder (Capy, YC-backed), not a professional mathematician. And the discovery wasn't a directed research task — the agent chose to attempt an open problem on its own initiative during an unrelated Slack conversation.</li>
+<li><strong>Verification so far is AI-on-AI.</strong> The "adversarial review" that checked the counterexample was other AI models, not an independent human graph theorist — a materially lower bar than expert peer review.</li>
+<li><strong>Graffiti conjectures have a mixed, decades-long track record</strong> — several papers over the years have specifically hunted for and found counterexamples to Graffiti's automatically-generated conjectures (e.g. "A computational attack on the conjectures of Graffiti"). Worth checking whether Conjecture 284 specifically was already known to be resolved, refuted, or narrowed in the prior literature before crediting this as a first refutation.</li>
+<li>Track: does a credentialed spectral/algebraic graph theorist confirm the Hoffman–Singleton graph actually violates the inequality as Conjecture 284 states it (vs. a misreading of the conjecture's exact hypotheses)? Does any prior paper already cover this case?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=done>☑ <strong>+1 week</strong> (2026-08-01) — The significant development is an independent, human-authored preprint: <a href="https://arxiv.org/abs/2607.27452">Samuil Petkov (ENS Paris), "Counterexamples, Spectral Obstructions, and Deletion Stability for WOW-284," arXiv:2607.27452</a> (29 July 2026), which derives counterexamples to Graffiti/WOW-284 at orders 38, 39, 40, 42, and 50, confirms the Hoffman–Singleton graph is a genuine violation (dual-degree gap of 3), and backs the arithmetic with Lean 4 kernel-checked proofs. It never mentions Capy or Grok, suggesting parallel human verification rather than reliance on the AI transcript. Checking the classic exhaustive-search paper, <a href="https://www.cs.auckland.ac.nz/~mjd/graffiti/graffiti1.pdf">Brewster, Dinneen & Faber, "A computational attack on the conjectures of Graffiti" (1995)</a>, it only tested graphs of ≤10 vertices, so the 50-vertex Hoffman–Singleton counterexample was genuinely new, not previously known. No named senior spectral/algebraic graph theorist has publicly commented by name, and no retraction has appeared from Capy/Justin Sun/Nalin Semwal. Coverage of this claim is frequently conflated in outlets with an unrelated same-week wave of "AI refutes old Graffiti conjecture" stories, a sign reporting is derivative rather than independently fact-checked. Status moved to partially-confirmed: mathematically corroborated by an independent, formally-verified (Lean) human preprint, but still only a preprint with no peer review or named-authority endorsement.</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-08-25) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-10-25) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-01-25) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-07-25) —</li>
+</ul></details>
+</article>
+<article class="entry ">
+  <header>
     <span class="stamp s-unverified">unverified</span>
     <span class="tag">Linguistics / epigraphy (ancient script decipherment)</span>
     <span class="tag outsider">outsider</span>
@@ -311,5 +311,5 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-06-26) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-07-31 01:12 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-08-01 01:12 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 </body></html>

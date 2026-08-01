@@ -4,8 +4,8 @@ source: https://x.com/justinsunyt/status/2080116559352316409
 field: Mathematics / graph theory (spectral graph theory)
 outsider: true
 added: 2026-07-25
-status: unverified
-next_review: 2026-08-01
+status: partially-confirmed
+next_review: 2026-08-25
 verdict:
 ---
 ## The claim
@@ -62,7 +62,7 @@ July 2026.
   any prior paper already cover this case?
 
 ## Review log
-- [ ] **+1 week** (2026-08-01) —
+- [x] **+1 week** (2026-08-01) — The significant development is an independent, human-authored preprint: [Samuil Petkov (ENS Paris), "Counterexamples, Spectral Obstructions, and Deletion Stability for WOW-284," arXiv:2607.27452](https://arxiv.org/abs/2607.27452) (29 July 2026), which derives counterexamples to Graffiti/WOW-284 at orders 38, 39, 40, 42, and 50, confirms the Hoffman–Singleton graph is a genuine violation (dual-degree gap of 3), and backs the arithmetic with Lean 4 kernel-checked proofs. It never mentions Capy or Grok, suggesting parallel human verification rather than reliance on the AI transcript. Checking the classic exhaustive-search paper, [Brewster, Dinneen & Faber, "A computational attack on the conjectures of Graffiti" (1995)](https://www.cs.auckland.ac.nz/~mjd/graffiti/graffiti1.pdf), it only tested graphs of ≤10 vertices, so the 50-vertex Hoffman–Singleton counterexample was genuinely new, not previously known. No named senior spectral/algebraic graph theorist has publicly commented by name, and no retraction has appeared from Capy/Justin Sun/Nalin Semwal. Coverage of this claim is frequently conflated in outlets with an unrelated same-week wave of "AI refutes old Graffiti conjecture" stories, a sign reporting is derivative rather than independently fact-checked. Status moved to partially-confirmed: mathematically corroborated by an independent, formally-verified (Lean) human preprint, but still only a preprint with no peer review or named-authority endorsement.
 - [ ] **+1 month** (2026-08-25) —
 - [ ] **+3 months** (2026-10-25) —
 - [ ] **+6 months** (2027-01-25) —
