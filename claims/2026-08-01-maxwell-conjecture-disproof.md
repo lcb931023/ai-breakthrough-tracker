@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-08-08
+next_review: 2026-09-01
 verdict:
 ---
 ## The claim
@@ -61,7 +61,20 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   versus the authors' own derivation?
 
 ## Review log
-- [ ] **+1 week** (2026-08-08) —
+- [x] **+1 week** (2026-08-08) — Still only v1 on arXiv, no corrections or
+  withdrawal. No peer review yet (still an unreviewed preprint per
+  [EmergentMind](https://www.emergentmind.com/papers/2607.27197)). Notably,
+  Gabrielov, Novikov & Shapiro — the originators of the conjecture being
+  disproved — posted an adjacent preprint the very next day,
+  [arXiv:2607.28785](https://arxiv.org/abs/2607.28785) ("From 12 to 6:
+  Sharpening the Three-Charge Bound in Maxwell's Problem"), but it does not
+  reference or respond to this refutation — looks like concurrent work, not
+  a rebuttal or endorsement. A [Hacker News
+  thread](https://news.ycombinator.com/item?id=49121868) exists with mixed
+  reaction (some enthusiasm, some reflexive AI-skepticism) but no
+  substantive technical pushback found. No dispute of the GPT-5.6 Sol
+  attribution has surfaced. In short: too early for real signal — status
+  unchanged, re-check at the 1-month mark.
 - [ ] **+1 month** (2026-09-01) —
 - [ ] **+3 months** (2026-11-01) —
 - [ ] **+6 months** (2027-02-01) —
