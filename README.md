@@ -19,6 +19,29 @@ human — the agent proposes, it does not auto-add.
 - `docs/index.html` — the published site (GitHub Pages serves from `/docs`).
 - `proposed.md` — ledger of candidates the agent surfaced but hasn't logged (dedupe + curation queue).
 - `AGENT.md` — standing instructions for the daily cloud agent.
+- `specs/` — design docs for changes to the tooling.
+
+## The site
+A verification-progress bar at the top breaks the docket into six mutually
+exclusive buckets, and the list can be filtered by discipline, by outsider-only,
+and by bucket. Filtering is progressive enhancement — with JavaScript off every
+claim still renders.
+
+Five buckets are just `status`. The sixth, **went stale**, is derived at build
+time and stored nowhere:
+
+> a claim has gone stale when **2 or more review milestones are ticked and its
+> `status` is still `unverified`** — we looked repeatedly and nobody serious
+> engaged.
+
+Stale takes precedence over the raw status so the buckets always sum to the
+claim total; `unverified` on the site therefore means "unverified and not yet
+stale". Nothing to maintain by hand — it follows from the review log.
+
+Discipline chips are derived too: the `field` string up to its first `/` or `(`,
+passed through a small merge table in `build.py` (`DISCIPLINE_MERGE`) that folds
+e.g. *Mathematical physics* and *Statistical physics* into **Physics**. A new
+field buckets itself with no code change; edit the table only to merge two heads.
 
 ## Add a claim
 Copy any file in `claims/`, rename it `YYYY-MM-DD-short-slug.md`, and fill the

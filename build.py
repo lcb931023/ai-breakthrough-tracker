@@ -6,6 +6,7 @@ frontmatter (claim, source, field, outsider, added, status, next_review,
 verdict) and a markdown body holding the review log. No third-party deps.
 """
 import html
+import json
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -15,6 +16,43 @@ CLAIMS_DIR = ROOT / "claims"
 OUT = ROOT / "docs" / "index.html"
 
 STATUS_ORDER = ["unverified", "contested", "partially-confirmed", "confirmed", "debunked"]
+
+# Display buckets for the verification-progress bar, in progression order.
+# Mutually exclusive, so the counts always sum to the number of claims.
+BUCKETS = [
+    ("unverified", "unverified"),
+    ("stale", "went stale"),
+    ("contested", "contested"),
+    ("partially-confirmed", "partially confirmed"),
+    ("confirmed", "confirmed"),
+    ("debunked", "refuted"),
+]
+
+# `field` is freeform prose, so the filter chip is its head (text before the
+# first "/" or "("). This table folds related heads together; anything not
+# listed falls through unchanged, so new fields bucket themselves.
+DISCIPLINE_MERGE = {
+    "Mathematical physics": "Physics",
+    "Statistical physics": "Physics",
+}
+
+
+def discipline(field):
+    """Collapse a freeform `field` string into a single filter chip label."""
+    head = re.split(r"[/(]", field or "")[0].strip()
+    return DISCIPLINE_MERGE.get(head, head) or "Other"
+
+
+def bucket(status, ticks):
+    """Which progress bucket a claim falls in.
+
+    A claim that has been reviewed twice and still hasn't moved off
+    `unverified` has gone stale — we looked, and nobody serious engaged.
+    Stale wins over the raw status so the buckets stay exclusive.
+    """
+    if status == "unverified" and sum(1 for _, s, _ in ticks if s == "done") >= 2:
+        return "stale"
+    return status if any(status == b for b, _ in BUCKETS) else "unverified"
 
 
 def parse_claim(text):
@@ -127,31 +165,88 @@ def ticker_html(ticks):
     return f'<div class="ticker">{"".join(dots)}</div>'
 
 
-def card(meta, body):
+def card(meta, body, ticks, buck):
     status = meta.get("status", "unverified")
     settled = status in ("confirmed", "debunked")
     nr = meta.get("next_review", "")
     du = days_until(nr)
     overdue = du is not None and du <= 0 and not settled
-    outsider = "outsider" if str(meta.get("outsider", "")).lower() == "true" else "insider"
+    is_out = str(meta.get("outsider", "")).lower() == "true"
+    outsider = "outsider" if is_out else "insider"
     src = html.escape(meta["source"]) if meta.get("source") else ""
     src_html = f' <a href="{src}">source →</a>' if src else ""
     verdict_html = (f'<p class="verdict"><span class="stamp-label">Verdict</span> '
                     f'{html.escape(meta["verdict"])}</p>') if meta.get("verdict") else ""
     flag_html = '<span class="flag">review due</span>' if overdue else ""
-    return f"""<article class="entry {'overdue' if overdue else ''}">
+    # Mirror the bar's stale call on the card, so the two never disagree.
+    stale_html = '<span class="flag stale">went stale</span>' if buck == "stale" else ""
+    return f"""<article class="entry {'overdue' if overdue else ''}"
+  data-discipline="{html.escape(discipline(meta.get('field', '')))}"
+  data-outsider="{'true' if is_out else 'false'}" data-bucket="{buck}">
   <header>
     <span class="stamp s-{status}">{html.escape(status)}</span>
     <span class="tag">{html.escape(meta.get('field','—'))}</span>
     <span class="tag {outsider}">{outsider}</span>
-    {flag_html}
+    {flag_html}{stale_html}
   </header>
   <h2>{html.escape(meta.get('claim','(untitled)'))}</h2>
   <p class="meta">filed {html.escape(meta.get('added','?'))}{src_html}</p>
-  {ticker_html(milestone_ticks(body, settled))}
+  {ticker_html(ticks)}
   {verdict_html}
   <details><summary>Full review log</summary>{md_to_html(body)}</details>
 </article>"""
+
+
+def progress_html(counts, total, due_n):
+    """The verification-progress bar. Display only — filtering lives below.
+
+    Rendered server-side so the page is correct with JavaScript disabled; the
+    script re-renders this same markup as filters narrow the set.
+    """
+    segs, legend = [], []
+    for key, label in BUCKETS:
+        n = counts.get(key, 0)
+        if n:
+            segs.append(f'<span class="seg b-{key}" style="width:{n / total * 100:.4f}%"'
+                        f' title="{n} {label}"></span>')
+        legend.append(f'<li class="lg b-{key}{"" if n else " zero"}">'
+                      f"<b>{n}</b><span>{label}</span></li>")
+    due = f'<p class="due-note">{due_n} review{"" if due_n == 1 else "s"} due</p>' if due_n else ""
+    return f"""<section class="progress">
+  <div class="progress-head">
+    <span class="eyebrow">Verification progress</span>
+    <span class="pcount" id="pcount">{total} claim{"" if total == 1 else "s"}</span>
+  </div>
+  <div class="bar" id="bar">{"".join(segs)}</div>
+  <ul class="legend" id="legend">{"".join(legend)}</ul>
+  {due}
+</section>"""
+
+
+def filters_html(claims_meta, total):
+    """Filter controls. Carries `hidden` so a no-JS page never shows dead UI."""
+    counts = {}
+    for m in claims_meta:
+        d = discipline(m.get("field", ""))
+        counts[d] = counts.get(d, 0) + 1
+    # Biggest discipline first, ties broken alphabetically.
+    chips = [f'<button type="button" class="chip on" data-d="all" aria-pressed="true">'
+             f"All <b>{total}</b></button>"]
+    for d, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])):
+        chips.append(f'<button type="button" class="chip" data-d="{html.escape(d)}"'
+                     f' aria-pressed="false">{html.escape(d)} <b>{n}</b></button>')
+    opts = "".join(f'<option value="{k}">{l}</option>' for k, l in BUCKETS)
+    return f"""<div class="filters" id="filters" hidden>
+  <div class="chips" role="group" aria-label="Filter by discipline">{"".join(chips)}</div>
+  <div class="frow">
+    <button type="button" class="chip toggle" id="outsider" aria-pressed="false">outsider only</button>
+    <label class="sel" for="status">status
+      <select id="status"><option value="all">any</option>{opts}</select>
+    </label>
+    <button type="button" class="chip reset" id="reset" hidden>reset</button>
+  </div>
+</div>
+<p class="empty" id="empty" hidden>No claims match these filters.</p>"""
 
 
 def main():
@@ -169,13 +264,25 @@ def main():
     due_n = sum(1 for m, _ in claims
                 if (days_until(m.get("next_review", "")) or 1) <= 0
                 and m.get("status") not in ("confirmed", "debunked"))
-    cards = "\n".join(card(m, b) for m, b in claims)
+
+    counts, cards = {}, []
+    for meta, body in claims:
+        status = meta.get("status", "unverified")
+        ticks = milestone_ticks(body, status in ("confirmed", "debunked"))
+        buck = bucket(status, ticks)
+        counts[buck] = counts.get(buck, 0) + 1
+        cards.append(card(meta, body, ticks, buck))
+
+    total = len(claims)
     OUT.write_text(PAGE.format(
-        cards=cards or "<p>No claims logged yet.</p>",
-        total=len(claims), open_n=open_n, due_n=due_n,
+        progress=progress_html(counts, total, due_n) if total else "",
+        filters=filters_html([m for m, _ in claims], total) if total else "",
+        cards="\n".join(cards) or "<p>No claims logged yet.</p>",
         built=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        script=SCRIPT,
     ))
-    print(f"Built {OUT} — {len(claims)} claims, {open_n} open, {due_n} due.")
+    stale_n = counts.get("stale", 0)
+    print(f"Built {OUT} — {total} claims, {open_n} open, {due_n} due, {stale_n} stale.")
 
 
 PAGE = """<!doctype html>
@@ -201,10 +308,54 @@ body {{ font:16px/1.6 var(--sans); max-width:44rem; margin:0 auto; padding:3rem 
 .eyebrow {{ font:.72rem/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--mut); }}
 h1 {{ font-family:var(--serif); font-weight:600; font-size:2.1rem; margin:.35rem 0 .6rem; }}
 .lede {{ color:var(--mut); margin:0 0 1.6rem; max-width:38rem; }}
-.stats {{ display:flex; gap:2rem; margin:0 0 2.2rem; padding:.8rem 0; border-top:1px solid var(--ink);
-          border-bottom:1px solid var(--line-strong); font-family:var(--mono); }}
-.stats b {{ display:block; font-size:1.5rem; font-weight:600; font-variant-numeric:tabular-nums; }}
-.stats span {{ color:var(--mut); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; }}
+[hidden] {{ display:none !important; }}
+
+.progress {{ margin:0 0 1.3rem; padding:.9rem 0 1rem; border-top:1px solid var(--ink);
+             border-bottom:1px solid var(--line-strong); }}
+.progress-head {{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; }}
+.pcount {{ font-family:var(--mono); font-size:.72rem; color:var(--mut); font-variant-numeric:tabular-nums; }}
+.bar {{ display:flex; height:.6rem; margin:.7rem 0 .85rem; background:var(--line);
+        border-radius:2px; overflow:hidden; }}
+.seg {{ display:block; min-width:3px; background:var(--c); }}
+.legend {{ list-style:none; display:flex; flex-wrap:wrap; gap:.3rem 1.15rem; margin:0; padding:0; }}
+.lg {{ display:flex; align-items:center; gap:.4rem; font-family:var(--mono); font-size:.72rem; color:var(--mut); }}
+.lg::before {{ content:""; width:.55rem; height:.55rem; border-radius:2px; background:var(--c); flex:none; }}
+.lg b {{ font-size:1.05rem; font-weight:600; font-variant-numeric:tabular-nums; color:var(--ink); }}
+.lg.zero {{ opacity:.4; }}
+.lg.zero b {{ color:var(--mut); }}
+.due-note {{ margin:.85rem 0 0; font-family:var(--mono); font-size:.7rem; color:var(--flag);
+             font-weight:700; letter-spacing:.03em; text-transform:uppercase; }}
+.due-note::before {{ content:"▸ "; }}
+
+.b-unverified {{ --c:var(--gray); }}
+.b-contested {{ --c:var(--amber); }}
+.b-partially-confirmed {{ --c:var(--teal); }}
+.b-confirmed {{ --c:var(--green); }}
+.b-debunked {{ --c:var(--flag); }}
+/* Stale should read as absence of attention, not as a verdict — hatched, not solid. */
+.b-stale {{ --c:var(--mut); }}
+.seg.b-stale, .lg.b-stale::before {{
+  background:repeating-linear-gradient(45deg,var(--mut) 0 2px,transparent 2px 5px);
+  box-shadow:inset 0 0 0 1px var(--line-strong); }}
+
+.filters {{ display:flex; flex-direction:column; gap:.55rem; margin:0 0 2rem; }}
+.chips,.frow {{ display:flex; flex-wrap:wrap; gap:.4rem; align-items:center; }}
+.chip {{ font-family:var(--mono); font-size:.7rem; letter-spacing:.03em; text-transform:uppercase;
+         color:var(--mut); background:transparent; border:1px solid var(--line-strong);
+         border-radius:3px; padding:.25rem .55rem; cursor:pointer; }}
+.chip b {{ font-weight:600; font-variant-numeric:tabular-nums; opacity:.6; }}
+.chip:hover {{ border-color:var(--ink); color:var(--ink); }}
+.chip.on {{ background:var(--ink); border-color:var(--ink); color:var(--bg); }}
+.chip.toggle::before {{ content:"◆ "; }}
+.chip.toggle.on {{ background:var(--flag); border-color:var(--flag); color:var(--bg); }}
+.chip.reset {{ border-style:dashed; }}
+.sel {{ display:flex; align-items:center; gap:.35rem; font-family:var(--mono); font-size:.7rem;
+        letter-spacing:.03em; text-transform:uppercase; color:var(--mut); }}
+.sel select {{ font:inherit; text-transform:none; color:var(--ink); background:transparent;
+               border:1px solid var(--line-strong); border-radius:3px; padding:.22rem .3rem; }}
+.chip:focus-visible, .sel select:focus-visible {{ outline:2px solid var(--teal); outline-offset:2px; }}
+.empty {{ color:var(--mut); font-family:var(--mono); font-size:.85rem; padding:2rem 0;
+          border-top:1px solid var(--ink); }}
 
 .entry {{ border-top:1px solid var(--line); padding:1.5rem 0; }}
 .entry:first-of-type {{ border-top:1px solid var(--ink); }}
@@ -226,6 +377,8 @@ h1 {{ font-family:var(--serif); font-weight:600; font-size:2.1rem; margin:.35rem
 .flag {{ font-family:var(--mono); font-size:.68rem; letter-spacing:.03em; text-transform:uppercase;
          color:var(--flag); font-weight:700; }}
 .flag::before {{ content:"▸ "; }}
+.flag.stale {{ color:var(--mut); }}
+.flag.stale::before {{ content:"~ "; }}
 
 .meta {{ color:var(--mut); font-size:.85rem; margin:.2rem 0; font-family:var(--mono); }}
 .meta a {{ color:var(--mut); }}
@@ -266,14 +419,111 @@ a {{ color:var(--teal); }}
 <p class="lede">"Breakthrough" claims where an AI model was the engine of discovery — often
 made by outsiders to the field. Each is re-checked against scientific consensus at
 1 week, 1 month, 3 / 6 / 12 months, and the docket updates automatically.</p>
-<div class="stats">
-  <div><b>{total}</b><span>tracked</span></div>
-  <div><b>{open_n}</b><span>still open</span></div>
-  <div><b>{due_n}</b><span>review due</span></div>
-</div>
+{progress}
+{filters}
 {cards}
 <footer>Last built {built} · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+{script}
 </body></html>"""
+
+# Passed into PAGE.format() as a *value*, never as part of the template, so its
+# braces don't need doubling. Bucket labels are injected from BUCKETS so the
+# client-side list can't drift from the Python one.
+SCRIPT = """<script>
+(function () {
+  var BUCKETS = __BUCKETS__;
+  var cards = [].slice.call(document.querySelectorAll('.entry'));
+  var filters = document.getElementById('filters');
+  if (!cards.length || !filters) return;
+  var bar = document.getElementById('bar');
+  var legend = document.getElementById('legend');
+  var pcount = document.getElementById('pcount');
+  var empty = document.getElementById('empty');
+  var reset = document.getElementById('reset');
+  var outsider = document.getElementById('outsider');
+  var statusSel = document.getElementById('status');
+  var chips = [].slice.call(filters.querySelectorAll('.chip[data-d]'));
+  var TOTAL = cards.length;
+  var state = { d: 'all', outsider: false, status: 'all' };
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function matches(c) {
+    if (state.d !== 'all' && c.getAttribute('data-discipline') !== state.d) return false;
+    if (state.outsider && c.getAttribute('data-outsider') !== 'true') return false;
+    if (state.status !== 'all' && c.getAttribute('data-bucket') !== state.status) return false;
+    return true;
+  }
+
+  function render() {
+    var counts = {}, n = 0;
+    cards.forEach(function (c) {
+      var ok = matches(c);
+      c.hidden = !ok;
+      if (ok) {
+        n++;
+        var b = c.getAttribute('data-bucket');
+        counts[b] = (counts[b] || 0) + 1;
+      }
+    });
+    bar.innerHTML = BUCKETS.map(function (b) {
+      var v = counts[b[0]] || 0;
+      if (!v) return '';
+      return '<span class="seg b-' + b[0] + '" style="width:' + (v / n * 100).toFixed(4) +
+             '%" title="' + v + ' ' + esc(b[1]) + '"></span>';
+    }).join('');
+    legend.innerHTML = BUCKETS.map(function (b) {
+      var v = counts[b[0]] || 0;
+      return '<li class="lg b-' + b[0] + (v ? '' : ' zero') + '"><b>' + v + '</b><span>' +
+             esc(b[1]) + '</span></li>';
+    }).join('');
+    pcount.textContent = n === TOTAL ? TOTAL + ' claim' + (TOTAL === 1 ? '' : 's')
+                                     : n + ' of ' + TOTAL + ' claims';
+    bar.hidden = n === 0;
+    empty.hidden = n > 0;
+    reset.hidden = state.d === 'all' && !state.outsider && state.status === 'all';
+  }
+
+  function press(el, on) {
+    el.classList.toggle('on', on);
+    el.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      state.d = chip.getAttribute('data-d');
+      chips.forEach(function (o) { press(o, o === chip); });
+      render();
+    });
+  });
+
+  outsider.addEventListener('click', function () {
+    state.outsider = !state.outsider;
+    press(outsider, state.outsider);
+    render();
+  });
+
+  statusSel.addEventListener('change', function () {
+    state.status = statusSel.value;
+    render();
+  });
+
+  reset.addEventListener('click', function () {
+    state = { d: 'all', outsider: false, status: 'all' };
+    chips.forEach(function (o) { press(o, o.getAttribute('data-d') === 'all'); });
+    press(outsider, false);
+    statusSel.value = 'all';
+    render();
+  });
+
+  filters.hidden = false;
+  render();
+})();
+</script>""".replace("__BUCKETS__", json.dumps(BUCKETS))
 
 
 if __name__ == "__main__":
