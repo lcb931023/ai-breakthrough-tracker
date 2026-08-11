@@ -135,14 +135,14 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <section class="progress">
   <div class="progress-head">
     <span class="eyebrow">Verification progress</span>
-    <span class="pcount" id="pcount">7 claims</span>
+    <span class="pcount" id="pcount">8 claims</span>
   </div>
-  <div class="bar" id="bar"><span class="seg b-unverified" style="width:14.2857%" title="1 unverified"></span><span class="seg b-stale" style="width:14.2857%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:71.4286%" title="5 partially confirmed"></span></div>
-  <ul class="legend" id="legend"><li class="lg b-unverified"><b>1</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>5</b><span>partially confirmed</span></li><li class="lg b-confirmed zero"><b>0</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
+  <div class="bar" id="bar"><span class="seg b-unverified" style="width:25.0000%" title="2 unverified"></span><span class="seg b-stale" style="width:12.5000%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:62.5000%" title="5 partially confirmed"></span></div>
+  <ul class="legend" id="legend"><li class="lg b-unverified"><b>2</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>5</b><span>partially confirmed</span></li><li class="lg b-confirmed zero"><b>0</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
   
 </section>
 <div class="filters" id="filters" hidden>
-  <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>7</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>4</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button></div>
+  <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>8</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>5</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button></div>
   <div class="frow">
     <button type="button" class="chip toggle" id="outsider" aria-pressed="false">outsider only</button>
     <label class="sel" for="status">status
@@ -188,6 +188,45 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+3 months</strong> (2026-10-13) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-01-13) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-13) —</li>
+</ul></details>
+</article>
+<article class="entry "
+  data-discipline="Mathematics"
+  data-outsider="false" data-bucket="unverified">
+  <header>
+    <span class="stamp s-unverified">unverified</span>
+    <span class="tag">Mathematics / analytic number theory</span>
+    <span class="tag insider">insider</span>
+    
+  </header>
+  <h2>An unreleased Anthropic research build of Claude generated the proof strategy raising the known lower bound on Riemann zeta zeros that are simple and on the critical line from 41.6% to 67.2%</h2>
+  <p class="meta">filed 2026-08-11 <a href="https://www.anthropic.com/research/riemann-zeta">source →</a></p>
+  <div class="ticker"><span class="tick future" title="2026-08-18"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-11"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-11"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-11"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-11"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Anthropic reports that an <strong>unreleased research version of Claude</strong>, prompted by <strong>Jarred Sumner</strong> (an Anthropic staff member who is **not a mathematician**), generated the proof strategy behind a new unconditional result in analytic number theory: raising the known lower bound on the proportion of nontrivial Riemann zeta zeros that are **simple and lie on the critical line<strong> from the prior </strong>41.6%** (a figure built up incrementally by Baluyot, Goldston, Suriajaya, and Turnage-Butterbaugh) to <strong>67.2%</strong>.</p>
+<p>Specifics:</p>
+<ul>
+<li>Claude ran across <strong>two sessions inside Claude Code</strong>, coordinating roughly <strong>60 subagents</strong>, producing <strong>~31 million output tokens</strong>, and executing <strong>~2,400 shell commands</strong> plus hundreds of Python scripts.</li>
+<li>Anthropic says the model tried and discarded <strong>~650 failed proof ideas</strong> before landing on the successful approach: treating on- and off-critical- line zeros as a unified geometric space via Weil's explicit formula, Hermitian quadratic forms, Sylvester's law of inertia, and a new rank-trace inequality.</li>
+<li>Anthropic mathematicians <strong>Levent Alpöge</strong> and <strong>Ralph Furman</strong> validated the result afterward and formalized parts of it in Lean; external mathematicians <strong>Brian Conrey</strong> and <strong>Dan Goldston</strong> were also involved in review.</li>
+<li>Anthropic is explicit that **it does not expect this technique to lead to a full proof of the Riemann Hypothesis** — this is progress on a related, narrower quantitative question, not a resolution of the conjecture itself.</li>
+</ul>
+<p>Reported via [Anthropic's official research post](https://www.anthropic.com/research/riemann-zeta), published 10 August 2026; also covered by <a href="https://kingy.ai/blog/claude-riemann-hypothesis-67-percent-result/">kingy.ai</a> and <a href="https://xenospectrum.com/en/claude-riemann-zeta-critical-line-lower-bound/">xenospectrum.com</a>.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Single-vendor self-report</strong> — Anthropic reporting on its own unreleased model, on its own research blog. The AI-engine test passes cleanly (Claude generated the proof strategy, not just assisted with writeup), but there is no independent party confirming the framing or the significance yet.</li>
+<li><strong>Model unreleased and unidentified</strong> — no external party can reproduce the process even in principle until (if ever) this research build is released or its exact configuration is disclosed.</li>
+<li><strong>No peer review yet.</strong> The result touches a famous, heavily-scrutinized area (Riemann zeta zero-density estimates), so specialists in analytic number theory should weigh in relatively quickly if there's a flaw or if the bound doesn't actually improve on the state of the art once checked against the full literature (some outside commentary already flagged that the method appears to plateau around ~68%, which is worth verifying).</li>
+<li>Track: does a specialist outside Anthropic (e.g. authors of the papers the 67.2% bound builds on — Baluyot, Goldston, Suriajaya, Turnage-Butterbaugh) comment on or verify the claimed improvement? Does Anthropic release the Lean formalization or full proof for independent scrutiny? Does any math-community venue (e.g. MathOverflow, a number theory seminar) surface a gap?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=todo>☐ <strong>+1 week</strong> (2026-08-18) —</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-09-11) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-11-11) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-02-11) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-08-11) —</li>
 </ul></details>
 </article>
 <article class="entry "
@@ -423,7 +462,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-06) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-08-11 01:16 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-08-11 09:00 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];
