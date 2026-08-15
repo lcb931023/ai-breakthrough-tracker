@@ -135,14 +135,14 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <section class="progress">
   <div class="progress-head">
     <span class="eyebrow">Verification progress</span>
-    <span class="pcount" id="pcount">9 claims</span>
+    <span class="pcount" id="pcount">10 claims</span>
   </div>
-  <div class="bar" id="bar"><span class="seg b-unverified" style="width:33.3333%" title="3 unverified"></span><span class="seg b-stale" style="width:11.1111%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:44.4444%" title="4 partially confirmed"></span><span class="seg b-confirmed" style="width:11.1111%" title="1 confirmed"></span></div>
-  <ul class="legend" id="legend"><li class="lg b-unverified"><b>3</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>4</b><span>partially confirmed</span></li><li class="lg b-confirmed"><b>1</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
+  <div class="bar" id="bar"><span class="seg b-unverified" style="width:40.0000%" title="4 unverified"></span><span class="seg b-stale" style="width:10.0000%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:40.0000%" title="4 partially confirmed"></span><span class="seg b-confirmed" style="width:10.0000%" title="1 confirmed"></span></div>
+  <ul class="legend" id="legend"><li class="lg b-unverified"><b>4</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>4</b><span>partially confirmed</span></li><li class="lg b-confirmed"><b>1</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
   
 </section>
 <div class="filters" id="filters" hidden>
-  <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>9</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>5</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button><button type="button" class="chip" data-d="Mathematical" aria-pressed="false">Mathematical <b>1</b></button></div>
+  <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>10</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>6</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button><button type="button" class="chip" data-d="Mathematical" aria-pressed="false">Mathematical <b>1</b></button></div>
   <div class="frow">
     <button type="button" class="chip toggle" id="outsider" aria-pressed="false">outsider only</button>
     <label class="sel" for="status">status
@@ -227,6 +227,46 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+3 months</strong> (2026-11-12) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-02-12) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-08-12) —</li>
+</ul></details>
+</article>
+<article class="entry "
+  data-discipline="Mathematics"
+  data-outsider="true" data-bucket="unverified">
+  <header>
+    <span class="stamp s-unverified">unverified</span>
+    <span class="tag">Mathematics / numerical linear algebra (matrix analysis)</span>
+    <span class="tag outsider">outsider</span>
+    
+  </header>
+  <h2>A neurosurgery resident with no formal math training used GPT-5.6 Sol&#x27;s 16-hour autonomous run to produce a proof of the 22-year-old Crouzeix&#x27;s Conjecture</h2>
+  <p class="meta">filed 2026-08-15 <a href="https://www.scmp.com/tech/tech-trends/article/3363966/chinese-doctor-stuns-maths-world-cracking-decades-old-problem-using-chatgpt">source →</a></p>
+  <div class="ticker"><span class="tick future" title="2026-08-22"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-15"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-15"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-15"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-15"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p><strong>Shanmu Jin</strong>, a postdoctoral researcher and neurosurgery resident at Peking Union Medical College Hospital in Beijing, has no formal academic background in advanced mathematics — his undergraduate degree is in geology, followed by an MD. He says his interest in matrix analysis grew out of his own clinical research on transcranial ultrasound. Working essentially alone, he set <strong>GPT-5.6 Sol</strong> (in ChatGPT's "Work" mode) loose on <strong>Crouzeix's Conjecture</strong> — posed by Michel Crouzeix in 2004 and open for 22 years, stating that for any matrix A and any function f, ‖f(A)‖ ≤ 2·sup{|f(z)| : z in the numerical range of A}.</p>
+<p>Specifics:</p>
+<ul>
+<li>The model ran <strong>autonomously for ~16 hours</strong>, using a prompt Jin adapted from one OpenAI had used for its Cycle Double Cover proof: disconnected from the internet (forcing derivation from axioms rather than lookup), instructed to pursue multiple divergent proof branches rather than converging early, to adversarially attack its own candidate arguments with counterexamples, and not to stop short of a complete proof.</li>
+<li>The key step was a sampling strategy that converts the bound into a simpler positivity condition.</li>
+<li>Jin open-sourced everything on GitHub — prompt, successive manuscript drafts, a Lean formalization, and an "axiom audit" — <a href="https://github.com/jinshanmu/CrouzeixConjecture">jinshanmu/CrouzeixConjecture</a>.</li>
+<li>Cornell numerical analyst <strong>Alex Townsend</strong> learned of the claim (via ChatGPT itself, on July 30, telling him the problem "had been solved three days ago"), reviewed the manuscript, and brought in <strong>Anne Greenbaum</strong> (University of Washington). Both, along with <strong>Michel Crouzeix</strong> himself, checked the argument and believe it is correct. Townsend wrote up the story for <a href="https://alextownsend.net/essays/SIAMNews_CrouzeixConjecture.pdf">SIAM News</a>.</li>
+<li><strong>Not yet peer-reviewed.</strong></li>
+<li>Notably, eight days later (4 August 2026), professional mathematicians <strong>Emiel Lorist and Felix Schwenninger</strong> posted an independent, five-page, purely human-derived proof using a different method (double-layer-potential representation plus a perturbation lemma for 2-dilations) — <a href="https://arxiv.org/abs/2608.03841">arXiv:2608.03841</a> — with no mention of AI assistance and no reference to Jin's proof, suggesting genuinely convergent, independent resolution of the conjecture rather than one proof copying the other.</li>
+</ul>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Strong outsider case</strong> — a physician with no formal math training, reportedly getting a correct answer to a 22-year-old open problem in a specialist subfield via an autonomous AI run.</li>
+<li><strong>Verification so far is informal</strong> — Townsend, Greenbaum, and Crouzeix have checked the argument and found no error, but there is no peer-reviewed publication, and Jin's manuscript submission status (e.g. to Annals or a specialist journal) should be tracked.</li>
+<li><strong>The independent Lorist–Schwenninger proof is the strongest evidence</strong> — if a completely separate, human, peer-reviewable proof reaches the same conclusion by a different route, that's a good sign the conjecture is actually true regardless of any lingering doubts about Jin's specific argument. Track whether the Lorist–Schwenninger paper clears peer review.</li>
+<li>Watch for: formal peer review or journal acceptance of either proof, a Lean formalization of Jin's proof reaching completion, any errors found by outside reviewers, and broader numerical-analysis community commentary (MathOverflow, specialist blogs, conference talks).</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=todo>☐ <strong>+1 week</strong> (2026-08-22) —</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-09-15) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-11-15) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-02-15) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-08-15) —</li>
 </ul></details>
 </article>
 <article class="entry "
@@ -500,7 +540,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-13) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-08-15 01:12 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-08-15 13:31 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];
