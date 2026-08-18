@@ -4,8 +4,8 @@ source: https://www.anthropic.com/research/riemann-zeta
 field: Mathematics / analytic number theory
 outsider: false
 added: 2026-08-11
-status: unverified
-next_review: 2026-08-18
+status: partially-confirmed
+next_review: 2026-09-11
 verdict:
 ---
 ## The claim
@@ -63,7 +63,28 @@ and
   a gap?
 
 ## Review log
-- [ ] **+1 week** (2026-08-18) —
+- [x] **+1 week** (2026-08-18) — Anthropic has since published the full
+  manuscript, a shorter explanatory note, a large provenance appendix,
+  process transcripts, and a public Lean 4 formalization repo
+  ([anthropics/zeta-23-lean](https://github.com/anthropics/zeta-23-lean)),
+  which passes automated proof-checking — meaning the logical chain no
+  longer has to be taken on Anthropic's word. External number theorists
+  **Brian Conrey** and **Dan Goldston** reviewed the paper on short notice
+  and their reaction has been reported as positive; notably Goldston is
+  also a co-author of the Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh
+  work the 67.2% bound builds on, so his review carries direct domain
+  authority even though it isn't full journal peer review. No credible
+  flaw, gap, or retraction has surfaced in the week since publication —
+  coverage from [Forbes](https://www.forbes.com/sites/jonmarkman/2026/08/13/claude-just-broke-a-math-record-that-stood-for-37-years/),
+  [TechSpot](https://www.techspot.com/news/113472-anthropic-claude-tried-solve-riemann-hypothesis-found-something.html),
+  and [xenospectrum](https://xenospectrum.com/en/claude-riemann-zeta-critical-line-lower-bound/)
+  is largely favorable, and one commentator called it possibly the biggest
+  analytic-number-theory result since the 2013 bounded-gaps-between-primes
+  work. Caveats remain real: the underlying model is still unreleased and
+  unidentified (so the *process* can't be independently reproduced, only
+  the *output* checked), and there's been no formal journal peer review —
+  upgrading to `partially-confirmed` reflects the public, checkable proof
+  plus credible outside math review, short of full field consensus.
 - [ ] **+1 month** (2026-09-11) —
 - [ ] **+3 months** (2026-11-11) —
 - [ ] **+6 months** (2027-02-11) —
