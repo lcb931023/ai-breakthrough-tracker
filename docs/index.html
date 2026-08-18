@@ -135,14 +135,14 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <section class="progress">
   <div class="progress-head">
     <span class="eyebrow">Verification progress</span>
-    <span class="pcount" id="pcount">10 claims</span>
+    <span class="pcount" id="pcount">11 claims</span>
   </div>
-  <div class="bar" id="bar"><span class="seg b-unverified" style="width:30.0000%" title="3 unverified"></span><span class="seg b-stale" style="width:10.0000%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:50.0000%" title="5 partially confirmed"></span><span class="seg b-confirmed" style="width:10.0000%" title="1 confirmed"></span></div>
-  <ul class="legend" id="legend"><li class="lg b-unverified"><b>3</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>5</b><span>partially confirmed</span></li><li class="lg b-confirmed"><b>1</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
+  <div class="bar" id="bar"><span class="seg b-unverified" style="width:36.3636%" title="4 unverified"></span><span class="seg b-stale" style="width:9.0909%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:45.4545%" title="5 partially confirmed"></span><span class="seg b-confirmed" style="width:9.0909%" title="1 confirmed"></span></div>
+  <ul class="legend" id="legend"><li class="lg b-unverified"><b>4</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>5</b><span>partially confirmed</span></li><li class="lg b-confirmed"><b>1</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
   
 </section>
 <div class="filters" id="filters" hidden>
-  <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>10</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>6</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button><button type="button" class="chip" data-d="Mathematical" aria-pressed="false">Mathematical <b>1</b></button></div>
+  <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>11</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>7</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button><button type="button" class="chip" data-d="Mathematical" aria-pressed="false">Mathematical <b>1</b></button></div>
   <div class="frow">
     <button type="button" class="chip toggle" id="outsider" aria-pressed="false">outsider only</button>
     <label class="sel" for="status">status
@@ -267,6 +267,45 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+3 months</strong> (2026-10-23) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-01-23) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-23) —</li>
+</ul></details>
+</article>
+<article class="entry "
+  data-discipline="Mathematics"
+  data-outsider="true" data-bucket="unverified">
+  <header>
+    <span class="stamp s-unverified">unverified</span>
+    <span class="tag">Mathematics / complex analysis</span>
+    <span class="tag outsider">outsider</span>
+    
+  </header>
+  <h2>GPT-5.6 Pro, directed by Lech Mazur, generated a proof of Sendov&#x27;s Conjecture and the Phelps–Rodriguez conjecture, independently reformalized in Lean by Terence Tao</h2>
+  <p class="meta">filed 2026-08-16 <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">source →</a></p>
+  <div class="ticker"><span class="tick future" title="2026-08-23"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-16"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-16"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-16"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-16"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Lech Mazur — founder/CEO of Advameg, Inc. and City-Data.com, and more recently an author of LLM evaluation benchmarks, but with no evidence of formal mathematics training or prior peer-reviewed math work — used **OpenAI's GPT-5.6 Pro<strong> to generate a proof of </strong>Sendov's Conjecture**, open for 54 years, and the related <strong>Phelps–Rodriguez conjecture</strong>, in complex analysis. Both concern the location of a polynomial's critical points relative to its roots.</p>
+<p>Specifics:</p>
+<ul>
+<li>Published via ProofAtlas (a platform Mazur appears to run) as "A Computer-Assisted Proof of Sendov's Conjecture," dated 5 August 2026.</li>
+<li>Mazur's stated role: designing and running the orchestration/verification workflow, and selecting and reconciling GPT-5.6 Pro's outputs. GPT-5.6 Pro is credited with the mathematical exploration, proof derivation, exact computational testing, and adversarial auditing.</li>
+<li>The proof reduces to a "Conjecture 3" claimed to resolve both target conjectures in full generality, via an argument described as elementary (using only the fundamental theorem of algebra and the Maclaurin inequality, no heavier complex analysis).</li>
+<li>Fields medalist <strong>Terence Tao</strong> independently reformalized the entire argument in <strong>Lean 4</strong> (~15,000 lines, versus ~90,000 in the original writeup) and posted a "digestion" of the proof on his blog (12 August 2026), aiming to place it in context with prior literature and streamline the exposition.</li>
+</ul>
+<p>Reported via <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">Terence Tao's blog</a> and <a href="https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf">the ProofAtlas paper</a>.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Outsider profile, but a sophisticated one.</strong> No university degree, PhD, or prior math publication record was found for Mazur — his documented background is tech entrepreneurship (Advameg/City-Data.com) and, lately, AI-benchmark authorship, not research mathematics. He presents himself explicitly as the human orchestrator/curator of an AI system rather than as the mathematician who derived the proof.</li>
+<li><strong>Strong early verification signal</strong>, unusually so for a claim this fresh: an independent, credentialed expert (Tao) engaged deeply enough to reformalize the whole argument in Lean and write up a public exposition — that is a much higher bar than typical early-stage "looks plausible" commentary. Worth confirming whether Tao's writeup amounts to an endorsement of correctness or just a formalization exercise agnostic to truth.</li>
+<li>Still a preprint / self-published proof, not peer-reviewed or published in a journal.</li>
+<li>Track: does the broader complex-analysis community (beyond Tao) weigh in? Does Tao's Lean formalization actually compile and check without gaps? Does anyone dispute the division of credit between GPT-5.6 Pro and Mazur's orchestration?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=todo>☐ <strong>+1 week</strong> (2026-08-23) —</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-09-16) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-11-16) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-02-16) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-08-16) —</li>
 </ul></details>
 </article>
 <article class="entry "
@@ -540,7 +579,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-13) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-08-18 01:10 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-08-18 08:44 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];
