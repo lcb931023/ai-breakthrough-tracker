@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-08-19
+next_review: 2026-09-12
 verdict:
 ---
 ## The claim
@@ -54,7 +54,17 @@ Specifics:
   "proof" ever transcribed into checkable mathematics?
 
 ## Review log
-- [ ] **+1 week** (2026-08-19) —
+- [x] **+1 week** (2026-08-19) — No public movement since the post went up. The
+  [substack archive](https://chillphysicsenjoyer.substack.com/archive) shows no
+  follow-up or correction post, and the post itself still shows no reply from
+  Khalkhali, Pagliaroli, Parfeni, or Smith — the author's own text says they'll
+  "disclose in a later post" if they find they were wrong, which hasn't
+  happened yet. The source paper, [arXiv:2409.07565](https://arxiv.org/abs/2409.07565)
+  (JHEP 02 (2025) 158), remains at v2 (Feb 2025) with no update or erratum
+  addressing Conjecture 2. No independent preprint, MathOverflow thread, or
+  outside commentary on this specific disproof turned up. Still just a
+  self-reported, self-verified claim with an untranscribed (image-only) proof
+  — evidence is as thin as when logged. Keeping status `unverified`.
 - [ ] **+1 month** (2026-09-12) —
 - [ ] **+3 months** (2026-11-12) —
 - [ ] **+6 months** (2027-02-12) —
