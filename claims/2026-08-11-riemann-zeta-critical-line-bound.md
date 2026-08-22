@@ -22,8 +22,8 @@ Specifics:
   **60 subagents**, producing **~31 million output tokens**, and executing
   **~2,400 shell commands** plus hundreds of Python scripts.
 - Anthropic says the model tried and discarded **~650 failed proof ideas**
-  before landing on the successful approach: treating on- and off-critical-
-  line zeros as a unified geometric space via Weil's explicit formula,
+  before landing on the successful approach: treating on- and
+  off-critical-line zeros as a unified geometric space via Weil's explicit formula,
   Hermitian quadratic forms, Sylvester's law of inertia, and a new
   rank-trace inequality.
 - Anthropic mathematicians **Levent Alpöge** and **Ralph Furman** validated

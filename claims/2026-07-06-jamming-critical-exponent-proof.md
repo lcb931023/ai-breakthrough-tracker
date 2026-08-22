@@ -35,8 +35,8 @@ July 2026.
 - **Not the usual outsider profile** — the authors are among the most senior
   physicists in the field (Parisi won the 2021 Nobel partly for spin-glass /
   complex-systems work). This is AI-as-engine used *by* domain experts, so the
-  "does the community accept it" test is weaker: the proof is already peer-
-  reviewed and published in JSTAT. The open question is narrower — whether the
+  "does the community accept it" test is weaker: the proof is already
+  peer-reviewed and published in JSTAT. The open question is narrower — whether the
   AI-originated argument holds up under scrutiny and how much of the intellectual
   work was actually Claude's vs. the authors' revision.
 - Distinguish the *result* (already published, peer-reviewed identity) from the

@@ -32,8 +32,8 @@ and others, July 2026.
   used by its own makers as a marketing demonstration. The interesting question
   is narrow: does the proof actually hold?
 - **No formal verification.** Unlike the Fable-5 QAOA proof (mechanically checked
-  end-to-end in Lean 4), this proof is **not peer-reviewed and not machine-
-  verified** — it's a natural-language argument the community must check by hand,
+  end-to-end in Lean 4), this proof is **not peer-reviewed and not
+  machine-verified** — it's a natural-language argument the community must check by hand,
   expected to take days to weeks.
 - **Authorship dispute already brewing.** Mathematicians are flagging possible
   gaps and questioning how much of the reasoning was the model's own vs. baked
