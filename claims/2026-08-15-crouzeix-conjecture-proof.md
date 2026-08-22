@@ -4,8 +4,8 @@ source: https://www.scmp.com/tech/tech-trends/article/3363966/chinese-doctor-stu
 field: Mathematics / numerical linear algebra (matrix analysis)
 outsider: true
 added: 2026-08-15
-status: unverified
-next_review: 2026-08-22
+status: partially-confirmed
+next_review: 2026-09-15
 verdict:
 ---
 ## The claim
@@ -66,7 +66,7 @@ Specifics:
   (MathOverflow, specialist blogs, conference talks).
 
 ## Review log
-- [ ] **+1 week** (2026-08-22) —
+- [x] **+1 week** (2026-08-22) — No error has surfaced in Jin's manuscript ("The Numerical Range Is a 2-Spectral Set," posted 27 Jul) despite continued informal scrutiny; Townsend, Greenbaum, and Crouzeix's earlier read-through still stands and independent computational/adversarial audits in Jin's own repo report none found. The independent Lorist–Schwenninger proof ([arXiv:2608.03841](https://arxiv.org/abs/2608.03841), submitted 4 Aug via a different double-layer-potential method) remains the strongest corroborating signal — two structurally different routes reaching the same conclusion. Neither manuscript has entered formal peer review or a journal pipeline yet, and no MathOverflow or specialist-blog rebuttal has appeared. Coverage: [Remio](https://www.remio.ai/post/shanmu-jin-used-ai-on-the-crouzeix-conjecture-but-the-proof-still-needs-human-ju), [Townsend's SIAM News essay](https://alextownsend.net/essays/SIAMNews_CrouzeixConjecture.pdf). Status moved to partially-confirmed on the strength of convergent independent derivations, pending actual peer review.
 - [ ] **+1 month** (2026-09-15) —
 - [ ] **+3 months** (2026-11-15) —
 - [ ] **+6 months** (2027-02-15) —
