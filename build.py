@@ -69,12 +69,20 @@ def parse_claim(text):
     return meta, m.group(2).strip()
 
 
+def md_inline(text):
+    """Links and bold, applied to already-merged block text."""
+    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
+    return re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
+
+
 def md_to_html(md):
     """Minimal markdown: headings, checkboxes, quotes, lists, bold, links.
 
     Source files are hard-wrapped at ~80 cols for readable diffs, so
     soft-wrapped continuation lines are merged back into their block —
     only a blank line or a new block marker starts a new paragraph/item.
+    Inline markup is applied after that merge, so a **bold** span or a
+    [link](url) may straddle a hard wrap.
     """
     blocks = []  # [type, text], type one of h2/h3/h4/p/quote/li/li-done/li-todo
     open_block = None  # index of the block that can still absorb continuation lines
@@ -83,8 +91,6 @@ def md_to_html(md):
         if not line:
             open_block = None
             continue
-        line = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', line)
-        line = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", line)
         if line.startswith("### "):
             blocks.append(["h4", line[4:]]); open_block = None
         elif line.startswith("## "):
@@ -102,6 +108,9 @@ def md_to_html(md):
             blocks[open_block][1] += " " + line
         else:
             blocks.append(["p", line]); open_block = len(blocks) - 1
+
+    for block in blocks:
+        block[1] = md_inline(block[1])
 
     out, in_ul = [], None
     for typ, text in blocks:
