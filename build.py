@@ -70,13 +70,21 @@ def parse_claim(text):
 
 
 def md_inline(text):
-    """Links and bold, applied to already-merged block text."""
+    """Code spans, links, bold and italics, applied to already-merged block text.
+
+    Escaped first, so claim prose can contain a literal & or < and every tag
+    in the result is one this function emitted. Bold runs before italics so
+    the ** pairs are gone by the time the single-* rule sees the text.
+    """
+    text = html.escape(text, quote=False)
+    text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
-    return re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
+    text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
+    return re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
 
 
 def md_to_html(md):
-    """Minimal markdown: headings, checkboxes, quotes, lists, bold, links.
+    """Minimal markdown: headings, checkboxes, quotes, lists, and inline spans.
 
     Source files are hard-wrapped at ~80 cols for readable diffs, so
     soft-wrapped continuation lines are merged back into their block —
@@ -417,6 +425,9 @@ details :is(h2,h3,h4,p,li,blockquote) {{ font-family:var(--mono); font-size:.86r
 details :is(p,li) {{ margin:.5em 0; }}
 details ul {{ margin:.5em 0; padding-left:1.3em; }}
 .log {{ list-style:none; padding-left:0; }} .log .done {{ color:var(--mut); }}
+code {{ font-family:var(--mono); font-size:.92em;
+        background:color-mix(in srgb, var(--line-strong) 45%, transparent);
+        padding:.08em .32em; border-radius:3px; }}
 blockquote {{ border-left:3px solid var(--line-strong); margin:.5rem 0; padding-left:.8rem; color:var(--mut); }}
 
 footer {{ margin-top:3rem; color:var(--mut); font-size:.78rem; font-family:var(--mono);
