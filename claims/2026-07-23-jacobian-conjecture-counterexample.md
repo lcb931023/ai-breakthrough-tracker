@@ -5,7 +5,7 @@ field: Mathematics / algebraic geometry
 outsider: false
 added: 2026-07-23
 status: partially-confirmed
-next_review: 2026-08-23
+next_review: 2026-10-23
 verdict:
 ---
 ## The claim
@@ -73,7 +73,7 @@ July 2026.
 
 ## Review log
 - [x] **+1 week** (2026-07-30) — The core arithmetic is now widely reproduced and effectively settled: multiple mathematicians independently re-verified the determinant (≡ −2) and the three-point collision using SymPy, Sage, and Wolfram, and a [Secret Blogging Seminar](https://sbseminar.wordpress.com/2026/07/20/the-new-counterexample-to-the-jacobian-conjecture/) thread reports "two separately implemented exact verifiers agree, including the nilpotence certificate." Working mathematicians (Will Sawin, Jared Duker Lichtman) have gone further, giving a conceptual/geometric reformulation and building extensions to related conjectures (Dixmier, Hessian, vanishing) rather than pushing back — see [Lichtman's thread](https://x.com/jdlichtman/status/2079066717762863249). This is a strong positive signal that dimension ≥3 is settled, though the central two-variable case remains open. What is still *not* resolved: no formal journal peer review yet, and per [kingy.ai's rundown](https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/), "the full prompt history, model version and human workflow have not been released" — so the AI-provenance question (autonomous discovery vs. heavy human steering by Alpöge/Mathew) still cannot be independently audited. A "verification preprint" exists (referenced by [explainx.ai](https://www.explainx.ai/blog/fable-5-jacobian-conjecture-counterexample-alpoge-july-2026)) but no arXiv listing was found. Moving to partially-confirmed: the math looks settled, the AI-origin story does not yet have independent verification.
-- [ ] **+1 month** (2026-08-23) —
+- [x] **+1 month** (2026-08-23) — The mathematics has solidified further: [Shuhong Gao's arXiv preprint](https://arxiv.org/abs/2608.00222) generalizes Alpöge's dimension-3 example into explicit constructions for dimensions 3–5 and a general recipe for all dimensions >2, and states plainly the conjecture "was refuted in dimension three" — treating it as settled math, credited to Alpöge, with no mention of AI involvement at all. David Speyer independently supplied the geometric ("tangent-sweep") mechanism behind the construction. No pushback on the arithmetic or the resolution has surfaced. But the AI-provenance question — the actual open item on this tracker — remains completely stalled: over a month later, no prompt transcript, model log, or notebook has been released by Alpöge or Anthropic, and Gao's own follow-up paper conspicuously treats the result as ordinary human mathematics rather than an AI discovery, per [kingy.ai's analysis](https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/) and [ScienceDaily](https://www.sciencedaily.com/releases/2026/08/260804034634.htm). Holding at partially-confirmed: the math is essentially confirmed, but "Fable 5 found this largely autonomously" is still an unverifiable, unaudited claim.
 - [ ] **+3 months** (2026-10-23) —
 - [ ] **+6 months** (2027-01-23) —
 - [ ] **+1 year** (2027-07-23) —

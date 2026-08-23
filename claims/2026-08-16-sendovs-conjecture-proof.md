@@ -4,8 +4,8 @@ source: https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-se
 field: Mathematics / complex analysis
 outsider: true
 added: 2026-08-16
-status: unverified
-next_review: 2026-08-23
+status: partially-confirmed
+next_review: 2026-09-16
 verdict:
 ---
 ## The claim
@@ -59,7 +59,7 @@ and [the ProofAtlas paper](https://www.proofatlas.ai/papers/sendov-conjecture/SE
   orchestration?
 
 ## Review log
-- [ ] **+1 week** (2026-08-23) —
+- [x] **+1 week** (2026-08-23) — Independent mechanical corroboration has arrived: Tao's Lean 4 formalization ([github.com/teorth/sendov](https://github.com/teorth/sendov)) reports the build has "no `sorry` and no project-defined `axiom`," and Tao submitted it to [Palomar](https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/), a new Lean-FRO-backed verification registry, for mechanical typechecking — though Tao himself cautions such checks "fall well short of ... proper human peer review for novelty, interest, and accuracy." Notably, Tao's own Lean formalization was "essentially all written by Claude Opus 5," with no independent human review of that Lean source. On credit: mathematician Karim Adiprasito directly disputed the attribution in Tao's blog comments — "I don't think his name can reasonably be attached as main author without transparency... nice that chatgpt found a proof, even nicer that Terry digested it" — and no one in the thread defended sole-authorship framing for Mazur. Mathematician Teng Zhang engaged constructively, extending the result to a majorization/spectral formulation, without disputing correctness. No journal peer review yet, and ProofAtlas's own site still shows an inconsistent, seemingly stale "planned, not complete" note on Lean verification. Moving to partially-confirmed: credible independent mechanical verification exists, but no peer review and an active, unresolved credit dispute.
 - [ ] **+1 month** (2026-09-16) —
 - [ ] **+3 months** (2026-11-16) —
 - [ ] **+6 months** (2027-02-16) —
