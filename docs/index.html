@@ -140,9 +140,9 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="eyebrow">Verification progress</span>
     <span class="pcount" id="pcount">12 claims</span>
   </div>
-  <div class="bar" id="bar"><span class="seg b-unverified" style="width:25.0000%" title="3 unverified"></span><span class="seg b-stale" style="width:8.3333%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:58.3333%" title="7 partially confirmed"></span><span class="seg b-confirmed" style="width:8.3333%" title="1 confirmed"></span></div>
-  <ul class="legend" id="legend"><li class="lg b-unverified"><b>3</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>7</b><span>partially confirmed</span></li><li class="lg b-confirmed"><b>1</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
-
+  <div class="bar" id="bar"><span class="seg b-unverified" style="width:16.6667%" title="2 unverified"></span><span class="seg b-stale" style="width:8.3333%" title="1 went stale"></span><span class="seg b-partially-confirmed" style="width:66.6667%" title="8 partially confirmed"></span><span class="seg b-confirmed" style="width:8.3333%" title="1 confirmed"></span></div>
+  <ul class="legend" id="legend"><li class="lg b-unverified"><b>2</b><span>unverified</span></li><li class="lg b-stale"><b>1</b><span>went stale</span></li><li class="lg b-contested zero"><b>0</b><span>contested</span></li><li class="lg b-partially-confirmed"><b>8</b><span>partially confirmed</span></li><li class="lg b-confirmed"><b>1</b><span>confirmed</span></li><li class="lg b-debunked zero"><b>0</b><span>refuted</span></li></ul>
+  
 </section>
 <div class="filters" id="filters" hidden>
   <div class="chips" role="group" aria-label="Filter by discipline"><button type="button" class="chip on" data-d="all" aria-pressed="true">All <b>12</b></button><button type="button" class="chip" data-d="Mathematics" aria-pressed="false">Mathematics <b>7</b></button><button type="button" class="chip" data-d="Physics" aria-pressed="false">Physics <b>2</b></button><button type="button" class="chip" data-d="Biology" aria-pressed="false">Biology <b>1</b></button><button type="button" class="chip" data-d="Linguistics" aria-pressed="false">Linguistics <b>1</b></button><button type="button" class="chip" data-d="Mathematical" aria-pressed="false">Mathematical <b>1</b></button></div>
@@ -160,92 +160,14 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
   data-outsider="false" data-bucket="partially-confirmed">
   <header>
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
-    <span class="tag">Mathematics / algebraic geometry</span>
-    <span class="tag insider">insider</span>
-
-  </header>
-  <h2>Claude Fable 5 generated an explicit degree-7 polynomial counterexample to the 1939 Jacobian conjecture</h2>
-  <p class="meta">filed 2026-07-23 <a href="https://x.com/__alpoge__/status/2079028340955197566">source →</a></p>
-  <div class="ticker"><span class="tick done" title="2026-07-30"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-23"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-23"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-23"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-23"><i class="dot"></i>1y</span></div>
-
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Levent Alpöge, a mathematician at Anthropic, announced on X on 20 July 2026 that the <strong>Jacobian conjecture</strong> — posed by Ott-Heinrich Keller in 1939, one of algebraic geometry's oldest open problems — is <strong>false in dimension 3 and above</strong>. He credits <strong>Claude Fable 5</strong> with generating the counterexample while he was "working during the World Cup final."</p>
-<p>Specifics:</p>
-<ul>
-<li>The counterexample is an explicit degree-7 polynomial map F = (P, Q, R): ℂ³ → ℂ³ with <strong>constant nonzero Jacobian determinant (det J_F ≡ −2)</strong> — the conjecture's hypothesis — but <strong>no polynomial inverse</strong>: three distinct points, (0, 0, −1/4), (1, −3/2, 13/2), and (−1, 3/2, 13/2), all map to the same output (−1/4, 0, 0), so F is not even injective.</li>
-<li>The map is short enough (216 characters) to state in a single social-media post, and the determinant is <strong>independently hand-checkable</strong> — Alpöge included Wolfram Alpha links, and multiple outside users report verifying the arithmetic themselves within hours.</li>
-<li><strong>No prompt transcript, model log, or research notebook has been released</strong>, so the end-to-end discovery process (how much search, how many failed attempts, how it was guided) cannot yet be independently audited. Researchers reportedly expected a counterexample, if any, to require degree up to ~200; Fable found one at degree 7.</li>
-<li>Fields Medalist <strong>Terence Tao</strong> wrote a same-week <a href="https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/">"digestion" blog post</a> giving a geometric interpretation of <em>why</em> the construction works — he treats the counterexample as established ("It was recently shown (using the Fable AI) that the conjecture is false in three dimensions") and notes the construction "appears like a massive miracle... highly unlikely to be located by brute force." His own AI disclosure is narrow: "I used an AI chatbot to discuss various aspects of this problem and to confirm several of the calculations made here" — i.e. Tao used AI to check the <em>write-up</em>, not to validate Alpöge/Fable's original discovery process.</li>
-</ul>
-<p>Reported via <a href="https://x.com/__alpoge__/status/2079028340955197566">Alpöge's X thread</a>, <a href="https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/">Terence Tao's blog</a>, <a href="https://forklog.com/en/anthropics-claude-fable-5-finds-counterexample-to-1939-jacobian-conjecture/">ForkLog</a>, and <a href="https://theconversation.com/hello-there-the-jacobian-conjecture-is-false-thanx-why-a-tiny-social-media-post-has-mathematicians-rethinking-ai-283883">The Conversation</a>, July 2026.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Not the outsider profile</strong> — Alpöge is a professional mathematician at the AI lab whose model he's crediting, so there's an obvious incentive to narrate this as "AI did it." The arithmetic (determinant ≡ −2, the three-way collision) is trivially checkable and looks solid; the open question is narrower and about <em>provenance</em>: how much of the actual search/discovery was Fable's versus Alpöge's own guidance, since no transcript has been published.</li>
-<li><strong>The result itself is not yet formally verified end-to-end.</strong> What's been checked so far is the arithmetic of one explicit example, not a full peer-reviewed proof that this map is a valid counterexample under every reading of the conjecture, nor any formalization in Lean/Coq. Contrast with the Fable-5 QAOA proof (mechanically checked in Lean) — here nothing has been machine-verified yet.</li>
-<li>Tao's involvement is a strong positive signal for the <em>mathematics</em>, but his own disclosure shows he used AI only to check his write-up, not to independently reproduce the discovery — worth not overstating.</li>
-<li>Track: does a named domain expert (algebraic geometer) formally confirm the counterexample resolves the conjecture as stated (vs. a degenerate reading of it)? Does Anthropic or Alpöge release the actual transcript/log? Does any specialist push back on the construction or on the "AI found it" framing?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=done>☑ <strong>+1 week</strong> (2026-07-30) — The core arithmetic is now widely reproduced and effectively settled: multiple mathematicians independently re-verified the determinant (≡ −2) and the three-point collision using SymPy, Sage, and Wolfram, and a <a href="https://sbseminar.wordpress.com/2026/07/20/the-new-counterexample-to-the-jacobian-conjecture/">Secret Blogging Seminar</a> thread reports "two separately implemented exact verifiers agree, including the nilpotence certificate." Working mathematicians (Will Sawin, Jared Duker Lichtman) have gone further, giving a conceptual/geometric reformulation and building extensions to related conjectures (Dixmier, Hessian, vanishing) rather than pushing back — see <a href="https://x.com/jdlichtman/status/2079066717762863249">Lichtman's thread</a>. This is a strong positive signal that dimension ≥3 is settled, though the central two-variable case remains open. What is still <em>not</em> resolved: no formal journal peer review yet, and per <a href="https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/">kingy.ai's rundown</a>, "the full prompt history, model version and human workflow have not been released" — so the AI-provenance question (autonomous discovery vs. heavy human steering by Alpöge/Mathew) still cannot be independently audited. A "verification preprint" exists (referenced by <a href="https://www.explainx.ai/blog/fable-5-jacobian-conjecture-counterexample-alpoge-july-2026">explainx.ai</a>) but no arXiv listing was found. Moving to partially-confirmed: the math looks settled, the AI-origin story does not yet have independent verification.</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-08-23) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-10-23) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-01-23) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-07-23) —</li>
-</ul></details>
-</article>
-<article class="entry "
-  data-discipline="Mathematics"
-  data-outsider="true" data-bucket="unverified">
-  <header>
-    <span class="stamp s-unverified">unverified</span>
-    <span class="tag">Mathematics / complex analysis</span>
-    <span class="tag outsider">outsider</span>
-
-  </header>
-  <h2>GPT-5.6 Pro, directed by Lech Mazur, generated a proof of Sendov&#x27;s Conjecture and the Phelps–Rodriguez conjecture, independently reformalized in Lean by Terence Tao</h2>
-  <p class="meta">filed 2026-08-16 <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">source →</a></p>
-  <div class="ticker"><span class="tick future" title="2026-08-23"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-16"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-16"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-16"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-16"><i class="dot"></i>1y</span></div>
-
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Lech Mazur — founder/CEO of Advameg, Inc. and City-Data.com, and more recently an author of LLM evaluation benchmarks, but with no evidence of formal mathematics training or prior peer-reviewed math work — used <strong>OpenAI's GPT-5.6 Pro</strong> to generate a proof of <strong>Sendov's Conjecture</strong>, open for 54 years, and the related <strong>Phelps–Rodriguez conjecture</strong>, in complex analysis. Both concern the location of a polynomial's critical points relative to its roots.</p>
-<p>Specifics:</p>
-<ul>
-<li>Published via ProofAtlas (a platform Mazur appears to run) as "A Computer-Assisted Proof of Sendov's Conjecture," dated 5 August 2026.</li>
-<li>Mazur's stated role: designing and running the orchestration/verification workflow, and selecting and reconciling GPT-5.6 Pro's outputs. GPT-5.6 Pro is credited with the mathematical exploration, proof derivation, exact computational testing, and adversarial auditing.</li>
-<li>The proof reduces to a "Conjecture 3" claimed to resolve both target conjectures in full generality, via an argument described as elementary (using only the fundamental theorem of algebra and the Maclaurin inequality, no heavier complex analysis).</li>
-<li>Fields medalist <strong>Terence Tao</strong> independently reformalized the entire argument in <strong>Lean 4</strong> (~15,000 lines, versus ~90,000 in the original writeup) and posted a "digestion" of the proof on his blog (12 August 2026), aiming to place it in context with prior literature and streamline the exposition.</li>
-</ul>
-<p>Reported via <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">Terence Tao's blog</a> and <a href="https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf">the ProofAtlas paper</a>.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Outsider profile, but a sophisticated one.</strong> No university degree, PhD, or prior math publication record was found for Mazur — his documented background is tech entrepreneurship (Advameg/City-Data.com) and, lately, AI-benchmark authorship, not research mathematics. He presents himself explicitly as the human orchestrator/curator of an AI system rather than as the mathematician who derived the proof.</li>
-<li><strong>Strong early verification signal</strong>, unusually so for a claim this fresh: an independent, credentialed expert (Tao) engaged deeply enough to reformalize the whole argument in Lean and write up a public exposition — that is a much higher bar than typical early-stage "looks plausible" commentary. Worth confirming whether Tao's writeup amounts to an endorsement of correctness or just a formalization exercise agnostic to truth.</li>
-<li>Still a preprint / self-published proof, not peer-reviewed or published in a journal.</li>
-<li>Track: does the broader complex-analysis community (beyond Tao) weigh in? Does Tao's Lean formalization actually compile and check without gaps? Does anyone dispute the division of credit between GPT-5.6 Pro and Mazur's orchestration?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=todo>☐ <strong>+1 week</strong> (2026-08-23) —</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-09-16) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-11-16) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-02-16) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-08-16) —</li>
-</ul></details>
-</article>
-<article class="entry "
-  data-discipline="Mathematics"
-  data-outsider="false" data-bucket="partially-confirmed">
-  <header>
-    <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Mathematics / graph theory &amp; combinatorial optimization (network flows)</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>GPT-5.6 Pro produced a counterexample disproving Goemans&#x27; cost conjecture on unsplittable flow (the Dinitz–Garg–Goemans conjecture)</h2>
   <p class="meta">filed 2026-07-25 <a href="https://x.com/DmitryRybin1/status/2079904005652893709">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-01"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-25"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-25"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-25"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-25"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Dmitry Rybin — an ML PhD (CUHK), math BSc (HSE), math-olympiad medalist (IMC gold, national olympiad gold), and cofounder of a Shenzhen AI-for-math startup — announced on X on 22 July 2026 that he used <strong>OpenAI's GPT-5.6 Pro</strong> to construct an explicit counterexample disproving <strong>Goemans' cost conjecture</strong> on single-source unsplittable flow, informally called the <strong>Dinitz–Garg–Goemans conjecture</strong>, open for roughly 30 years.</p>
 <p>Background: Dinitz, Garg, and Goemans proved in 1999 that any fractional flow respecting capacity constraints can be converted into an <strong>unsplittable</strong> flow (each demand routed along a single path) that violates capacities by at most the largest single demand. Goemans then conjectured a stronger <strong>cost</strong> version: that such an unsplittable flow could always be found without increasing total routing cost above the fractional solution's cost. That is the conjecture now claimed false.</p>
@@ -280,12 +202,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Mathematics / graph theory (spectral graph theory)</span>
     <span class="tag outsider">outsider</span>
-
+    
   </header>
   <h2>Grok 4.5, running as the autonomous &quot;Capy&quot; agent, found a counterexample refuting Graffiti Conjecture 284</h2>
   <p class="meta">filed 2026-07-25 <a href="https://x.com/justinsunyt/status/2080116559352316409">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-01"><i class="dot"></i>1w</span><span class="tick future" title="2026-08-25"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-25"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-25"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-25"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Capy is a YC-backed autonomous AI-software-engineering agent (cofounded by Nalin Semwal and Justin Sun) built to triage issues and ship code changes on its own. On 23 July 2026, during an internal Slack discussion unrelated to its usual job, someone shared <strong>Graffiti Conjecture 284</strong> — one of many conjectures mechanically generated in the 1980s–90s by Siemion Fajtlowicz's automated "Graffiti" program, open for roughly 30 years. It states that in any connected graph with girth ≥ 5, the minimum <strong>dual degree</strong> (average degree of a vertex's neighbors) is bounded above by minus the smallest eigenvalue of the graph's distance matrix.</p>
 <p>Specifics:</p>
@@ -320,12 +242,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Biology / protein engineering</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>Anthropic reports Claude autonomously ran de novo protein-binder design campaigns against 15 targets, producing 354 wet-lab-confirmed binders out of 1,320 designs (22.6-35.1% hit rate) as measured by Adaptyv Bio and Twist Bioscience</h2>
   <p class="meta">filed 2026-08-22 <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">source →</a></p>
   <div class="ticker"><span class="tick future" title="2026-08-29"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-22"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-22"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-22"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-22"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Anthropic reports that <strong>Claude</strong> — <strong>Opus 4.8</strong> and an unreleased <strong>Mythos Preview</strong> build — autonomously ran de novo protein <strong>minibinder</strong> design campaigns against <strong>15 clinically relevant targets</strong> (PD-L1, TREM2, TNFα, EGFR, 15-PGDH, RBX1 and others), with no human input on individual designs during a run. Of <strong>1,320 designs</strong>, <strong>354 were confirmed to bind</strong>, hitting <strong>14 of 15 targets</strong>.</p>
 <p>Specifics:</p>
@@ -360,12 +282,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-unverified">unverified</span>
     <span class="tag">Mathematical physics / electrostatics</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>GPT-5.6 Sol suggested the geometric construction disproving Maxwell&#x27;s 150-year-old conjecture on electrostatic critical points</h2>
   <p class="meta">filed 2026-08-01 <a href="https://arxiv.org/abs/2607.27197">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-08"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-01"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-01"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-01"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-01"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Mathematicians Philip Arathoon (Babson College), Gavin Ball (University of Missouri), and Matthew D. Kvalheim (UMBC) posted <strong>"The Maxwell Conjecture is False"</strong> to arXiv on 29 July 2026, disproving the <strong>Maxwell conjecture</strong>: a 1873-treatise-inspired bound formulated by Gabrielov, Novikov, and Shapiro (2007) stating that if the critical points (equilibria) of the electrostatic potential generated by <strong>n</strong> point charges are all non-degenerate, their number cannot exceed <strong>(n − 1)²</strong>.</p>
 <p>Specifics:</p>
@@ -399,12 +321,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Mathematics / analytic number theory</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>An unreleased Anthropic research build of Claude generated the proof strategy raising the known lower bound on Riemann zeta zeros that are simple and on the critical line from 41.6% to 67.2%</h2>
   <p class="meta">filed 2026-08-11 <a href="https://www.anthropic.com/research/riemann-zeta">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-18"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-11"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-11"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-11"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-11"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Anthropic reports that an <strong>unreleased research version of Claude</strong>, prompted by <strong>Jarred Sumner</strong> (an Anthropic staff member who is <strong>not a mathematician</strong>), generated the proof strategy behind a new unconditional result in analytic number theory: raising the known lower bound on the proportion of nontrivial Riemann zeta zeros that are <strong>simple and lie on the critical line</strong> from the prior <strong>41.6%</strong> (a figure built up incrementally by Baluyot, Goldston, Suriajaya, and Turnage-Butterbaugh) to <strong>67.2%</strong>.</p>
 <p>Specifics:</p>
@@ -438,12 +360,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-unverified">unverified</span>
     <span class="tag">Mathematical / theoretical physics (random matrix theory)</span>
     <span class="tag outsider">outsider</span>
-
+    
   </header>
   <h2>An amateur physicist used GPT Sol Ultra to both select and disprove an open conjecture on the critical behavior of multi-matrix models</h2>
   <p class="meta">filed 2026-08-12 <a href="https://chillphysicsenjoyer.substack.com/p/i-possibly-resolved-a-conjecture">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-19"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-12"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-12"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-12"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-12"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>A blogger writing as "Casual Physics Enjoyer" — who studied theoretical physics to Master's level at Cambridge (a 98/100 final-year score, per their own account) but is not a professional research mathematician — says they used <strong>GPT Sol Ultra</strong> first to search for open conjectures they could personally understand and verify, and then to generate a <strong>disproof</strong> of one of them.</p>
 <p>The target is <strong>Conjecture 2</strong> from Khalkhali, Pagliaroli, Parfeni &amp; Smith, <a href="https://arxiv.org/abs/2409.07565">"Bootstrapping the critical behavior of multi-matrix models"</a> (JHEP 02 (2025) 158). For the 2-matrix model with configuration (g, α, β) = (g, g, g), the conjecture proposes that near a critical point g_c the free energy derivative behaves as d/dg F₀ ∼ (1 − g/g_c)^(2 − 2·(1/2)), i.e. that the <strong>string susceptibility exponent is γ = 1/2</strong> — which would place the model's continuum limit in the universality class of the Continuum Random Tree.</p>
@@ -476,12 +398,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Mathematics / numerical linear algebra (matrix analysis)</span>
     <span class="tag outsider">outsider</span>
-
+    
   </header>
   <h2>A neurosurgery resident with no formal math training used GPT-5.6 Sol&#x27;s 16-hour autonomous run to produce a proof of the 22-year-old Crouzeix&#x27;s Conjecture</h2>
   <p class="meta">filed 2026-08-15 <a href="https://www.scmp.com/tech/tech-trends/article/3363966/chinese-doctor-stuns-maths-world-cracking-decades-old-problem-using-chatgpt">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-22"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-15"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-15"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-15"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-15"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p><strong>Shanmu Jin</strong>, a postdoctoral researcher and neurosurgery resident at Peking Union Medical College Hospital in Beijing, has no formal academic background in advanced mathematics — his undergraduate degree is in geology, followed by an MD. He says his interest in matrix analysis grew out of his own clinical research on transcranial ultrasound. Working essentially alone, he set <strong>GPT-5.6 Sol</strong> (in ChatGPT's "Work" mode) loose on <strong>Crouzeix's Conjecture</strong> — posed by Michel Crouzeix in 2004 and open for 22 years, stating that for any matrix A and any function f, ‖f(A)‖ ≤ 2·sup{|f(z)| : z in the numerical range of A}.</p>
 <p>Specifics:</p>
@@ -516,14 +438,14 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Mathematics / complex analysis</span>
     <span class="tag outsider">outsider</span>
-
+    
   </header>
   <h2>GPT-5.6 Pro, directed by Lech Mazur, generated a proof of Sendov&#x27;s Conjecture and the Phelps–Rodriguez conjecture, independently reformalized in Lean by Terence Tao</h2>
   <p class="meta">filed 2026-08-16 <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-08-23"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-16"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-16"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-16"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-16"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Lech Mazur — founder/CEO of Advameg, Inc. and City-Data.com, and more recently an author of LLM evaluation benchmarks, but with no evidence of formal mathematics training or prior peer-reviewed math work — used **OpenAI's GPT-5.6 Pro<strong> to generate a proof of </strong>Sendov's Conjecture**, open for 54 years, and the related <strong>Phelps–Rodriguez conjecture</strong>, in complex analysis. Both concern the location of a polynomial's critical points relative to its roots.</p>
+<p>Lech Mazur — founder/CEO of Advameg, Inc. and City-Data.com, and more recently an author of LLM evaluation benchmarks, but with no evidence of formal mathematics training or prior peer-reviewed math work — used <strong>OpenAI's GPT-5.6 Pro</strong> to generate a proof of <strong>Sendov's Conjecture</strong>, open for 54 years, and the related <strong>Phelps–Rodriguez conjecture</strong>, in complex analysis. Both concern the location of a polynomial's critical points relative to its roots.</p>
 <p>Specifics:</p>
 <ul>
 <li>Published via ProofAtlas (a platform Mazur appears to run) as "A Computer-Assisted Proof of Sendov's Conjecture," dated 5 August 2026.</li>
@@ -541,7 +463,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </ul>
 <h3>Review log</h3>
 <ul class=log>
-<li class=done>☑ <strong>+1 week</strong> (2026-08-23) — Independent mechanical corroboration has arrived: Tao's Lean 4 formalization (<a href="https://github.com/teorth/sendov">github.com/teorth/sendov</a>) reports the build has "no `sorry` and no project-defined `axiom`," and Tao submitted it to <a href="https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/">Palomar</a>, a new Lean-FRO-backed verification registry, for mechanical typechecking — though Tao himself cautions such checks "fall well short of ... proper human peer review for novelty, interest, and accuracy." Notably, Tao's own Lean formalization was "essentially all written by Claude Opus 5," with no independent human review of that Lean source. On credit: mathematician Karim Adiprasito directly disputed the attribution in Tao's blog comments — "I don't think his name can reasonably be attached as main author without transparency... nice that chatgpt found a proof, even nicer that Terry digested it" — and no one in the thread defended sole-authorship framing for Mazur. Mathematician Teng Zhang engaged constructively, extending the result to a majorization/spectral formulation, without disputing correctness. No journal peer review yet, and ProofAtlas's own site still shows an inconsistent, seemingly stale "planned, not complete" note on Lean verification. Moving to partially-confirmed: credible independent mechanical verification exists, but no peer review and an active, unresolved credit dispute.</li>
+<li class=done>☑ <strong>+1 week</strong> (2026-08-23) — Independent mechanical corroboration has arrived: Tao's Lean 4 formalization (<a href="https://github.com/teorth/sendov">github.com/teorth/sendov</a>) reports the build has "no <code>sorry</code> and no project-defined <code>axiom</code>," and Tao submitted it to <a href="https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/">Palomar</a>, a new Lean-FRO-backed verification registry, for mechanical typechecking — though Tao himself cautions such checks "fall well short of ... proper human peer review for novelty, interest, and accuracy." Notably, Tao's own Lean formalization was "essentially all written by Claude Opus 5," with no independent human review of that Lean source. On credit: mathematician Karim Adiprasito directly disputed the attribution in Tao's blog comments — "I don't think his name can reasonably be attached as main author without transparency... nice that chatgpt found a proof, even nicer that Terry digested it" — and no one in the thread defended sole-authorship framing for Mazur. Mathematician Teng Zhang engaged constructively, extending the result to a majorization/spectral formulation, without disputing correctness. No journal peer review yet, and ProofAtlas's own site still shows an inconsistent, seemingly stale "planned, not complete" note on Lean verification. Moving to partially-confirmed: credible independent mechanical verification exists, but no peer review and an active, unresolved credit dispute.</li>
 <li class=todo>☐ <strong>+1 month</strong> (2026-09-16) —</li>
 <li class=todo>☐ <strong>+3 months</strong> (2026-11-16) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-02-16) —</li>
@@ -560,7 +482,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
   <h2>Linear A deciphered as an extinct Semitic language</h2>
   <p class="meta">filed 2026-06-26 <a href="https://aiclambake.com/clamtakes/linear-a/">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-07-03"><i class="dot"></i>1w</span><span class="tick done" title="2026-07-26"><i class="dot"></i>1mo</span><span class="tick future" title="2026-09-26"><i class="dot"></i>3mo</span><span class="tick future" title="2026-12-26"><i class="dot"></i>6mo</span><span class="tick future" title="2027-06-26"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Tom Di Mino, a self-taught AI engineer and amateur linguist in the Hudson Valley, claims to have deciphered <strong>Linear A</strong> — the Bronze Age Minoan script undeciphered for over a century. He proposes it maps to an <strong>extinct Semitic language</strong> predating Biblical Hebrew, Arabic, and Aramaic.</p>
 <p>Specifics:</p>
@@ -593,12 +515,12 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Statistical physics (jamming / complex systems)</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>Claude produced the core proof of a decade-old jamming critical-exponent identity (a + b = 1)</h2>
   <p class="meta">filed 2026-07-06 <a href="https://www.eurekalert.org/news-releases/1133306">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-07-13"><i class="dot"></i>1w</span><span class="tick done" title="2026-08-06"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-06"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-06"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-06"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
 <p>Giorgio Parisi (Nobel laureate) and Francesco Zamponi, both at La Sapienza University of Rome, report that <strong>Claude</strong> generated the essentially correct core idea for proving a conjecture the two of them first observed in 2014: that two critical exponents (<strong>a</strong> and <strong>b</strong>) in their mean-field model of <strong>jamming</strong> — the transition where a fluid-like system of particles abruptly becomes rigid — always sum to one, an identity that had gone unproven for over a decade.</p>
 <p>Specifics:</p>
@@ -630,33 +552,33 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
     <span class="tag">Mathematics / algebraic geometry</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>Claude Fable 5 generated an explicit degree-7 polynomial counterexample to the 1939 Jacobian conjecture</h2>
   <p class="meta">filed 2026-07-23 <a href="https://x.com/__alpoge__/status/2079028340955197566">source →</a></p>
   <div class="ticker"><span class="tick done" title="2026-07-30"><i class="dot"></i>1w</span><span class="tick done" title="2026-08-23"><i class="dot"></i>1mo</span><span class="tick future" title="2026-10-23"><i class="dot"></i>3mo</span><span class="tick future" title="2027-01-23"><i class="dot"></i>6mo</span><span class="tick future" title="2027-07-23"><i class="dot"></i>1y</span></div>
-
+  
   <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Levent Alpöge, a mathematician at Anthropic, announced on X on 20 July 2026 that the <strong>Jacobian conjecture</strong> — posed by Ott-Heinrich Keller in 1939, one of algebraic geometry's oldest open problems — is **false in dimension 3 and above<strong>. He credits </strong>Claude Fable 5** with generating the counterexample while he was "working during the World Cup final."</p>
+<p>Levent Alpöge, a mathematician at Anthropic, announced on X on 20 July 2026 that the <strong>Jacobian conjecture</strong> — posed by Ott-Heinrich Keller in 1939, one of algebraic geometry's oldest open problems — is <strong>false in dimension 3 and above</strong>. He credits <strong>Claude Fable 5</strong> with generating the counterexample while he was "working during the World Cup final."</p>
 <p>Specifics:</p>
 <ul>
-<li>The counterexample is an explicit degree-7 polynomial map F = (P, Q, R): ℂ³ → ℂ³ with **constant nonzero Jacobian determinant (det J_F ≡ −2)<strong> — the conjecture's hypothesis — but </strong>no polynomial inverse**: three distinct points, (0, 0, −1/4), (1, −3/2, 13/2), and (−1, 3/2, 13/2), all map to the same output (−1/4, 0, 0), so F is not even injective.</li>
+<li>The counterexample is an explicit degree-7 polynomial map F = (P, Q, R): ℂ³ → ℂ³ with <strong>constant nonzero Jacobian determinant (det J_F ≡ −2)</strong> — the conjecture's hypothesis — but <strong>no polynomial inverse</strong>: three distinct points, (0, 0, −1/4), (1, −3/2, 13/2), and (−1, 3/2, 13/2), all map to the same output (−1/4, 0, 0), so F is not even injective.</li>
 <li>The map is short enough (216 characters) to state in a single social-media post, and the determinant is <strong>independently hand-checkable</strong> — Alpöge included Wolfram Alpha links, and multiple outside users report verifying the arithmetic themselves within hours.</li>
 <li><strong>No prompt transcript, model log, or research notebook has been released</strong>, so the end-to-end discovery process (how much search, how many failed attempts, how it was guided) cannot yet be independently audited. Researchers reportedly expected a counterexample, if any, to require degree up to ~200; Fable found one at degree 7.</li>
-<li>Fields Medalist <strong>Terence Tao</strong> wrote a same-week ["digestion" blog post](https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/) giving a geometric interpretation of *why* the construction works — he treats the counterexample as established ("It was recently shown (using the Fable AI) that the conjecture is false in three dimensions") and notes the construction "appears like a massive miracle... highly unlikely to be located by brute force." His own AI disclosure is narrow: "I used an AI chatbot to discuss various aspects of this problem and to confirm several of the calculations made here" — i.e. Tao used AI to check the *write-up*, not to validate Alpöge/Fable's original discovery process.</li>
+<li>Fields Medalist <strong>Terence Tao</strong> wrote a same-week <a href="https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/">"digestion" blog post</a> giving a geometric interpretation of <em>why</em> the construction works — he treats the counterexample as established ("It was recently shown (using the Fable AI) that the conjecture is false in three dimensions") and notes the construction "appears like a massive miracle... highly unlikely to be located by brute force." His own AI disclosure is narrow: "I used an AI chatbot to discuss various aspects of this problem and to confirm several of the calculations made here" — i.e. Tao used AI to check the <em>write-up</em>, not to validate Alpöge/Fable's original discovery process.</li>
 </ul>
 <p>Reported via <a href="https://x.com/__alpoge__/status/2079028340955197566">Alpöge's X thread</a>, <a href="https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/">Terence Tao's blog</a>, <a href="https://forklog.com/en/anthropics-claude-fable-5-finds-counterexample-to-1939-jacobian-conjecture/">ForkLog</a>, and <a href="https://theconversation.com/hello-there-the-jacobian-conjecture-is-false-thanx-why-a-tiny-social-media-post-has-mathematicians-rethinking-ai-283883">The Conversation</a>, July 2026.</p>
 <h3>Why it needs watching</h3>
 <ul>
-<li><strong>Not the outsider profile</strong> — Alpöge is a professional mathematician at the AI lab whose model he's crediting, so there's an obvious incentive to narrate this as "AI did it." The arithmetic (determinant ≡ −2, the three-way collision) is trivially checkable and looks solid; the open question is narrower and about *provenance*: how much of the actual search/discovery was Fable's versus Alpöge's own guidance, since no transcript has been published.</li>
+<li><strong>Not the outsider profile</strong> — Alpöge is a professional mathematician at the AI lab whose model he's crediting, so there's an obvious incentive to narrate this as "AI did it." The arithmetic (determinant ≡ −2, the three-way collision) is trivially checkable and looks solid; the open question is narrower and about <em>provenance</em>: how much of the actual search/discovery was Fable's versus Alpöge's own guidance, since no transcript has been published.</li>
 <li><strong>The result itself is not yet formally verified end-to-end.</strong> What's been checked so far is the arithmetic of one explicit example, not a full peer-reviewed proof that this map is a valid counterexample under every reading of the conjecture, nor any formalization in Lean/Coq. Contrast with the Fable-5 QAOA proof (mechanically checked in Lean) — here nothing has been machine-verified yet.</li>
-<li>Tao's involvement is a strong positive signal for the *mathematics*, but his own disclosure shows he used AI only to check his write-up, not to independently reproduce the discovery — worth not overstating.</li>
+<li>Tao's involvement is a strong positive signal for the <em>mathematics</em>, but his own disclosure shows he used AI only to check his write-up, not to independently reproduce the discovery — worth not overstating.</li>
 <li>Track: does a named domain expert (algebraic geometer) formally confirm the counterexample resolves the conjecture as stated (vs. a degenerate reading of it)? Does Anthropic or Alpöge release the actual transcript/log? Does any specialist push back on the construction or on the "AI found it" framing?</li>
 </ul>
 <h3>Review log</h3>
 <ul class=log>
-<li class=done>☑ <strong>+1 week</strong> (2026-07-30) — The core arithmetic is now widely reproduced and effectively settled: multiple mathematicians independently re-verified the determinant (≡ −2) and the three-point collision using SymPy, Sage, and Wolfram, and a <a href="https://sbseminar.wordpress.com/2026/07/20/the-new-counterexample-to-the-jacobian-conjecture/">Secret Blogging Seminar</a> thread reports "two separately implemented exact verifiers agree, including the nilpotence certificate." Working mathematicians (Will Sawin, Jared Duker Lichtman) have gone further, giving a conceptual/geometric reformulation and building extensions to related conjectures (Dixmier, Hessian, vanishing) rather than pushing back — see <a href="https://x.com/jdlichtman/status/2079066717762863249">Lichtman's thread</a>. This is a strong positive signal that dimension ≥3 is settled, though the central two-variable case remains open. What is still *not* resolved: no formal journal peer review yet, and per <a href="https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/">kingy.ai's rundown</a>, "the full prompt history, model version and human workflow have not been released" — so the AI-provenance question (autonomous discovery vs. heavy human steering by Alpöge/Mathew) still cannot be independently audited. A "verification preprint" exists (referenced by <a href="https://www.explainx.ai/blog/fable-5-jacobian-conjecture-counterexample-alpoge-july-2026">explainx.ai</a>) but no arXiv listing was found. Moving to partially-confirmed: the math looks settled, the AI-origin story does not yet have independent verification.</li>
-<li class=done>☑ <strong>+1 month</strong> (2026-08-23) — The mathematics has solidified further: <a href="https://arxiv.org/abs/2608.00222">Shuhong Gao's arXiv preprint</a> generalizes Alpöge's dimension-3 example into explicit constructions for dimensions 3–5 and a general recipe for all dimensions >2, and states plainly the conjecture "was refuted in dimension three" — treating it as settled math, credited to Alpöge, with no mention of AI involvement at all. David Speyer independently supplied the geometric ("tangent-sweep") mechanism behind the construction. No pushback on the arithmetic or the resolution has surfaced. But the AI-provenance question — the actual open item on this tracker — remains completely stalled: over a month later, no prompt transcript, model log, or notebook has been released by Alpöge or Anthropic, and Gao's own follow-up paper conspicuously treats the result as ordinary human mathematics rather than an AI discovery, per <a href="https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/">kingy.ai's analysis</a> and <a href="https://www.sciencedaily.com/releases/2026/08/260804034634.htm">ScienceDaily</a>. Holding at partially-confirmed: the math is essentially confirmed, but "Fable 5 found this largely autonomously" is still an unverifiable, unaudited claim.</li>
+<li class=done>☑ <strong>+1 week</strong> (2026-07-30) — The core arithmetic is now widely reproduced and effectively settled: multiple mathematicians independently re-verified the determinant (≡ −2) and the three-point collision using SymPy, Sage, and Wolfram, and a <a href="https://sbseminar.wordpress.com/2026/07/20/the-new-counterexample-to-the-jacobian-conjecture/">Secret Blogging Seminar</a> thread reports "two separately implemented exact verifiers agree, including the nilpotence certificate." Working mathematicians (Will Sawin, Jared Duker Lichtman) have gone further, giving a conceptual/geometric reformulation and building extensions to related conjectures (Dixmier, Hessian, vanishing) rather than pushing back — see <a href="https://x.com/jdlichtman/status/2079066717762863249">Lichtman's thread</a>. This is a strong positive signal that dimension ≥3 is settled, though the central two-variable case remains open. What is still <em>not</em> resolved: no formal journal peer review yet, and per <a href="https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/">kingy.ai's rundown</a>, "the full prompt history, model version and human workflow have not been released" — so the AI-provenance question (autonomous discovery vs. heavy human steering by Alpöge/Mathew) still cannot be independently audited. A "verification preprint" exists (referenced by <a href="https://www.explainx.ai/blog/fable-5-jacobian-conjecture-counterexample-alpoge-july-2026">explainx.ai</a>) but no arXiv listing was found. Moving to partially-confirmed: the math looks settled, the AI-origin story does not yet have independent verification.</li>
+<li class=done>☑ <strong>+1 month</strong> (2026-08-23) — The mathematics has solidified further: <a href="https://arxiv.org/abs/2608.00222">Shuhong Gao's arXiv preprint</a> generalizes Alpöge's dimension-3 example into explicit constructions for dimensions 3–5 and a general recipe for all dimensions &gt;2, and states plainly the conjecture "was refuted in dimension three" — treating it as settled math, credited to Alpöge, with no mention of AI involvement at all. David Speyer independently supplied the geometric ("tangent-sweep") mechanism behind the construction. No pushback on the arithmetic or the resolution has surfaced. But the AI-provenance question — the actual open item on this tracker — remains completely stalled: over a month later, no prompt transcript, model log, or notebook has been released by Alpöge or Anthropic, and Gao's own follow-up paper conspicuously treats the result as ordinary human mathematics rather than an AI discovery, per <a href="https://kingy.ai/blog/claude-fable-jacobian-conjecture-counterexample/">kingy.ai's analysis</a> and <a href="https://www.sciencedaily.com/releases/2026/08/260804034634.htm">ScienceDaily</a>. Holding at partially-confirmed: the math is essentially confirmed, but "Fable 5 found this largely autonomously" is still an unverifiable, unaudited claim.</li>
 <li class=todo>☐ <strong>+3 months</strong> (2026-10-23) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-01-23) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-23) —</li>
@@ -669,7 +591,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
     <span class="stamp s-confirmed">confirmed</span>
     <span class="tag">Mathematics / graph theory</span>
     <span class="tag insider">insider</span>
-
+    
   </header>
   <h2>GPT-5.6 Sol Ultra produced a complete proof of the Cycle Double Cover Conjecture</h2>
   <p class="meta">filed 2026-07-13 <a href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf">source →</a></p>
@@ -700,7 +622,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-13) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-08-22 02:34 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-08-24 08:24 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];
