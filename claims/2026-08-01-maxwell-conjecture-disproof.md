@@ -1,5 +1,5 @@
 ---
-claim: GPT-5.6 Sol suggested the geometric construction disproving Maxwell's 150-year-old conjecture on electrostatic critical points
+claim: Mathematicians at Babson, Missouri, and UMBC disproved Maxwell's 150-year-old conjecture on electrostatic critical points with GPT-5.6 Sol
 source: https://arxiv.org/abs/2607.27197
 field: Mathematical physics / electrostatics
 outsider: false

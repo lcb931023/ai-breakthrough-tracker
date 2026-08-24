@@ -1,5 +1,5 @@
 ---
-claim: An unreleased Anthropic research build of Claude generated the proof strategy raising the known lower bound on Riemann zeta zeros that are simple and on the critical line from 41.6% to 67.2%
+claim: Jarred Sumner, a non-mathematician at Anthropic, raised the known lower bound on Riemann zeta zeros that are simple and on the critical line from 41.6% to 67.2% with an unreleased research build of Claude
 source: https://www.anthropic.com/research/riemann-zeta
 field: Mathematics / analytic number theory
 outsider: false

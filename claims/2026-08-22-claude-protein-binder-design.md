@@ -1,5 +1,5 @@
 ---
-claim: Anthropic reports Claude autonomously ran de novo protein-binder design campaigns against 15 targets, producing 354 wet-lab-confirmed binders out of 1,320 designs (22.6-35.1% hit rate) as measured by Adaptyv Bio and Twist Bioscience
+claim: Anthropic produced 354 wet-lab-confirmed de novo protein binders out of 1,320 designs across 15 targets with Claude (Opus 4.8 and an unreleased Mythos Preview build)
 source: https://www.anthropic.com/research/Claude-accelerates-protein-design
 field: Biology / protein engineering
 outsider: false

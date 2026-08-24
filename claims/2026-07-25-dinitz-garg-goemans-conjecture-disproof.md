@@ -1,5 +1,5 @@
 ---
-claim: GPT-5.6 Pro produced a counterexample disproving Goemans' cost conjecture on unsplittable flow (the Dinitz–Garg–Goemans conjecture)
+claim: Dmitry Rybin, an ML PhD and math-olympiad medalist, disproved Goemans' cost conjecture on unsplittable flow (the Dinitz–Garg–Goemans conjecture) with GPT-5.6 Pro
 source: https://x.com/DmitryRybin1/status/2079904005652893709
 field: Mathematics / graph theory & combinatorial optimization (network flows)
 outsider: false

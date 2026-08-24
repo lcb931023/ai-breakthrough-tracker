@@ -1,5 +1,5 @@
 ---
-claim: A neurosurgery resident with no formal math training used GPT-5.6 Sol's 16-hour autonomous run to produce a proof of the 22-year-old Crouzeix's Conjecture
+claim: Shanmu Jin, a neurosurgery resident with no formal math training, produced a proof of the 22-year-old Crouzeix's Conjecture with GPT-5.6 Sol
 source: https://www.scmp.com/tech/tech-trends/article/3363966/chinese-doctor-stuns-maths-world-cracking-decades-old-problem-using-chatgpt
 field: Mathematics / numerical linear algebra (matrix analysis)
 outsider: true

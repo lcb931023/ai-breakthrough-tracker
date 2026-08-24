@@ -1,5 +1,5 @@
 ---
-claim: Linear A deciphered as an extinct Semitic language
+claim: Tom Di Mino, a self-taught AI engineer and amateur linguist, deciphered Linear A as an extinct Semitic language with Claude Code
 source: https://aiclambake.com/clamtakes/linear-a/
 field: Linguistics / epigraphy (ancient script decipherment)
 outsider: true

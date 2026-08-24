@@ -72,14 +72,39 @@ the claimed result, it does not belong here, no matter how impressive.
    appears in `proposed.md`. Only surface genuinely new items.
 
 6. For each new candidate, append a row to `proposed.md` under today's date:
-   `- [YYYY-MM-DD] <one-line claim> — <field> — <source url>`. Make the AI engine
-   explicit in the one-line claim (name the model/tool and what it did). This
-   ledger is how you avoid re-proposing the same thing tomorrow. Do not create
-   files in `claims/`; the human decides what gets logged.
+   `- [YYYY-MM-DD] <one-line claim> — <field> — <source url>`. The one-line claim
+   follows the **claim sentence structure** below, so it can be lifted straight
+   into a claim file's `claim:` field; append caveats after it (`— not yet
+   peer-reviewed`) rather than reordering the sentence. This ledger is how you
+   avoid re-proposing the same thing tomorrow. Do not create files in `claims/`;
+   the human decides what gets logged.
 
 7. Keep it tight: at most ~5 candidates per day, and **quality over quota** — if
    nothing genuinely AI-powered surfaced today, propose nothing rather than
    filling the slots with general science news. When unsure, leave it out.
+
+## Claim sentence structure
+
+Every claim title — the `claim:` frontmatter line of a file in `claims/`, and
+every one-line claim you write in `proposed.md` — is one sentence reading
+**`<who> <did what> with <which AI / AI system>`**, in that order:
+
+- **who** — the person, team, or organization behind the result, with a short
+  identifying appositive when that's the interesting part (`Shanmu Jin, a
+  neurosurgery resident with no formal math training,`). Name people when the
+  source names them; make the AI agent itself the subject only when it acted on
+  its own initiative.
+- **did what** — the concrete, checkable result (`raised the known lower bound
+  … from 41.6% to 67.2%`), never `made a breakthrough`.
+- **with which AI** — ends the sentence, naming the model or tool as precisely
+  as the source allows (`with GPT-5.6 Sol`, `with an unreleased research build
+  of Claude`). This is also how the AI-engine test shows up in the title: if you
+  can't finish the sentence, the candidate doesn't belong here.
+
+Example: *Shanmu Jin, a neurosurgery resident with no formal math training,
+produced a proof of the 22-year-old Crouzeix's Conjecture with GPT-5.6 Sol.*
+
+Keep it to one line — the frontmatter parser reads single-line values only.
 
 ## C. Rebuild, commit, push
 If anything changed (reviewed claims and/or new `proposed.md` entries):

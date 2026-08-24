@@ -1,5 +1,5 @@
 ---
-claim: GPT-5.6 Sol Ultra produced a complete proof of the Cycle Double Cover Conjecture
+claim: OpenAI produced a complete proof of the Cycle Double Cover Conjecture with GPT-5.6 Sol Ultra
 source: https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf
 field: Mathematics / graph theory
 outsider: false

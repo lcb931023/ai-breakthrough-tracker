@@ -49,7 +49,7 @@ frontmatter:
 
 | key | meaning |
 |-----|---------|
-| `claim` | one-line description |
+| `claim` | one-line description, always **who did what with which AI** (see below) |
 | `source` | link to paper / preprint / announcement |
 | `field` | the discipline whose community will judge it |
 | `outsider` | `true` if authors are outside that field's mainstream |
@@ -59,3 +59,22 @@ frontmatter:
 | `verdict` | filled in once settled |
 
 Then run `python3 build.py` (the agent does this automatically).
+
+### Claim sentence structure
+Every `claim` line — the title shown on the site — reads
+**`<who> <did what> with <which AI / AI system>`**, one sentence, in that order:
+
+- **who** — the person, team, or organization behind the result, with a short
+  identifying appositive when it's the interesting part (`Shanmu Jin, a
+  neurosurgery resident with no formal math training,`). Name people when the
+  source names them; use the agent itself as the subject only when it acted on
+  its own initiative.
+- **did what** — the concrete result, specific enough to be checkable
+  (`raised the known lower bound … from 41.6% to 67.2%`), not `made a
+  breakthrough`.
+- **with which AI** — ends the sentence, naming the model or tool as precisely
+  as the source allows (`with GPT-5.6 Sol`, `with an unreleased research build
+  of Claude`).
+
+Example: *Shanmu Jin, a neurosurgery resident with no formal math training,
+produced a proof of the 22-year-old Crouzeix's Conjecture with GPT-5.6 Sol.*

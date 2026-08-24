@@ -1,5 +1,5 @@
 ---
-claim: An amateur physicist used GPT Sol Ultra to both select and disprove an open conjecture on the critical behavior of multi-matrix models
+claim: A Cambridge-trained amateur physicist selected and disproved an open conjecture on the critical behavior of multi-matrix models with GPT Sol Ultra
 source: https://chillphysicsenjoyer.substack.com/p/i-possibly-resolved-a-conjecture
 field: Mathematical / theoretical physics (random matrix theory)
 outsider: true

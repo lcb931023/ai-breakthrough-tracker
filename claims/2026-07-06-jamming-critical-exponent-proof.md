@@ -1,5 +1,5 @@
 ---
-claim: Claude produced the core proof of a decade-old jamming critical-exponent identity (a + b = 1)
+claim: Giorgio Parisi and Francesco Zamponi proved a decade-old jamming critical-exponent identity (a + b = 1) with Claude
 source: https://www.eurekalert.org/news-releases/1133306
 field: Statistical physics (jamming / complex systems)
 outsider: false

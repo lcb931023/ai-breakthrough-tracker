@@ -1,5 +1,5 @@
 ---
-claim: GPT-5.6 Pro, directed by Lech Mazur, generated a proof of Sendov's Conjecture and the Phelps–Rodriguez conjecture, independently reformalized in Lean by Terence Tao
+claim: Lech Mazur, an LLM-benchmark author with no formal math training, generated proofs of Sendov's Conjecture and the Phelps–Rodriguez conjecture with GPT-5.6 Pro
 source: https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/
 field: Mathematics / complex analysis
 outsider: true

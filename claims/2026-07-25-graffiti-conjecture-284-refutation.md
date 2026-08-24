@@ -1,5 +1,5 @@
 ---
-claim: Grok 4.5, running as the autonomous "Capy" agent, found a counterexample refuting Graffiti Conjecture 284
+claim: Capy, a YC-backed autonomous coding agent, found a counterexample refuting Graffiti Conjecture 284 with Grok 4.5
 source: https://x.com/justinsunyt/status/2080116559352316409
 field: Mathematics / graph theory (spectral graph theory)
 outsider: true

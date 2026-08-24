@@ -1,5 +1,5 @@
 ---
-claim: Claude Fable 5 generated an explicit degree-7 polynomial counterexample to the 1939 Jacobian conjecture
+claim: Levent Alpöge, a mathematician at Anthropic, produced an explicit degree-7 polynomial counterexample to the 1939 Jacobian conjecture with Claude Fable 5
 source: https://x.com/__alpoge__/status/2079028340955197566
 field: Mathematics / algebraic geometry
 outsider: false
