@@ -5,7 +5,7 @@ field: Mathematics / graph theory (spectral graph theory)
 outsider: true
 added: 2026-07-25
 status: partially-confirmed
-next_review: 2026-08-25
+next_review: 2026-10-25
 verdict:
 ---
 ## The claim
@@ -63,7 +63,7 @@ July 2026.
 
 ## Review log
 - [x] **+1 week** (2026-08-01) — The significant development is an independent, human-authored preprint: [Samuil Petkov (ENS Paris), "Counterexamples, Spectral Obstructions, and Deletion Stability for WOW-284," arXiv:2607.27452](https://arxiv.org/abs/2607.27452) (29 July 2026), which derives counterexamples to Graffiti/WOW-284 at orders 38, 39, 40, 42, and 50, confirms the Hoffman–Singleton graph is a genuine violation (dual-degree gap of 3), and backs the arithmetic with Lean 4 kernel-checked proofs. It never mentions Capy or Grok, suggesting parallel human verification rather than reliance on the AI transcript. Checking the classic exhaustive-search paper, [Brewster, Dinneen & Faber, "A computational attack on the conjectures of Graffiti" (1995)](https://www.cs.auckland.ac.nz/~mjd/graffiti/graffiti1.pdf), it only tested graphs of ≤10 vertices, so the 50-vertex Hoffman–Singleton counterexample was genuinely new, not previously known. No named senior spectral/algebraic graph theorist has publicly commented by name, and no retraction has appeared from Capy/Justin Sun/Nalin Semwal. Coverage of this claim is frequently conflated in outlets with an unrelated same-week wave of "AI refutes old Graffiti conjecture" stories, a sign reporting is derivative rather than independently fact-checked. Status moved to partially-confirmed: mathematically corroborated by an independent, formally-verified (Lean) human preprint, but still only a preprint with no peer review or named-authority endorsement.
-- [ ] **+1 month** (2026-08-25) —
+- [x] **+1 month** (2026-08-25) — Samuil Petkov's preprint ([arXiv:2607.27452](https://arxiv.org/abs/2607.27452)) remains at v1 with no revision, and its own [repro-package README](https://github.com/SamPetkov/wow284) explicitly states "reproducible checks are not peer review or journal acceptance" — Petkov himself isn't claiming this is settled. No named senior spectral/algebraic graph theorist (searches covered figures like Cioabă and Haemers) has publicly weighed in on Hoffman–Singleton vs. WOW-284 either way; the one on-record named reaction, Christian Szegedy's dismissive "pre-AI slop" tweet, predates this review window. No corrections or retractions from Capy, Justin Sun, or Nalin Semwal. No citations of the preprint found. Coverage since remains recycled tech-press repeating the same late-July facts, consistently noting the result hasn't been evaluated by the mathematical community. Status held at partially-confirmed: an independent, Lean-checked human preprint stands unretracted, but nothing has moved it toward expert/institutional confirmation.
 - [ ] **+3 months** (2026-10-25) —
 - [ ] **+6 months** (2027-01-25) —
 - [ ] **+1 year** (2027-07-25) —

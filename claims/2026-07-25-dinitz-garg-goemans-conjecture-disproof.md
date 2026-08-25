@@ -5,7 +5,7 @@ field: Mathematics / graph theory & combinatorial optimization (network flows)
 outsider: false
 added: 2026-07-25
 status: partially-confirmed
-next_review: 2026-08-25
+next_review: 2026-10-25
 verdict:
 ---
 ## The claim
@@ -65,7 +65,7 @@ and others, July 2026.
 
 ## Review log
 - [x] **+1 week** (2026-08-01) — No named academic specialist in unsplittable-flow/approximation algorithms has weighed in, and no arXiv preprint or formal writeup from Rybin has appeared, but the claim has spread widely (Hacker News front page, r/singularity) without a retraction. The most substantive independent check is crowd-level rather than institutional: X user [Hensen Juang](https://x.com/basedjensen/status/2080020575968543230) generalized Rybin's 7-node graph into an infinite 3-parameter family reproducing the same cost gap, implying the arithmetic holds up to at least one independent reviewer. Tracker site [VibeMathed](https://vibemathed.com/problem/dinitz-garg-goemans-unsplittable-flow) labels it "Announced (unreviewed)" and references a separately-found "restricted counterexample: planar, four terminals" attributed to someone named Protti, though details are thin. One useful clarification circulating: this only threatens Goemans' cost-augmented conjecture — the original 1999 Dinitz–Garg–Goemans congestion-only theorem is untouched, and some coverage has conflated the two. Status moved to partially-confirmed: independent arithmetic checks exist, but no domain-expert or peer review yet.
-- [ ] **+1 month** (2026-08-25) —
+- [x] **+1 month** (2026-08-25) — Still no arXiv preprint or formal writeup from Rybin, and no named specialist in unsplittable-flow/approximation algorithms (e.g. Goemans, Traub, Zenklusen, Swamy) has publicly commented in either direction; a search for citing work found only a pre-existing, unrelated 2025 paper on Goemans' conjecture by Swamy, Traub, Vargas Koch & Zenklusen ([arXiv:2510.21287](https://arxiv.org/abs/2510.21287)) that predates and doesn't reference this claim. The one new item is another crowd-level, non-institutional check: independent researcher Felipe Santibañez-Leal posted an exact-rational-arithmetic re-verification of the instance to [Zenodo](https://zenodo.org/records/21554259) (25 Jul 2026), explicitly framed as a replication note rather than a priority claim. A low-credibility content-farm blog post claiming a "formal falsification" was found but disregarded — it pairs the claim with unrelated spam content and cites nothing new. [VibeMathed](https://vibemathed.com/problem/dinitz-garg-goemans-unsplittable-flow) still lists it as "Disproved (2026-07-22)" but "Unreviewed." Status held at partially-confirmed: incremental crowd-level corroboration, no qualitative movement toward expert/institutional confirmation, no debunking either.
 - [ ] **+3 months** (2026-10-25) —
 - [ ] **+6 months** (2027-01-25) —
 - [ ] **+1 year** (2027-07-25) —
