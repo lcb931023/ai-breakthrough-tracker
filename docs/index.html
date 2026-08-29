@@ -156,46 +156,6 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </div>
 <p class="empty" id="empty" hidden>No claims match these filters.</p>
 <article class="entry "
-  data-discipline="Biology"
-  data-outsider="false" data-bucket="partially-confirmed">
-  <header>
-    <span class="stamp s-partially-confirmed">partially-confirmed</span>
-    <span class="tag">Biology / protein engineering</span>
-    <span class="tag insider">insider</span>
-    
-  </header>
-  <h2>Anthropic produced 354 wet-lab-confirmed de novo protein binders out of 1,320 designs across 15 targets with Claude (Opus 4.8 and an unreleased Mythos Preview build)</h2>
-  <p class="meta">filed 2026-08-22 <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">source →</a></p>
-  <div class="ticker"><span class="tick future" title="2026-08-29"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-22"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-22"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-22"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-22"><i class="dot"></i>1y</span></div>
-  
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Anthropic reports that <strong>Claude</strong> — <strong>Opus 4.8</strong> and an unreleased <strong>Mythos Preview</strong> build — autonomously ran de novo protein <strong>minibinder</strong> design campaigns against <strong>15 clinically relevant targets</strong> (PD-L1, TREM2, TNFα, EGFR, 15-PGDH, RBX1 and others), with no human input on individual designs during a run. Of <strong>1,320 designs</strong>, <strong>354 were confirmed to bind</strong>, hitting <strong>14 of 15 targets</strong>.</p>
-<p>Specifics:</p>
-<ul>
-<li>Claude was given a ~16,000-word protocol prompt, up to <strong>12,500 H100 GPU-hours</strong>, and access to existing open-source tools (<strong>RFdiffusion</strong>, <strong>ProteinMPNN</strong>, <strong>ESMFold2</strong> and others). Claude chose binding sites, composed ~24 distinct tool workflows, ran optimization cycles, and ranked candidates — the model is the <strong>orchestrator</strong>, not the source of the underlying structure-prediction models (which come from the Baker lab, Columbia, MIT, ByteDance).</li>
-<li>Hit rates: <strong>Mythos Preview 26.7%</strong> and <strong>Opus 4.8 22.6%</strong> in 48-hour multi-target mode; <strong>Mythos Preview 35.1%</strong> in 24-hour single-target mode. Anthropic cites <strong>10–15%</strong> as a typical industry campaign hit rate.</li>
-<li><strong>Adaptyv Bio</strong> and <strong>Twist Bioscience</strong> independently expressed and tested the designs. Adaptyv published <a href="https://www.adaptyvbio.com/blog/anthropic-1">its own case study</a> reporting a 95% expression rate, binding measured by <strong>SPR at 5 target concentrations in duplicate</strong>, and overall <strong>354/1,320 = 26.8%</strong>. Adaptyv says Claude beat its own prior public design competitions on the same targets (TREM2: <strong>80%</strong> vs <strong>38.3%</strong>; RBX1 single-target: <strong>40%</strong> vs <strong>3.7%</strong> across 245 competition entrants) and improved best affinity on 15-PGDH from <strong>1.7 μM to 33.4 nM</strong>. Its conclusion: Claude "seems to have matched or even surpassed expert protein designers" at orchestrating design tools.</li>
-<li>Prompts, computational models, and experimental data were released on HuggingFace.</li>
-</ul>
-<p>Published as an <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">Anthropic research post</a> on 18 August 2026, with two linked technical reports. Not a peer-reviewed paper.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Vendor self-report, not an outsider claim.</strong> Anthropic is reporting on its own models, and Adaptyv/Twist are paid service providers — independent in <em>execution</em> (they ran the assays and published concurring numbers) but not disinterested parties. Same pattern as the Riemann zeta critical-line claim logged 2026-08-11, in wet-lab form. Logged despite this tracker's outsider preference because the physical measurement is genuinely third-party and falsifiable.</li>
-<li><strong>The comparative claim is the soft part.</strong> "22–35% vs a 10–15% industry baseline" is the headline, but that baseline is a rule of thumb, not a matched control. Target choice, binding-site difficulty, assay stringency, and what counts as a "hit" all move the number. The Adaptyv competition comparisons (TREM2, RBX1) are the tightest evidence, since the same lab ran the same assay on the same target.</li>
-<li><strong>Binders are not drugs, and affinity matters.</strong> Anthropic says so itself. Former pharma executive <strong>Martin Shkreli</strong> called the work "not impressive," citing weak affinities and noting that no intracellular targets were attempted (<a href="https://www.techtimes.com/articles/325081/20260820/claude-runs-autonomous-protein-design-campaign-wet-lab-confirms-twice-industry-hit-rate.htm">TechTimes</a>). Anthropic also flags that "more extensive characterization to confirm our hit rates and affinity measurements" is still pending — the reported numbers are explicitly provisional.</li>
-<li><strong>Known failures are in the report.</strong> MBP produced <strong>0 binders from 90 designs</strong>; the synthetic beta-barrel BBF-14 also went badly; GDF-8 (mature) was dropped for target aggregation. Anthropic admits it cannot explain why Opus 4.8 succeeded where Mythos Preview failed on one target.</li>
-<li>Track: does an unaffiliated lab reproduce a campaign from the released prompts? Does the promised fuller characterization hold the hit rates and affinities? Do protein-design specialists (Baker lab and peers) publish an assessment, and does the "matched or surpassed experts" framing survive it? Does any of this reach a preprint or journal?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=todo>☐ <strong>+1 week</strong> (2026-08-29) —</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-09-22) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-11-22) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-02-22) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-08-22) —</li>
-</ul></details>
-</article>
-<article class="entry "
   data-discipline="Physics"
   data-outsider="false" data-bucket="unverified">
   <header>
@@ -388,6 +348,46 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+3 months</strong> (2026-11-16) —</li>
 <li class=todo>☐ <strong>+6 months</strong> (2027-02-16) —</li>
 <li class=todo>☐ <strong>+1 year</strong> (2027-08-16) —</li>
+</ul></details>
+</article>
+<article class="entry "
+  data-discipline="Biology"
+  data-outsider="false" data-bucket="partially-confirmed">
+  <header>
+    <span class="stamp s-partially-confirmed">partially-confirmed</span>
+    <span class="tag">Biology / protein engineering</span>
+    <span class="tag insider">insider</span>
+    
+  </header>
+  <h2>Anthropic produced 354 wet-lab-confirmed de novo protein binders out of 1,320 designs across 15 targets with Claude (Opus 4.8 and an unreleased Mythos Preview build)</h2>
+  <p class="meta">filed 2026-08-22 <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">source →</a></p>
+  <div class="ticker"><span class="tick done" title="2026-08-29"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-22"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-22"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-22"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-22"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Anthropic reports that <strong>Claude</strong> — <strong>Opus 4.8</strong> and an unreleased <strong>Mythos Preview</strong> build — autonomously ran de novo protein <strong>minibinder</strong> design campaigns against <strong>15 clinically relevant targets</strong> (PD-L1, TREM2, TNFα, EGFR, 15-PGDH, RBX1 and others), with no human input on individual designs during a run. Of <strong>1,320 designs</strong>, <strong>354 were confirmed to bind</strong>, hitting <strong>14 of 15 targets</strong>.</p>
+<p>Specifics:</p>
+<ul>
+<li>Claude was given a ~16,000-word protocol prompt, up to <strong>12,500 H100 GPU-hours</strong>, and access to existing open-source tools (<strong>RFdiffusion</strong>, <strong>ProteinMPNN</strong>, <strong>ESMFold2</strong> and others). Claude chose binding sites, composed ~24 distinct tool workflows, ran optimization cycles, and ranked candidates — the model is the <strong>orchestrator</strong>, not the source of the underlying structure-prediction models (which come from the Baker lab, Columbia, MIT, ByteDance).</li>
+<li>Hit rates: <strong>Mythos Preview 26.7%</strong> and <strong>Opus 4.8 22.6%</strong> in 48-hour multi-target mode; <strong>Mythos Preview 35.1%</strong> in 24-hour single-target mode. Anthropic cites <strong>10–15%</strong> as a typical industry campaign hit rate.</li>
+<li><strong>Adaptyv Bio</strong> and <strong>Twist Bioscience</strong> independently expressed and tested the designs. Adaptyv published <a href="https://www.adaptyvbio.com/blog/anthropic-1">its own case study</a> reporting a 95% expression rate, binding measured by <strong>SPR at 5 target concentrations in duplicate</strong>, and overall <strong>354/1,320 = 26.8%</strong>. Adaptyv says Claude beat its own prior public design competitions on the same targets (TREM2: <strong>80%</strong> vs <strong>38.3%</strong>; RBX1 single-target: <strong>40%</strong> vs <strong>3.7%</strong> across 245 competition entrants) and improved best affinity on 15-PGDH from <strong>1.7 μM to 33.4 nM</strong>. Its conclusion: Claude "seems to have matched or even surpassed expert protein designers" at orchestrating design tools.</li>
+<li>Prompts, computational models, and experimental data were released on HuggingFace.</li>
+</ul>
+<p>Published as an <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">Anthropic research post</a> on 18 August 2026, with two linked technical reports. Not a peer-reviewed paper.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Vendor self-report, not an outsider claim.</strong> Anthropic is reporting on its own models, and Adaptyv/Twist are paid service providers — independent in <em>execution</em> (they ran the assays and published concurring numbers) but not disinterested parties. Same pattern as the Riemann zeta critical-line claim logged 2026-08-11, in wet-lab form. Logged despite this tracker's outsider preference because the physical measurement is genuinely third-party and falsifiable.</li>
+<li><strong>The comparative claim is the soft part.</strong> "22–35% vs a 10–15% industry baseline" is the headline, but that baseline is a rule of thumb, not a matched control. Target choice, binding-site difficulty, assay stringency, and what counts as a "hit" all move the number. The Adaptyv competition comparisons (TREM2, RBX1) are the tightest evidence, since the same lab ran the same assay on the same target.</li>
+<li><strong>Binders are not drugs, and affinity matters.</strong> Anthropic says so itself. Former pharma executive <strong>Martin Shkreli</strong> called the work "not impressive," citing weak affinities and noting that no intracellular targets were attempted (<a href="https://www.techtimes.com/articles/325081/20260820/claude-runs-autonomous-protein-design-campaign-wet-lab-confirms-twice-industry-hit-rate.htm">TechTimes</a>). Anthropic also flags that "more extensive characterization to confirm our hit rates and affinity measurements" is still pending — the reported numbers are explicitly provisional.</li>
+<li><strong>Known failures are in the report.</strong> MBP produced <strong>0 binders from 90 designs</strong>; the synthetic beta-barrel BBF-14 also went badly; GDF-8 (mature) was dropped for target aggregation. Anthropic admits it cannot explain why Opus 4.8 succeeded where Mythos Preview failed on one target.</li>
+<li>Track: does an unaffiliated lab reproduce a campaign from the released prompts? Does the promised fuller characterization hold the hit rates and affinities? Do protein-design specialists (Baker lab and peers) publish an assessment, and does the "matched or surpassed experts" framing survive it? Does any of this reach a preprint or journal?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=done>☑ <strong>+1 week</strong> (2026-08-29) — No independent lab has yet run its own full campaign from Anthropic's released prompts, and no protein-design specialists (Baker lab or peers) have published an assessment. Coverage since launch mostly restates the original release; the substantive independent pushback remains Martin Shkreli's (<a href="https://www.techtimes.com/articles/325081/20260820/claude-runs-autonomous-protein-design-campaign-wet-lab-confirms-twice-industry-hit-rate.htm">TechTimes</a>) point about low peptidic affinities and no intracellular targets. <a href="https://endpoints.news/analysis-what-anthropics-protein-study-says-about-its-life-sciences-aims/">Endpoints News</a> confirms the work has not been through outside peer review and frames it more as a signal of Anthropic's life-sciences ambitions than a settled scientific result. The paper's own stated limitations stand unaddressed: no human-expert control campaign, binding only (no structures, no functional data), and each model/target combination run just once. Status unchanged.</li>
+<li class=todo>☐ <strong>+1 month</strong> (2026-09-22) —</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-11-22) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-02-22) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-08-22) —</li>
 </ul></details>
 </article>
 <article class="entry "
@@ -622,7 +622,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-07-13) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-08-25 01:15 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-08-29 01:10 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];

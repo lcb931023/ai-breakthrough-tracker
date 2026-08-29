@@ -5,7 +5,7 @@ field: Biology / protein engineering
 outsider: false
 added: 2026-08-22
 status: partially-confirmed
-next_review: 2026-08-29
+next_review: 2026-09-22
 verdict:
 ---
 ## The claim
@@ -77,7 +77,7 @@ paper.
   Does any of this reach a preprint or journal?
 
 ## Review log
-- [ ] **+1 week** (2026-08-29) —
+- [x] **+1 week** (2026-08-29) — No independent lab has yet run its own full campaign from Anthropic's released prompts, and no protein-design specialists (Baker lab or peers) have published an assessment. Coverage since launch mostly restates the original release; the substantive independent pushback remains Martin Shkreli's ([TechTimes](https://www.techtimes.com/articles/325081/20260820/claude-runs-autonomous-protein-design-campaign-wet-lab-confirms-twice-industry-hit-rate.htm)) point about low peptidic affinities and no intracellular targets. [Endpoints News](https://endpoints.news/analysis-what-anthropics-protein-study-says-about-its-life-sciences-aims/) confirms the work has not been through outside peer review and frames it more as a signal of Anthropic's life-sciences ambitions than a settled scientific result. The paper's own stated limitations stand unaddressed: no human-expert control campaign, binding only (no structures, no functional data), and each model/target combination run just once. Status unchanged.
 - [ ] **+1 month** (2026-09-22) —
 - [ ] **+3 months** (2026-11-22) —
 - [ ] **+6 months** (2027-02-22) —
