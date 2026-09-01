@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-09-01
+next_review: 2026-11-01
 verdict:
 ---
 ## The claim
@@ -75,7 +75,24 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   substantive technical pushback found. No dispute of the GPT-5.6 Sol
   attribution has surfaced. In short: too early for real signal — status
   unchanged, re-check at the 1-month mark.
-- [ ] **+1 month** (2026-09-01) —
+- [x] **+1 month** (2026-09-01) — No change since the 1-week check. Still only
+  v1 on arXiv, no journal-ref, no withdrawal
+  ([arXiv:2607.27197](https://arxiv.org/abs/2607.27197)). No electrostatics
+  specialist (Gabrielov, Novikov, Shapiro, Edelsbrunner, Zolotov) has gone on
+  record checking the specific 24-critical-point construction; the
+  originators' own concurrent preprint,
+  [arXiv:2607.28785](https://arxiv.org/abs/2607.28785), sharpens a different
+  (three-charge) bound and still doesn't engage with this refutation. A
+  separate, unrelated Edelsbrunner–Fillmore–Oliveira paper on a different GNS
+  conjecture reached *Proc. London Math. Soc.* this month
+  ([doi:10.1112/plms.70163](https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms.70163))
+  but predates and does not address this counterexample. No new preprints
+  cite 2607.27197. The GPT-5.6 Sol attribution is undisputed in substance,
+  though the [Hacker News thread](https://news.ycombinator.com/item?id=49121868)
+  shows recurring grumbling that the paper's framing overstates the AI's role
+  relative to the authors' verification/write-up work. Overall reads as
+  ordinary slow peer review for a niche result, not suppressed controversy —
+  status unchanged, re-check at 3 months.
 - [ ] **+3 months** (2026-11-01) —
 - [ ] **+6 months** (2027-02-01) —
 - [ ] **+1 year** (2027-08-01) —
