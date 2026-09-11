@@ -4,9 +4,9 @@ source: https://www.anthropic.com/research/riemann-zeta
 field: Mathematics / analytic number theory
 outsider: false
 added: 2026-08-11
-status: partially-confirmed
+status: confirmed
 next_review: 2026-09-11
-verdict:
+verdict: Independently re-established via a different, cleaner method by analytic number theorist Youness Lamzouri (arXiv, Sept 2026), whose proof was itself Lean-formalized by AxiomProver — convergent evidence from a specialist outside Anthropic; the community treats the 67%+ bound as correct pending only formal journal publication.
 ---
 ## The claim
 Anthropic reports that an **unreleased research version of Claude**, prompted
@@ -85,7 +85,31 @@ and
   the *output* checked), and there's been no formal journal peer review —
   upgrading to `partially-confirmed` reflects the public, checkable proof
   plus credible outside math review, short of full field consensus.
-- [ ] **+1 month** (2026-09-11) —
+- [x] **+1 month** (2026-09-11) — The strongest independent signal yet: Youness
+  Lamzouri, an analytic number theorist who publishes on pair correlation of
+  zeta zeros (the exact subfield the 41.6%→67.2% bound comes from), posted his
+  own paper ["A new proof that more than 2/3 of the zeros of the Riemann zeta
+  function are simple and on the critical line"](https://arxiv.org/abs/2609.02882)
+  (arXiv, 2 Sep 2026, revised 8 Sep). Rather than just reviewing Claude's
+  argument, Lamzouri **independently reproved the same core bound (>67.25%)
+  using a different, simpler method** — a direct Hilbert-space inequality
+  combined with Montgomery's pair-correlation theorem, replacing Claude's
+  finite-matrix/rank-trace machinery — and went further, adding a new
+  unconditional estimate (≥83.62% of zeros distinct) that Claude's proof
+  didn't establish. His paper explicitly credits Claude's original result as
+  the starting point. Lamzouri's proof was itself formally verified by
+  AxiomProver (Lean formalization in the paper's appendix), so the result now
+  has two independent, machine-checked derivations by two different methods.
+  Commentary (e.g. [Axiom's thread](https://x.com/axiommathai/status/2095413953866440828))
+  frames this as a case of a human mathematician "distilling" an opaque
+  AI-generated proof into an elegant, checkable one. No gap, dissent, or
+  correctness concern has surfaced anywhere in this search — only convergence.
+  The sole remaining caveat is procedural: neither Claude's original paper nor
+  Lamzouri's has cleared formal journal peer review yet. Given independent
+  reproof by a domain specialist via a genuinely different method, plus
+  machine verification of both derivations, and zero dissent, this crosses
+  the same bar the Cycle Double Cover proof did — moving status to
+  **confirmed**.
 - [ ] **+3 months** (2026-11-11) —
 - [ ] **+6 months** (2027-02-11) —
 - [ ] **+1 year** (2027-08-11) —
