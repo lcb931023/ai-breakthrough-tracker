@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-09-12
+next_review: 2026-11-12
 verdict:
 ---
 ## The claim
@@ -65,7 +65,18 @@ Specifics:
   outside commentary on this specific disproof turned up. Still just a
   self-reported, self-verified claim with an untranscribed (image-only) proof
   — evidence is as thin as when logged. Keeping status `unverified`.
-- [ ] **+1 month** (2026-09-12) —
+- [x] **+1 month** (2026-09-12) — Still no movement. The
+  [substack archive](https://chillphysicsenjoyer.substack.com/archive) shows no
+  correction or follow-up post about Conjecture 2 (the author's Sep 10 post,
+  ["AI Is Not Going To Kill My Love Of
+  Math"](https://chillphysicsenjoyer.substack.com/p/ai-is-not-going-to-kill-my-love-of),
+  is a general reflection on AI and mathematical practice and does not mention
+  this claim). [arXiv:2409.07565](https://arxiv.org/abs/2409.07565) is still at
+  v2 (Feb 2025) with no erratum. No response from Khalkhali, Pagliaroli,
+  Parfeni, or Smith has surfaced, and no MathOverflow, X, or other outside
+  commentary on this specific disproof turned up. The proof remains
+  self-reported, self-verified, and untranscribed (image-only). Keeping status
+  `unverified`.
 - [ ] **+3 months** (2026-11-12) —
 - [ ] **+6 months** (2027-02-12) —
 - [ ] **+1 year** (2027-08-12) —
