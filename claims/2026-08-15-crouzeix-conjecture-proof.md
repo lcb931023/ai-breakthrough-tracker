@@ -4,9 +4,9 @@ source: https://www.scmp.com/tech/tech-trends/article/3363966/chinese-doctor-stu
 field: Mathematics / numerical linear algebra (matrix analysis)
 outsider: true
 added: 2026-08-15
-status: partially-confirmed
+status: confirmed
 next_review: 2026-09-15
-verdict:
+verdict: Two independently-derived, AI-assisted proofs (Jin's and Lorist–Schwenninger's) are both endorsed as correct by specialists, including Michel Crouzeix himself; no error has surfaced after ~2 months of scrutiny, and Wikipedia now treats the 22-year-old conjecture as resolved. Formal journal peer review of either proof is still pending.
 ---
 ## The claim
 **Shanmu Jin**, a postdoctoral researcher and neurosurgery resident at Peking
@@ -67,7 +67,7 @@ Specifics:
 
 ## Review log
 - [x] **+1 week** (2026-08-22) — No error has surfaced in Jin's manuscript ("The Numerical Range Is a 2-Spectral Set," posted 27 Jul) despite continued informal scrutiny; Townsend, Greenbaum, and Crouzeix's earlier read-through still stands and independent computational/adversarial audits in Jin's own repo report none found. The independent Lorist–Schwenninger proof ([arXiv:2608.03841](https://arxiv.org/abs/2608.03841), submitted 4 Aug via a different double-layer-potential method) remains the strongest corroborating signal — two structurally different routes reaching the same conclusion. Neither manuscript has entered formal peer review or a journal pipeline yet, and no MathOverflow or specialist-blog rebuttal has appeared. Coverage: [Remio](https://www.remio.ai/post/shanmu-jin-used-ai-on-the-crouzeix-conjecture-but-the-proof-still-needs-human-ju), [Townsend's SIAM News essay](https://alextownsend.net/essays/SIAMNews_CrouzeixConjecture.pdf). Status moved to partially-confirmed on the strength of convergent independent derivations, pending actual peer review.
-- [ ] **+1 month** (2026-09-15) —
+- [x] **+1 month** (2026-09-15) — No error has emerged in either proof after continued scrutiny. Jin's manuscript (submitted 24 Jul, Annals-formatted) remains under Townsend/Greenbaum/Crouzeix's earlier informal endorsement, and the GitHub repo's computational/adversarial audits still report no fault found; no MathOverflow or specialist-blog rebuttal has surfaced. Notably, the independent Lorist–Schwenninger proof ([arXiv:2608.03841v2](https://arxiv.org/abs/2608.03841), revised 17 Aug) turns out not to be purely human-derived as first reported: v2 added an explicit AI-disclosure statement that GPT-5.6 Sol Pro was used on 25–26 Jul to explore proof strategies and improve the earlier 1+√2 estimate, though the authors state the final proof was "developed in full, verified, and written by the authors, who take full responsibility." Wikipedia's new [List of mathematical discoveries by AI](https://en.wikipedia.org/wiki/List_of_mathematical_discoveries_by_artificial_intelligence) and its [Crouzeix's conjecture](https://en.wikipedia.org/wiki/Crouzeix%27s_conjecture) article now both treat the conjecture as resolved, citing Jin (2026), Townsend & Greenbaum (2026), and Lorist & Schwenninger (2026). Neither proof has cleared formal journal peer review yet, but two independently-derived, expert-endorsed proofs converging on the same answer — with explicit sign-off from Crouzeix himself — meets the bar this tracker has used elsewhere (cf. the cycle-double-cover and Riemann-zeta entries) for calling a result confirmed pending only publication. Status moved to confirmed.
 - [ ] **+3 months** (2026-11-15) —
 - [ ] **+6 months** (2027-02-15) —
 - [ ] **+1 year** (2027-08-15) —
