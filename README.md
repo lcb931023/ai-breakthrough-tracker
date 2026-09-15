@@ -1,7 +1,7 @@
 # AI Breakthrough Tracker
 
-A watchlist for **AI-powered** "breakthrough" claims — results where a frontier
-AI model or AI tool was the *engine* of the discovery (often made by
+A watchlist for **AI-powered** "breakthrough" claims — results where a **frontier
+AI model or AI tool** (read: LLM-based) was the *engine* of the discovery (often made by
 **outsiders** to a field, since AI lowers the barrier to entry), and where
 whether the finding actually *holds up* is the open question. Each claim is
 logged when it surfaces, then re-checked against what the scientific community
