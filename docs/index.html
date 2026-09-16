@@ -156,45 +156,6 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </div>
 <p class="empty" id="empty" hidden>No claims match these filters.</p>
 <article class="entry "
-  data-discipline="Mathematics"
-  data-outsider="true" data-bucket="partially-confirmed">
-  <header>
-    <span class="stamp s-partially-confirmed">partially-confirmed</span>
-    <span class="tag">Mathematics / complex analysis</span>
-    <span class="tag outsider">outsider</span>
-    
-  </header>
-  <h2>Lech Mazur, an LLM-benchmark author with no formal math training, generated proofs of Sendov&#x27;s Conjecture and the Phelps–Rodriguez conjecture with GPT-5.6 Pro</h2>
-  <p class="meta">filed 2026-08-16 <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">source →</a></p>
-  <div class="ticker"><span class="tick done" title="2026-08-23"><i class="dot"></i>1w</span><span class="tick future" title="2026-09-16"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-16"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-16"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-16"><i class="dot"></i>1y</span></div>
-  
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Lech Mazur — founder/CEO of Advameg, Inc. and City-Data.com, and more recently an author of LLM evaluation benchmarks, but with no evidence of formal mathematics training or prior peer-reviewed math work — used <strong>OpenAI's GPT-5.6 Pro</strong> to generate a proof of <strong>Sendov's Conjecture</strong>, open for 54 years, and the related <strong>Phelps–Rodriguez conjecture</strong>, in complex analysis. Both concern the location of a polynomial's critical points relative to its roots.</p>
-<p>Specifics:</p>
-<ul>
-<li>Published via ProofAtlas (a platform Mazur appears to run) as "A Computer-Assisted Proof of Sendov's Conjecture," dated 5 August 2026.</li>
-<li>Mazur's stated role: designing and running the orchestration/verification workflow, and selecting and reconciling GPT-5.6 Pro's outputs. GPT-5.6 Pro is credited with the mathematical exploration, proof derivation, exact computational testing, and adversarial auditing.</li>
-<li>The proof reduces to a "Conjecture 3" claimed to resolve both target conjectures in full generality, via an argument described as elementary (using only the fundamental theorem of algebra and the Maclaurin inequality, no heavier complex analysis).</li>
-<li>Fields medalist <strong>Terence Tao</strong> independently reformalized the entire argument in <strong>Lean 4</strong> (~15,000 lines, versus ~90,000 in the original writeup) and posted a "digestion" of the proof on his blog (12 August 2026), aiming to place it in context with prior literature and streamline the exposition.</li>
-</ul>
-<p>Reported via <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">Terence Tao's blog</a> and <a href="https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf">the ProofAtlas paper</a>.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Outsider profile, but a sophisticated one.</strong> No university degree, PhD, or prior math publication record was found for Mazur — his documented background is tech entrepreneurship (Advameg/City-Data.com) and, lately, AI-benchmark authorship, not research mathematics. He presents himself explicitly as the human orchestrator/curator of an AI system rather than as the mathematician who derived the proof.</li>
-<li><strong>Strong early verification signal</strong>, unusually so for a claim this fresh: an independent, credentialed expert (Tao) engaged deeply enough to reformalize the whole argument in Lean and write up a public exposition — that is a much higher bar than typical early-stage "looks plausible" commentary. Worth confirming whether Tao's writeup amounts to an endorsement of correctness or just a formalization exercise agnostic to truth.</li>
-<li>Still a preprint / self-published proof, not peer-reviewed or published in a journal.</li>
-<li>Track: does the broader complex-analysis community (beyond Tao) weigh in? Does Tao's Lean formalization actually compile and check without gaps? Does anyone dispute the division of credit between GPT-5.6 Pro and Mazur's orchestration?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=done>☑ <strong>+1 week</strong> (2026-08-23) — Independent mechanical corroboration has arrived: Tao's Lean 4 formalization (<a href="https://github.com/teorth/sendov">github.com/teorth/sendov</a>) reports the build has "no <code>sorry</code> and no project-defined <code>axiom</code>," and Tao submitted it to <a href="https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/">Palomar</a>, a new Lean-FRO-backed verification registry, for mechanical typechecking — though Tao himself cautions such checks "fall well short of ... proper human peer review for novelty, interest, and accuracy." Notably, Tao's own Lean formalization was "essentially all written by Claude Opus 5," with no independent human review of that Lean source. On credit: mathematician Karim Adiprasito directly disputed the attribution in Tao's blog comments — "I don't think his name can reasonably be attached as main author without transparency... nice that chatgpt found a proof, even nicer that Terry digested it" — and no one in the thread defended sole-authorship framing for Mazur. Mathematician Teng Zhang engaged constructively, extending the result to a majorization/spectral formulation, without disputing correctness. No journal peer review yet, and ProofAtlas's own site still shows an inconsistent, seemingly stale "planned, not complete" note on Lean verification. Moving to partially-confirmed: credible independent mechanical verification exists, but no peer review and an active, unresolved credit dispute.</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-09-16) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-11-16) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-02-16) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-08-16) —</li>
-</ul></details>
-</article>
-<article class="entry "
   data-discipline="Biology"
   data-outsider="false" data-bucket="partially-confirmed">
   <header>
@@ -592,6 +553,45 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </article>
 <article class="entry "
   data-discipline="Mathematics"
+  data-outsider="true" data-bucket="partially-confirmed">
+  <header>
+    <span class="stamp s-partially-confirmed">partially-confirmed</span>
+    <span class="tag">Mathematics / complex analysis</span>
+    <span class="tag outsider">outsider</span>
+    
+  </header>
+  <h2>Lech Mazur, an LLM-benchmark author with no formal math training, generated proofs of Sendov&#x27;s Conjecture and the Phelps–Rodriguez conjecture with GPT-5.6 Pro</h2>
+  <p class="meta">filed 2026-08-16 <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">source →</a></p>
+  <div class="ticker"><span class="tick done" title="2026-08-23"><i class="dot"></i>1w</span><span class="tick done" title="2026-09-16"><i class="dot"></i>1mo</span><span class="tick future" title="2026-11-16"><i class="dot"></i>3mo</span><span class="tick future" title="2027-02-16"><i class="dot"></i>6mo</span><span class="tick future" title="2027-08-16"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Lech Mazur — founder/CEO of Advameg, Inc. and City-Data.com, and more recently an author of LLM evaluation benchmarks, but with no evidence of formal mathematics training or prior peer-reviewed math work — used <strong>OpenAI's GPT-5.6 Pro</strong> to generate a proof of <strong>Sendov's Conjecture</strong>, open for 54 years, and the related <strong>Phelps–Rodriguez conjecture</strong>, in complex analysis. Both concern the location of a polynomial's critical points relative to its roots.</p>
+<p>Specifics:</p>
+<ul>
+<li>Published via ProofAtlas (a platform Mazur appears to run) as "A Computer-Assisted Proof of Sendov's Conjecture," dated 5 August 2026.</li>
+<li>Mazur's stated role: designing and running the orchestration/verification workflow, and selecting and reconciling GPT-5.6 Pro's outputs. GPT-5.6 Pro is credited with the mathematical exploration, proof derivation, exact computational testing, and adversarial auditing.</li>
+<li>The proof reduces to a "Conjecture 3" claimed to resolve both target conjectures in full generality, via an argument described as elementary (using only the fundamental theorem of algebra and the Maclaurin inequality, no heavier complex analysis).</li>
+<li>Fields medalist <strong>Terence Tao</strong> independently reformalized the entire argument in <strong>Lean 4</strong> (~15,000 lines, versus ~90,000 in the original writeup) and posted a "digestion" of the proof on his blog (12 August 2026), aiming to place it in context with prior literature and streamline the exposition.</li>
+</ul>
+<p>Reported via <a href="https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/">Terence Tao's blog</a> and <a href="https://www.proofatlas.ai/papers/sendov-conjecture/SENDOV_CONJECTURE_PROOF_AUGUST_5_2026.pdf">the ProofAtlas paper</a>.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Outsider profile, but a sophisticated one.</strong> No university degree, PhD, or prior math publication record was found for Mazur — his documented background is tech entrepreneurship (Advameg/City-Data.com) and, lately, AI-benchmark authorship, not research mathematics. He presents himself explicitly as the human orchestrator/curator of an AI system rather than as the mathematician who derived the proof.</li>
+<li><strong>Strong early verification signal</strong>, unusually so for a claim this fresh: an independent, credentialed expert (Tao) engaged deeply enough to reformalize the whole argument in Lean and write up a public exposition — that is a much higher bar than typical early-stage "looks plausible" commentary. Worth confirming whether Tao's writeup amounts to an endorsement of correctness or just a formalization exercise agnostic to truth.</li>
+<li>Still a preprint / self-published proof, not peer-reviewed or published in a journal.</li>
+<li>Track: does the broader complex-analysis community (beyond Tao) weigh in? Does Tao's Lean formalization actually compile and check without gaps? Does anyone dispute the division of credit between GPT-5.6 Pro and Mazur's orchestration?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=done>☑ <strong>+1 week</strong> (2026-08-23) — Independent mechanical corroboration has arrived: Tao's Lean 4 formalization (<a href="https://github.com/teorth/sendov">github.com/teorth/sendov</a>) reports the build has "no <code>sorry</code> and no project-defined <code>axiom</code>," and Tao submitted it to <a href="https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/">Palomar</a>, a new Lean-FRO-backed verification registry, for mechanical typechecking — though Tao himself cautions such checks "fall well short of ... proper human peer review for novelty, interest, and accuracy." Notably, Tao's own Lean formalization was "essentially all written by Claude Opus 5," with no independent human review of that Lean source. On credit: mathematician Karim Adiprasito directly disputed the attribution in Tao's blog comments — "I don't think his name can reasonably be attached as main author without transparency... nice that chatgpt found a proof, even nicer that Terry digested it" — and no one in the thread defended sole-authorship framing for Mazur. Mathematician Teng Zhang engaged constructively, extending the result to a majorization/spectral formulation, without disputing correctness. No journal peer review yet, and ProofAtlas's own site still shows an inconsistent, seemingly stale "planned, not complete" note on Lean verification. Moving to partially-confirmed: credible independent mechanical verification exists, but no peer review and an active, unresolved credit dispute.</li>
+<li class=done>☑ <strong>+1 month</strong> (2026-09-16) — Further independent corroboration, no contradicting evidence found. Mathematician Senjian An posted <a href="https://arxiv.org/html/2609.04246">a follow-on paper</a> (submitted 22 Aug 2026) that explicitly accepts the Mazur–Tao reductions as proven and replaces their remaining numerical-search step with an elementary scalar-optimization argument backed by a fixed, auditable 272-point rational-arithmetic certificate — a second, differently-trained researcher independently working through and extending the proof's internals is a stronger signal than passive endorsement. An's paper is itself LLM-assisted (ChatGPT, for proof architecture/algebra/code) but states "no language-model output is treated as mathematical evidence." ProofAtlas's own formalization page still explicitly disclaims "accepted-result" status, listing four still-open review categories (formal evidence review, statement alignment, result boundary, public wording) and confirms the Lean build has "no unfinished proof steps" and no extra axioms beyond the standard <code>propext</code>/<code>Classical.choice</code>/<code>Quot.sound</code>. No submission-to-Palomar completion or journal peer review found yet. The Tao-vs-Adiprasito authorship dispute from the prior review period has not resurfaced or been resolved either way. Holding at partially-confirmed: mathematics keeps checking out under independent scrutiny, but the process (peer review, Palomar acceptance, credit) that would move this to confirmed is still unresolved.</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-11-16) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-02-16) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-08-16) —</li>
+</ul></details>
+</article>
+<article class="entry "
+  data-discipline="Mathematics"
   data-outsider="false" data-bucket="confirmed">
   <header>
     <span class="stamp s-confirmed">confirmed</span>
@@ -707,7 +707,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-08-15) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-09-15 08:33 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-09-16 01:10 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];
