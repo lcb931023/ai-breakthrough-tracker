@@ -5,7 +5,7 @@ field: Mathematics / fluid dynamics (PDE)
 outsider: false
 added: 2026-09-15
 status: contested
-next_review: 2026-09-22
+next_review: 2026-10-15
 verdict:
 ---
 ## The claim
@@ -78,7 +78,7 @@ companion 57-page paper claims blow-up for the unforced Euler equations.
   Does Clay's evaluation reach a conclusion? Does anyone remove the force?
 
 ## Review log
-- [ ] **+1 week** (2026-09-22) —
+- [x] **+1 week** (2026-09-22) — No one has certified the informal 166-page proof itself. A community repo ([CrystalArchitect/navier-stokes-lean-check](https://github.com/CrystalArchitect/navier-stokes-lean-check)) confirms OpenAI's Lean statement matches DeepMind's formal encoding of Clay alternatives (C)/(D) and kernel-checks against only the standard axioms — but explicitly disclaims checking whether the prose argument is correct, so this is statement-fidelity, not mathematical verification. The Clay Institute has issued no update since its Sept 11 "apparently settled / deliberately unhurried" statement. Buckmaster and Alpöge posted three forced-blowup preprints (Euler, Boussinesq, porous medium) around Sept 7–8 and say they also have an unreleased hypo-dissipative Navier–Stokes result closer to OpenAI's actual claim, held back pending its own Lean formalization — the authorship/priority dispute remains unresolved and OpenAI's Codex-data account is unchanged since Sept 13. Nobody has removed the forcing term; Scientific American (Sept 21, ["Did OpenAI solve the wrong Navier-Stokes problem?"](https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/)) cites an unconfirmed secondhand "Sept 19" result reinforcing Palasek's obstruction to extending the construction to the unforced case. The most substantive movement is social/institutional: Terence Tao's blog hosted a running guest-post debate (Sept 16–21), including Timothy Gowers publicly declining to sign the 25-Fields-Medalist letter; and on Sept 21 OpenAI announced, jointly with a newly formed unpaid "Advisory Group on Mathematics and AI" (Gowers, Witten, Vakil, Hairer, and others, hosted at IAS/agmai.org, explicitly not empowered to pace OpenAI's research), that the same internal model has "resolved more than 100 additional open problems" — a major new, entirely unverified claim with no released detail. Net: still contested, no error found, no independent full verification, and the dispute has widened rather than resolved.
 - [ ] **+1 month** (2026-10-15) —
 - [ ] **+3 months** (2026-12-15) —
 - [ ] **+6 months** (2027-03-15) —
