@@ -157,91 +157,6 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <p class="empty" id="empty" hidden>No claims match these filters.</p>
 <article class="entry "
   data-discipline="Mathematics"
-  data-outsider="false" data-bucket="contested">
-  <header>
-    <span class="stamp s-contested">contested</span>
-    <span class="tag">Mathematics / fluid dynamics (PDE)</span>
-    <span class="tag insider">insider</span>
-    
-  </header>
-  <h2>OpenAI&#x27;s math team, led by ML researcher Sébastien Bubeck, produced a 166-page proof of finite-time blow-up for the forced 3D Navier–Stokes equations, claiming to settle the Clay Millennium Prize Problem, with ~10,000 concurrent agents running an unreleased model more capable than GPT-6 Astra</h2>
-  <p class="meta">filed 2026-09-15 <a href="https://openai.com/index/navier-stokes-solution/">source →</a></p>
-  <div class="ticker"><span class="tick done" title="2026-09-22"><i class="dot"></i>1w</span><span class="tick future" title="2026-10-15"><i class="dot"></i>1mo</span><span class="tick future" title="2026-12-15"><i class="dot"></i>3mo</span><span class="tick future" title="2027-03-15"><i class="dot"></i>6mo</span><span class="tick future" title="2027-09-15"><i class="dot"></i>1y</span></div>
-  
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>OpenAI's paper "Finite Time Blowup for Navier–Stokes" (<a href="https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf">PDF</a>, 166 pages, authored only as "OpenAI") claims a <strong>disproof</strong>, not a regularity result. For every viscosity ν &gt; 0 it builds a smooth, compactly supported <strong>force</strong>, zero initial velocity, and a smooth finite-energy solution on R³×[0,1) whose L∞ norm blows up as t → 1. OpenAI says this establishes alternative (C) of the Clay problem statement on R³, and alternative (D) on the torus via compact support.</p>
-<p>Who is behind it:</p>
-<ul>
-<li><strong>Sébastien Bubeck</strong> leads OpenAI's math team and ran the effort. His background is ML and optimization, not PDE. By his own account the team had math, physics, and CS backgrounds but "lacked research-level expertise in fluid dynamics."</li>
-<li><strong>Ven Chandrasekaran</strong>, Mark Chen, Noam Brown, and Sam Altman are the other named OpenAI figures. <strong>No outside mathematician co-authored or checked the proof.</strong> This is a big-lab result, logged here despite the tracker's outsider preference because it is the most prominent and most disputed AI math claim to date.</li>
-</ul>
-<p>Process, per OpenAI: an internal model trained from 28 Aug ran as ~10,000 concurrent agents for 88 hours (1–5 Sep), exchanging 2.7M messages and ~130B output tokens. GPT-6 Astra then produced a <a href="https://github.com/openai/NavierStokesAndEuler">Lean 4 formalization</a> in 17 more hours. The mechanism is an inward-spiraling, axially stretched vortex built with a Córdoba–Martínez-Zoroa-style multi-scale amplification. A companion 57-page paper claims blow-up for the unforced Euler equations.</p>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>Forced only.</strong> The unforced Cauchy problem, which most PDE specialists mean by "Navier–Stokes," is untouched. Princeton's <strong>Stan Palasek</strong> <a href="https://mathstodon.xyz/@palasek/117235270483911935">pointed out</a> a heuristic obstacle to removing the force in 3D via this style of lacunary construction, which <strong>Terence Tao</strong> <a href="https://mathstodon.xyz/@tao/117236063705269594">called</a> "a good observation." It does not refute the forced result.</li>
-<li><strong>Priority and conduct dispute.</strong> NYU's <strong>Tristan Buckmaster</strong> and <strong>Levent Alpöge</strong> (an Anthropic employee, collaborating personally) say they had smooth-forced blow-up for IPM, Boussinesq, and 3D Euler on 15 Aug, Lean-verified 22 Aug, using Claude and Codex. Buckmaster's <a href="https://cims.nyu.edu/~tristanb/statement.pdf">statement</a> says OpenAI's first prompt was sent "after information about our work had reached OpenAI," and that Bubeck pushed to drop Alpöge from authorship. He also says he has not seen OpenAI's proof and is "not accusing anyone of anything." Bubeck <a href="https://x.com/SebastienBubeck/status/2097214122471432349">called</a> the allegations "false and inflammatory." OpenAI's paper does not cite Alpöge–Buckmaster.</li>
-<li><strong>OpenAI's data-use story shifted.</strong> It moved from "cannot rule out" that de-identified Codex data helped its models (8 Sep), to "categorically" impossible (9 Sep), to "no user inputs past July 3rd" (13 Sep), per the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy">Wikipedia timeline</a>.</li>
-<li><strong>Community backlash at the framing.</strong> Tao's blog post <a href="https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/">"A Severe Misalignment of AI in Mathematics"</a> (11 Sep), signed by 25 Fields Medalists, criticizes the rushed announcement. <strong>Charles Fefferman</strong>, who wrote the Clay problem statement, told <a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/">Quanta</a> he was "thrilled that the problem was solved" and called Córdoba and Martínez-Zoroa "the heroes of the story."</li>
-<li><strong>No independent verification yet, and no error found.</strong> The Lean build is public but only self-assessed. The <a href="https://www.claymath.org/news/navier-stokes-announcement/">Clay Institute</a> says the problem "has apparently been settled" and promises a "deliberately unhurried" evaluation. The prize requires publication plus two years of acceptance, and OpenAI says it will not claim it.</li>
-<li>Track: does an outside group reproduce the Lean build and audit its definitions against the Clay statement? Does a human write-up reach a journal? Does the Alpöge–Buckmaster work appear and how do the two compare? Does Clay's evaluation reach a conclusion? Does anyone remove the force?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=done>☑ <strong>+1 week</strong> (2026-09-22) — No one has certified the informal 166-page proof itself. A community repo (<a href="https://github.com/CrystalArchitect/navier-stokes-lean-check">CrystalArchitect/navier-stokes-lean-check</a>) confirms OpenAI's Lean statement matches DeepMind's formal encoding of Clay alternatives (C)/(D) and kernel-checks against only the standard axioms — but explicitly disclaims checking whether the prose argument is correct, so this is statement-fidelity, not mathematical verification. The Clay Institute has issued no update since its Sept 11 "apparently settled / deliberately unhurried" statement. Buckmaster and Alpöge posted three forced-blowup preprints (Euler, Boussinesq, porous medium) around Sept 7–8 and say they also have an unreleased hypo-dissipative Navier–Stokes result closer to OpenAI's actual claim, held back pending its own Lean formalization — the authorship/priority dispute remains unresolved and OpenAI's Codex-data account is unchanged since Sept 13. Nobody has removed the forcing term; Scientific American (Sept 21, <a href="https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/">"Did OpenAI solve the wrong Navier-Stokes problem?"</a>) cites an unconfirmed secondhand "Sept 19" result reinforcing Palasek's obstruction to extending the construction to the unforced case. The most substantive movement is social/institutional: Terence Tao's blog hosted a running guest-post debate (Sept 16–21), including Timothy Gowers publicly declining to sign the 25-Fields-Medalist letter; and on Sept 21 OpenAI announced, jointly with a newly formed unpaid "Advisory Group on Mathematics and AI" (Gowers, Witten, Vakil, Hairer, and others, hosted at IAS/agmai.org, explicitly not empowered to pace OpenAI's research), that the same internal model has "resolved more than 100 additional open problems" — a major new, entirely unverified claim with no released detail. Net: still contested, no error found, no independent full verification, and the dispute has widened rather than resolved.</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-10-15) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-12-15) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-03-15) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-09-15) —</li>
-</ul></details>
-</article>
-<article class="entry "
-  data-discipline="Cryptography"
-  data-outsider="true" data-bucket="contested">
-  <header>
-    <span class="stamp s-contested">contested</span>
-    <span class="tag">Cryptography / historical cryptograms &amp; early-modern texts</span>
-    <span class="tag outsider">outsider</span>
-    
-  </header>
-  <h2>Geby Jaff, a researcher at AI-evaluation startup Vals AI with no background in cryptography or early-modern literature, deciphered the &quot;Cyphral Distich&quot; closing Thomas Urquhart&#x27;s 1653 Logopandecteision, unsolved since at least 1899, with Claude Fable 5.1 running autonomously for 44 minutes</h2>
-  <p class="meta">filed 2026-09-15 <a href="https://www.vals.ai/blogs/fable-solves-cyphral-distich">source →</a></p>
-  <div class="ticker"><span class="tick done" title="2026-09-22"><i class="dot"></i>1w</span><span class="tick future" title="2026-10-15"><i class="dot"></i>1mo</span><span class="tick future" title="2026-12-15"><i class="dot"></i>3mo</span><span class="tick future" title="2027-03-15"><i class="dot"></i>6mo</span><span class="tick future" title="2027-09-15"><i class="dot"></i>1y</span></div>
-  
-  <details><summary>Full review log</summary><h3>The claim</h3>
-<p>Vals AI's blog post (31 Aug 2026) reports that <strong>Claude Fable 5.1</strong>, given an open-ended request to solve an unsolved cipher, chose the <strong>Cyphral Distich</strong>, two lines of 32 numbers printed after Sir Thomas Urquhart's <em>Logopandecteision</em> and #28 on Klaus Schmeh's <a href="https://scienceblogs.de/klausis-krypto-kolumne/2017/06/30/the-top-50-unsolved-encrypted-messages-28-thomas-urquharts-encrypted-poems/">Top 50 unsolved encrypted messages</a>. It ran for 44 minutes and 176k tokens with no human interjection during the solve.</p>
-<p>Who is behind it:</p>
-<ul>
-<li><strong>Geby Jaff</strong> ran the experiment and wrote the post. He is listed as "Research @ Vals" and CEO of "Archivara," with ML and math interests and no trace of cryptography, early-modern literature, or Urquhart scholarship.</li>
-<li><strong>Vals AI</strong> is an AI benchmarking startup founded by Rayan Krishnan (Stanford CS) and Langston Nashold. It raised a <a href="https://techfundingnews.com/a16z-leads-40m-vals-ai-round-at-400m-valuation-to-test-ai-on-real-world-tasks/">$40M Series A at a $400M valuation</a> led by a16z in August 2026. It is an independent evaluator of Anthropic models, with no known formal partnership. The human is an outsider to the field, working inside a funded AI company.</li>
-</ul>
-<p>The method and plaintext:</p>
-<ul>
-<li><strong>Book cipher keyed to the book itself.</strong> The <em>i</em>-th number in each line indexes a word in the <em>i</em>-th of the 32 "Proquiritations" printed just before the cipher, and the word's first letter is the plaintext letter.</li>
-<li><strong>Plaintext:</strong> "O GOD UPHOLD KING CHARLS THE SECOND AND / MAKE HIM THE SUPREME RULER OF THIS LAND," a rhyming Royalist couplet of 32+32 letters.</li>
-<li>The key text was the <strong>1834 Maitland Club reprint</strong> (<a href="https://archive.org/details/worksofsirthomas00mait/page/416/mode/1up">archive.org</a>), not a 1653 original.</li>
-<li>Vals also claims a partial solve, all but nine letters, of the 285-number <strong>Cyphral Octastich</strong> in Urquhart's <em>The Jewel</em> (1652).</li>
-<li>No prior publication of this plaintext or method was found. Two 2014 commenters on Schmeh's blog guessed a book cipher but not the key.</li>
-</ul>
-<h3>Why it needs watching</h3>
-<ul>
-<li><strong>The first rebuttal came from an AI agent, not a human group.</strong> "Reticuli" is a Claude Fable 5.1 agent on The Colony, a social network for AI agents. Its <a href="https://github.com/reticuli-labs/panel-artifacts/blob/main/distich-refutation-2026-09-01/FINDINGS.md">FINDINGS.md</a> (1 Sep) says the British Library 1653 copy and the EEBO-TCP transcription print <strong>no numeric distich</strong>. It also says ten letters are infeasible against the 1653 Proquiritation text, since e.g. Proquiritation 11 has no K-initial word for KING.</li>
-<li><strong>An edition mismatch appears to reconcile both sides.</strong> A <a href="https://vera-wren.github.io/posts/2026-09-11-the-key-is-a-printing.html">Vera Wren analysis</a> (11 Sep, also a self-described AI persona) found the 1834 reprint's Proquiritations are rewritten and reordered relative to the 1653 EEBO copy. Against the 1834 text, 62 of 64 letters decode exactly. The 1834 title page says "reprinted from the original editions," implying a 1653 issue with the distich existed, but names no copy. Vals never flagged that its key text differs from the 1653 printing it cites.</li>
-<li><strong>Physical-copy evidence is unverified.</strong> A commenter on <a href="https://www.schneier.com/blog/archives/2026/09/claude-fable-solves-a-historical-cipher.html">Schneier's blog</a> says the National Library of Scotland copy H.32.a.39 contains the distich, and that scans of Glasgow's copy of <em>The Jewel</em> match parts of the Octastich decode. Hacker News users suggest that commenter was also agent-mediated.</li>
-<li><strong>Selection on solvability.</strong> The model picked its target from a list, and Jaff describes "steering away from intractable problems" before the run.</li>
-<li><strong>No specialist has weighed in.</strong> Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, and Urquhart scholars are silent. Bruce Schneier added a note on 14 Sep: "I'm not sure if this result is correct." A <a href="https://news.ycombinator.com/item?id=49688695">Hacker News thread</a> (13 Sep) drew 555 comments, mostly on hype and selection effects. Vals has not responded to the dispute.</li>
-<li>Track: does a librarian or scholar confirm a surviving 1653 printing with both the distich and the revised Proquiritations? Does Schmeh or another historical-cryptography specialist assess the decode? Does the full Octastich solve get published and checked against the Glasgow copy?</li>
-</ul>
-<h3>Review log</h3>
-<ul class=log>
-<li class=done>☑ <strong>+1 week</strong> (2026-09-22) — Effectively unchanged. No credentialed human specialist (Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, or any named Urquhart/17th-century-literature scholar) has weighed in; Schmeh's own blog carries no update or comment referencing this claim. No library or bibliographer has independently confirmed the National Library of Scotland copy (H.32.a.39) claim — a Czech tech-news piece (<a href="https://www.root.cz/zpravicky/ai-zrejme-rozlustila-373-rokov-staru-sifru-otvorila-vsak-novy-bibliograficky-problem/">root.cz</a>, Sept 4) repeats it and attributes photographic documentation to a "D. P. J. A. Scheers" who has no independent trace anywhere else — an unverifiable, likely-unreliable citation, not new scholarship. Vals AI and Geby Jaff have issued no correction or response to the Reticuli/Vera Wren rebuttals. The Octastich partial-solve is still stuck at "9 of 285 letters unverified." Coverage this week (<a href="https://gigazine.net/gsc_news/en/20260917-fable-solves-cyphral-distich/">Gigazine</a>, <a href="https://lilting.ch/en/articles/claude-fable-solves-cyphral-distich">lilting.ch</a>, both Sept 17) merely restates the Aug 31 claim and Sept 1 rebuttal rather than reporting anything new; the Hacker News thread grew only modestly (~555→~571 comments), still dominated by hype/selection-effect skepticism. Status unchanged: an unresolved claim propagated mainly through AI-agent-adjacent sources, with no independent human or institutional confirmation.</li>
-<li class=todo>☐ <strong>+1 month</strong> (2026-10-15) —</li>
-<li class=todo>☐ <strong>+3 months</strong> (2026-12-15) —</li>
-<li class=todo>☐ <strong>+6 months</strong> (2027-03-15) —</li>
-<li class=todo>☐ <strong>+1 year</strong> (2027-09-15) —</li>
-</ul></details>
-</article>
-<article class="entry "
-  data-discipline="Mathematics"
   data-outsider="false" data-bucket="partially-confirmed">
   <header>
     <span class="stamp s-partially-confirmed">partially-confirmed</span>
@@ -516,6 +431,91 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 </ul></details>
 </article>
 <article class="entry "
+  data-discipline="Mathematics"
+  data-outsider="false" data-bucket="contested">
+  <header>
+    <span class="stamp s-contested">contested</span>
+    <span class="tag">Mathematics / fluid dynamics (PDE)</span>
+    <span class="tag insider">insider</span>
+    
+  </header>
+  <h2>OpenAI&#x27;s math team, led by ML researcher Sébastien Bubeck, produced a 166-page proof of finite-time blow-up for the forced 3D Navier–Stokes equations, claiming to settle the Clay Millennium Prize Problem, with ~10,000 concurrent agents running an unreleased model more capable than GPT-6 Astra</h2>
+  <p class="meta">filed 2026-09-15 <a href="https://openai.com/index/navier-stokes-solution/">source →</a></p>
+  <div class="ticker"><span class="tick done" title="2026-09-22"><i class="dot"></i>1w</span><span class="tick done" title="2026-10-15"><i class="dot"></i>1mo</span><span class="tick future" title="2026-12-15"><i class="dot"></i>3mo</span><span class="tick future" title="2027-03-15"><i class="dot"></i>6mo</span><span class="tick future" title="2027-09-15"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>OpenAI's paper "Finite Time Blowup for Navier–Stokes" (<a href="https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf">PDF</a>, 166 pages, authored only as "OpenAI") claims a <strong>disproof</strong>, not a regularity result. For every viscosity ν &gt; 0 it builds a smooth, compactly supported <strong>force</strong>, zero initial velocity, and a smooth finite-energy solution on R³×[0,1) whose L∞ norm blows up as t → 1. OpenAI says this establishes alternative (C) of the Clay problem statement on R³, and alternative (D) on the torus via compact support.</p>
+<p>Who is behind it:</p>
+<ul>
+<li><strong>Sébastien Bubeck</strong> leads OpenAI's math team and ran the effort. His background is ML and optimization, not PDE. By his own account the team had math, physics, and CS backgrounds but "lacked research-level expertise in fluid dynamics."</li>
+<li><strong>Ven Chandrasekaran</strong>, Mark Chen, Noam Brown, and Sam Altman are the other named OpenAI figures. <strong>No outside mathematician co-authored or checked the proof.</strong> This is a big-lab result, logged here despite the tracker's outsider preference because it is the most prominent and most disputed AI math claim to date.</li>
+</ul>
+<p>Process, per OpenAI: an internal model trained from 28 Aug ran as ~10,000 concurrent agents for 88 hours (1–5 Sep), exchanging 2.7M messages and ~130B output tokens. GPT-6 Astra then produced a <a href="https://github.com/openai/NavierStokesAndEuler">Lean 4 formalization</a> in 17 more hours. The mechanism is an inward-spiraling, axially stretched vortex built with a Córdoba–Martínez-Zoroa-style multi-scale amplification. A companion 57-page paper claims blow-up for the unforced Euler equations.</p>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>Forced only.</strong> The unforced Cauchy problem, which most PDE specialists mean by "Navier–Stokes," is untouched. Princeton's <strong>Stan Palasek</strong> <a href="https://mathstodon.xyz/@palasek/117235270483911935">pointed out</a> a heuristic obstacle to removing the force in 3D via this style of lacunary construction, which <strong>Terence Tao</strong> <a href="https://mathstodon.xyz/@tao/117236063705269594">called</a> "a good observation." It does not refute the forced result.</li>
+<li><strong>Priority and conduct dispute.</strong> NYU's <strong>Tristan Buckmaster</strong> and <strong>Levent Alpöge</strong> (an Anthropic employee, collaborating personally) say they had smooth-forced blow-up for IPM, Boussinesq, and 3D Euler on 15 Aug, Lean-verified 22 Aug, using Claude and Codex. Buckmaster's <a href="https://cims.nyu.edu/~tristanb/statement.pdf">statement</a> says OpenAI's first prompt was sent "after information about our work had reached OpenAI," and that Bubeck pushed to drop Alpöge from authorship. He also says he has not seen OpenAI's proof and is "not accusing anyone of anything." Bubeck <a href="https://x.com/SebastienBubeck/status/2097214122471432349">called</a> the allegations "false and inflammatory." OpenAI's paper does not cite Alpöge–Buckmaster.</li>
+<li><strong>OpenAI's data-use story shifted.</strong> It moved from "cannot rule out" that de-identified Codex data helped its models (8 Sep), to "categorically" impossible (9 Sep), to "no user inputs past July 3rd" (13 Sep), per the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy">Wikipedia timeline</a>.</li>
+<li><strong>Community backlash at the framing.</strong> Tao's blog post <a href="https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/">"A Severe Misalignment of AI in Mathematics"</a> (11 Sep), signed by 25 Fields Medalists, criticizes the rushed announcement. <strong>Charles Fefferman</strong>, who wrote the Clay problem statement, told <a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/">Quanta</a> he was "thrilled that the problem was solved" and called Córdoba and Martínez-Zoroa "the heroes of the story."</li>
+<li><strong>No independent verification yet, and no error found.</strong> The Lean build is public but only self-assessed. The <a href="https://www.claymath.org/news/navier-stokes-announcement/">Clay Institute</a> says the problem "has apparently been settled" and promises a "deliberately unhurried" evaluation. The prize requires publication plus two years of acceptance, and OpenAI says it will not claim it.</li>
+<li>Track: does an outside group reproduce the Lean build and audit its definitions against the Clay statement? Does a human write-up reach a journal? Does the Alpöge–Buckmaster work appear and how do the two compare? Does Clay's evaluation reach a conclusion? Does anyone remove the force?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=done>☑ <strong>+1 week</strong> (2026-09-22) — No one has certified the informal 166-page proof itself. A community repo (<a href="https://github.com/CrystalArchitect/navier-stokes-lean-check">CrystalArchitect/navier-stokes-lean-check</a>) confirms OpenAI's Lean statement matches DeepMind's formal encoding of Clay alternatives (C)/(D) and kernel-checks against only the standard axioms — but explicitly disclaims checking whether the prose argument is correct, so this is statement-fidelity, not mathematical verification. The Clay Institute has issued no update since its Sept 11 "apparently settled / deliberately unhurried" statement. Buckmaster and Alpöge posted three forced-blowup preprints (Euler, Boussinesq, porous medium) around Sept 7–8 and say they also have an unreleased hypo-dissipative Navier–Stokes result closer to OpenAI's actual claim, held back pending its own Lean formalization — the authorship/priority dispute remains unresolved and OpenAI's Codex-data account is unchanged since Sept 13. Nobody has removed the forcing term; Scientific American (Sept 21, <a href="https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/">"Did OpenAI solve the wrong Navier-Stokes problem?"</a>) cites an unconfirmed secondhand "Sept 19" result reinforcing Palasek's obstruction to extending the construction to the unforced case. The most substantive movement is social/institutional: Terence Tao's blog hosted a running guest-post debate (Sept 16–21), including Timothy Gowers publicly declining to sign the 25-Fields-Medalist letter; and on Sept 21 OpenAI announced, jointly with a newly formed unpaid "Advisory Group on Mathematics and AI" (Gowers, Witten, Vakil, Hairer, and others, hosted at IAS/agmai.org, explicitly not empowered to pace OpenAI's research), that the same internal model has "resolved more than 100 additional open problems" — a major new, entirely unverified claim with no released detail. Net: still contested, no error found, no independent full verification, and the dispute has widened rather than resolved.</li>
+<li class=done>☑ <strong>+1 month</strong> (2026-10-15) — The most concrete movement is a new, substantive technical critique rather than a resolution either way: Alexander Bastounis, Fabian Circelli, and Anders Hansen posted <a href="https://arxiv.org/pdf/2610.08144"><strong>"Navier–Stokes lost in translation"</strong></a> to arXiv on Oct 6, arguing OpenAI's Lean 4 formalization does not faithfully encode the written 166-page proof — they identify specific mismatches (e.g. around Lemma 8.6) between the natural-language argument and what the Lean code actually certifies. Crucially the authors are explicit that this is not a claim the proof is wrong: co-author Anders Hansen said "we are not saying that the natural-language proof is wrong... nor do we say that it is correct" — it's a warning that a passing Lean compile doesn't by itself certify the prose argument, consistent with the earlier community-repo finding (logged at +1 week) that Lean-checking only verifies statement-fidelity to the Clay alternatives, not the internal argument. <a href="https://news.ycombinator.com/item?id=50032058">Hacker News discussion</a> is split on whether the mismatch runs NL→Lean or Lean→NL; no rebuttal from OpenAI located. Separately, Terence Tao's Sept 7 post (on Buckmaster–Alpöge's own independently Lean-verified forced-blowup results for porous-medium/Boussinesq/Euler) called their approach a "remarkable achievement" and said he sees no fundamental obstruction to extending the method to Navier–Stokes itself — but per <a href="https://cims.nyu.edu/~tristanb/statement.pdf">Buckmaster's own statement</a> their hypo-dissipative Navier–Stokes result specifically remains <strong>unreleased</strong>, its Lean verification still unfinished, so it still cannot be compared against OpenAI's. No outside mathematician has certified OpenAI's core argument; the Clay Institute has issued no further update since its "deliberately unhurried" stance; the priority/conduct dispute with Buckmaster–Alpöge is unchanged. Net: still contested, trending toward <em>more</em> scrutiny of the verification methodology (not just the math), no error in the core claim confirmed or refuted.</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-12-15) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-03-15) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-09-15) —</li>
+</ul></details>
+</article>
+<article class="entry "
+  data-discipline="Cryptography"
+  data-outsider="true" data-bucket="contested">
+  <header>
+    <span class="stamp s-contested">contested</span>
+    <span class="tag">Cryptography / historical cryptograms &amp; early-modern texts</span>
+    <span class="tag outsider">outsider</span>
+    
+  </header>
+  <h2>Geby Jaff, a researcher at AI-evaluation startup Vals AI with no background in cryptography or early-modern literature, deciphered the &quot;Cyphral Distich&quot; closing Thomas Urquhart&#x27;s 1653 Logopandecteision, unsolved since at least 1899, with Claude Fable 5.1 running autonomously for 44 minutes</h2>
+  <p class="meta">filed 2026-09-15 <a href="https://www.vals.ai/blogs/fable-solves-cyphral-distich">source →</a></p>
+  <div class="ticker"><span class="tick done" title="2026-09-22"><i class="dot"></i>1w</span><span class="tick done" title="2026-10-15"><i class="dot"></i>1mo</span><span class="tick future" title="2026-12-15"><i class="dot"></i>3mo</span><span class="tick future" title="2027-03-15"><i class="dot"></i>6mo</span><span class="tick future" title="2027-09-15"><i class="dot"></i>1y</span></div>
+  
+  <details><summary>Full review log</summary><h3>The claim</h3>
+<p>Vals AI's blog post (31 Aug 2026) reports that <strong>Claude Fable 5.1</strong>, given an open-ended request to solve an unsolved cipher, chose the <strong>Cyphral Distich</strong>, two lines of 32 numbers printed after Sir Thomas Urquhart's <em>Logopandecteision</em> and #28 on Klaus Schmeh's <a href="https://scienceblogs.de/klausis-krypto-kolumne/2017/06/30/the-top-50-unsolved-encrypted-messages-28-thomas-urquharts-encrypted-poems/">Top 50 unsolved encrypted messages</a>. It ran for 44 minutes and 176k tokens with no human interjection during the solve.</p>
+<p>Who is behind it:</p>
+<ul>
+<li><strong>Geby Jaff</strong> ran the experiment and wrote the post. He is listed as "Research @ Vals" and CEO of "Archivara," with ML and math interests and no trace of cryptography, early-modern literature, or Urquhart scholarship.</li>
+<li><strong>Vals AI</strong> is an AI benchmarking startup founded by Rayan Krishnan (Stanford CS) and Langston Nashold. It raised a <a href="https://techfundingnews.com/a16z-leads-40m-vals-ai-round-at-400m-valuation-to-test-ai-on-real-world-tasks/">$40M Series A at a $400M valuation</a> led by a16z in August 2026. It is an independent evaluator of Anthropic models, with no known formal partnership. The human is an outsider to the field, working inside a funded AI company.</li>
+</ul>
+<p>The method and plaintext:</p>
+<ul>
+<li><strong>Book cipher keyed to the book itself.</strong> The <em>i</em>-th number in each line indexes a word in the <em>i</em>-th of the 32 "Proquiritations" printed just before the cipher, and the word's first letter is the plaintext letter.</li>
+<li><strong>Plaintext:</strong> "O GOD UPHOLD KING CHARLS THE SECOND AND / MAKE HIM THE SUPREME RULER OF THIS LAND," a rhyming Royalist couplet of 32+32 letters.</li>
+<li>The key text was the <strong>1834 Maitland Club reprint</strong> (<a href="https://archive.org/details/worksofsirthomas00mait/page/416/mode/1up">archive.org</a>), not a 1653 original.</li>
+<li>Vals also claims a partial solve, all but nine letters, of the 285-number <strong>Cyphral Octastich</strong> in Urquhart's <em>The Jewel</em> (1652).</li>
+<li>No prior publication of this plaintext or method was found. Two 2014 commenters on Schmeh's blog guessed a book cipher but not the key.</li>
+</ul>
+<h3>Why it needs watching</h3>
+<ul>
+<li><strong>The first rebuttal came from an AI agent, not a human group.</strong> "Reticuli" is a Claude Fable 5.1 agent on The Colony, a social network for AI agents. Its <a href="https://github.com/reticuli-labs/panel-artifacts/blob/main/distich-refutation-2026-09-01/FINDINGS.md">FINDINGS.md</a> (1 Sep) says the British Library 1653 copy and the EEBO-TCP transcription print <strong>no numeric distich</strong>. It also says ten letters are infeasible against the 1653 Proquiritation text, since e.g. Proquiritation 11 has no K-initial word for KING.</li>
+<li><strong>An edition mismatch appears to reconcile both sides.</strong> A <a href="https://vera-wren.github.io/posts/2026-09-11-the-key-is-a-printing.html">Vera Wren analysis</a> (11 Sep, also a self-described AI persona) found the 1834 reprint's Proquiritations are rewritten and reordered relative to the 1653 EEBO copy. Against the 1834 text, 62 of 64 letters decode exactly. The 1834 title page says "reprinted from the original editions," implying a 1653 issue with the distich existed, but names no copy. Vals never flagged that its key text differs from the 1653 printing it cites.</li>
+<li><strong>Physical-copy evidence is unverified.</strong> A commenter on <a href="https://www.schneier.com/blog/archives/2026/09/claude-fable-solves-a-historical-cipher.html">Schneier's blog</a> says the National Library of Scotland copy H.32.a.39 contains the distich, and that scans of Glasgow's copy of <em>The Jewel</em> match parts of the Octastich decode. Hacker News users suggest that commenter was also agent-mediated.</li>
+<li><strong>Selection on solvability.</strong> The model picked its target from a list, and Jaff describes "steering away from intractable problems" before the run.</li>
+<li><strong>No specialist has weighed in.</strong> Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, and Urquhart scholars are silent. Bruce Schneier added a note on 14 Sep: "I'm not sure if this result is correct." A <a href="https://news.ycombinator.com/item?id=49688695">Hacker News thread</a> (13 Sep) drew 555 comments, mostly on hype and selection effects. Vals has not responded to the dispute.</li>
+<li>Track: does a librarian or scholar confirm a surviving 1653 printing with both the distich and the revised Proquiritations? Does Schmeh or another historical-cryptography specialist assess the decode? Does the full Octastich solve get published and checked against the Glasgow copy?</li>
+</ul>
+<h3>Review log</h3>
+<ul class=log>
+<li class=done>☑ <strong>+1 week</strong> (2026-09-22) — Effectively unchanged. No credentialed human specialist (Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, or any named Urquhart/17th-century-literature scholar) has weighed in; Schmeh's own blog carries no update or comment referencing this claim. No library or bibliographer has independently confirmed the National Library of Scotland copy (H.32.a.39) claim — a Czech tech-news piece (<a href="https://www.root.cz/zpravicky/ai-zrejme-rozlustila-373-rokov-staru-sifru-otvorila-vsak-novy-bibliograficky-problem/">root.cz</a>, Sept 4) repeats it and attributes photographic documentation to a "D. P. J. A. Scheers" who has no independent trace anywhere else — an unverifiable, likely-unreliable citation, not new scholarship. Vals AI and Geby Jaff have issued no correction or response to the Reticuli/Vera Wren rebuttals. The Octastich partial-solve is still stuck at "9 of 285 letters unverified." Coverage this week (<a href="https://gigazine.net/gsc_news/en/20260917-fable-solves-cyphral-distich/">Gigazine</a>, <a href="https://lilting.ch/en/articles/claude-fable-solves-cyphral-distich">lilting.ch</a>, both Sept 17) merely restates the Aug 31 claim and Sept 1 rebuttal rather than reporting anything new; the Hacker News thread grew only modestly (~555→~571 comments), still dominated by hype/selection-effect skepticism. Status unchanged: an unresolved claim propagated mainly through AI-agent-adjacent sources, with no independent human or institutional confirmation.</li>
+<li class=done>☑ <strong>+1 month</strong> (2026-10-15) — Essentially stalled. No named historical-cryptography specialist (Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, or any Urquhart scholar) has weighed in; Schmeh's own column carries no follow-up post. The National Library of Scotland copy (shelfmark H.32.a.39), the one piece of physical evidence that could settle the edition question, is still attested only by an anonymous, unattributed comment on <a href="https://www.schneier.com/blog/archives/2026/09/claude-fable-solves-a-historical-cipher.html">Schneier's blog post</a> — no library statement, scan, or named bibliographer has confirmed it, and the earlier "D. P. J. A. Scheers" citation remains untraceable. The Reticuli Labs rebuttal (no numeric distich in the British Library 1653 copy / EEBO-TCP) and the Vera Wren edition-mismatch analysis (1834 reprint's Proquiritations are reordered vs. 1653, decoding 62/64 letters against that later text) both still stand unreconciled, and Vals AI/Geby Jaff have issued no response or correction to either. The Octastich partial solve is still stuck at "9 of 285 letters unverified," with no full solve published. No new coverage beyond restating the Aug 31–Sept 21 timeline was found in this window. Status unchanged: an unresolved, AI-agent-propagated claim with no independent human or institutional confirmation one month on.</li>
+<li class=todo>☐ <strong>+3 months</strong> (2026-12-15) —</li>
+<li class=todo>☐ <strong>+6 months</strong> (2027-03-15) —</li>
+<li class=todo>☐ <strong>+1 year</strong> (2027-09-15) —</li>
+</ul></details>
+</article>
+<article class="entry "
   data-discipline="Linguistics"
   data-outsider="true" data-bucket="stale">
   <header>
@@ -707,7 +707,7 @@ made by outsiders to the field. Each is re-checked against scientific consensus 
 <li class=todo>☐ <strong>+1 year</strong> (2027-08-15) —</li>
 </ul></details>
 </article>
-<footer>Last built 2026-10-13 01:13 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
+<footer>Last built 2026-10-15 01:10 UTC · source of truth: <code>claims/*.md</code> · regenerated by <code>build.py</code></footer>
 <script>
 (function () {
   var BUCKETS = [["unverified", "unverified"], ["stale", "went stale"], ["contested", "contested"], ["partially-confirmed", "partially confirmed"], ["confirmed", "confirmed"], ["debunked", "refuted"]];

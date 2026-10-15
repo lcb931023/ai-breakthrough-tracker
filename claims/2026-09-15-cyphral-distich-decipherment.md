@@ -5,7 +5,7 @@ field: Cryptography / historical cryptograms & early-modern texts
 outsider: true
 added: 2026-09-15
 status: contested
-next_review: 2026-10-15
+next_review: 2026-12-15
 verdict:
 ---
 ## The claim
@@ -78,7 +78,7 @@ The method and plaintext:
 
 ## Review log
 - [x] **+1 week** (2026-09-22) — Effectively unchanged. No credentialed human specialist (Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, or any named Urquhart/17th-century-literature scholar) has weighed in; Schmeh's own blog carries no update or comment referencing this claim. No library or bibliographer has independently confirmed the National Library of Scotland copy (H.32.a.39) claim — a Czech tech-news piece ([root.cz](https://www.root.cz/zpravicky/ai-zrejme-rozlustila-373-rokov-staru-sifru-otvorila-vsak-novy-bibliograficky-problem/), Sept 4) repeats it and attributes photographic documentation to a "D. P. J. A. Scheers" who has no independent trace anywhere else — an unverifiable, likely-unreliable citation, not new scholarship. Vals AI and Geby Jaff have issued no correction or response to the Reticuli/Vera Wren rebuttals. The Octastich partial-solve is still stuck at "9 of 285 letters unverified." Coverage this week ([Gigazine](https://gigazine.net/gsc_news/en/20260917-fable-solves-cyphral-distich/), [lilting.ch](https://lilting.ch/en/articles/claude-fable-solves-cyphral-distich), both Sept 17) merely restates the Aug 31 claim and Sept 1 rebuttal rather than reporting anything new; the Hacker News thread grew only modestly (~555→~571 comments), still dominated by hype/selection-effect skepticism. Status unchanged: an unresolved claim propagated mainly through AI-agent-adjacent sources, with no independent human or institutional confirmation.
-- [ ] **+1 month** (2026-10-15) —
+- [x] **+1 month** (2026-10-15) — Essentially stalled. No named historical-cryptography specialist (Klaus Schmeh, Nick Pelling, Elonka Dunin, Craig Bauer, or any Urquhart scholar) has weighed in; Schmeh's own column carries no follow-up post. The National Library of Scotland copy (shelfmark H.32.a.39), the one piece of physical evidence that could settle the edition question, is still attested only by an anonymous, unattributed comment on [Schneier's blog post](https://www.schneier.com/blog/archives/2026/09/claude-fable-solves-a-historical-cipher.html) — no library statement, scan, or named bibliographer has confirmed it, and the earlier "D. P. J. A. Scheers" citation remains untraceable. The Reticuli Labs rebuttal (no numeric distich in the British Library 1653 copy / EEBO-TCP) and the Vera Wren edition-mismatch analysis (1834 reprint's Proquiritations are reordered vs. 1653, decoding 62/64 letters against that later text) both still stand unreconciled, and Vals AI/Geby Jaff have issued no response or correction to either. The Octastich partial solve is still stuck at "9 of 285 letters unverified," with no full solve published. No new coverage beyond restating the Aug 31–Sept 21 timeline was found in this window. Status unchanged: an unresolved, AI-agent-propagated claim with no independent human or institutional confirmation one month on.
 - [ ] **+3 months** (2026-12-15) —
 - [ ] **+6 months** (2027-03-15) —
 - [ ] **+1 year** (2027-09-15) —
