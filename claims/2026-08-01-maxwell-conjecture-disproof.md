@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-11-01
+next_review: 2027-02-01
 verdict:
 ---
 ## The claim
@@ -93,6 +93,18 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   relative to the authors' verification/write-up work. Overall reads as
   ordinary slow peer review for a niche result, not suppressed controversy —
   status unchanged, re-check at 3 months.
-- [ ] **+3 months** (2026-11-01) —
+- [x] **+3 months** (2026-11-01) — Still no change: [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
+  remains at v1 (29 July 2026), no journal-ref, no withdrawal
+  ([confirmed directly from the arXiv abstract page](https://arxiv.org/abs/2607.27197)).
+  [MathWorld's Maxwell Conjecture entry](https://mathworld.wolfram.com/MaxwellConjecture.html)
+  now cites the paper as the standing counterexample, which is at least a
+  neutral sign no one has flagged an error to a widely-used reference work.
+  No electrostatics specialist (Gabrielov, Novikov, Shapiro, Edelsbrunner,
+  Zolotov) has gone on record about this specific 24-critical-point
+  construction, and no citing papers from the following three months turned
+  up in search. Secondary coverage (DataCamp, a Chinese-language 163.com
+  piece) just restates the original disclosure without new scrutiny. In
+  short: quiet but not disputed — ordinary slow-preprint pace, not a red
+  flag. Status unchanged (`unverified`); re-check at 6 months.
 - [ ] **+6 months** (2027-02-01) —
 - [ ] **+1 year** (2027-08-01) —

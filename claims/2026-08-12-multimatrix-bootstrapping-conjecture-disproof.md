@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-11-12
+next_review: 2027-02-12
 verdict:
 ---
 ## The claim
@@ -77,6 +77,23 @@ Specifics:
   commentary on this specific disproof turned up. The proof remains
   self-reported, self-verified, and untranscribed (image-only). Keeping status
   `unverified`.
-- [ ] **+3 months** (2026-11-12) —
+- [x] **+3 months** (2026-11-12) — Zero engagement continues. The
+  [substack archive](https://chillphysicsenjoyer.substack.com/archive) shows
+  the author has kept posting regularly through November (brewing,
+  algae-safety, chemistry, biology, "Merging With An LLM," etc.) but never
+  returned to Conjecture 2 or the matrix-model disproof — no correction,
+  retraction, or "I checked and I was wrong/right" follow-up as they said
+  they'd write if they resolved their own stated uncertainty.
+  [arXiv:2409.07565](https://arxiv.org/abs/2409.07565) (the Khalkhali–
+  Pagliaroli–Parfeni–Smith paper) is still at v2 with no erratum, and no
+  response from any of the four authors has surfaced anywhere searchable.
+  No MathOverflow, X, or matrix-model-community commentary on this specific
+  disproof exists three months in. This is now a longer silence than
+  ordinary slow peer review — it reads more like an informal blog claim that
+  nobody with the relevant expertise ever picked up, for or against. The
+  proof is still only a self-reported, self-verified, untranscribed
+  (image-only) chat log. Status unchanged (`unverified`); re-check at 6
+  months, though at this point continued silence should be read as the
+  claim fading rather than quietly being confirmed.
 - [ ] **+6 months** (2027-02-12) —
 - [ ] **+1 year** (2027-08-12) —

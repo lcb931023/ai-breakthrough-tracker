@@ -5,7 +5,7 @@ field: Mathematics / complex analysis
 outsider: true
 added: 2026-08-16
 status: partially-confirmed
-next_review: 2026-11-16
+next_review: 2027-02-16
 verdict:
 ---
 ## The claim
@@ -61,6 +61,29 @@ and [the ProofAtlas paper](https://www.proofatlas.ai/papers/sendov-conjecture/SE
 ## Review log
 - [x] **+1 week** (2026-08-23) — Independent mechanical corroboration has arrived: Tao's Lean 4 formalization ([github.com/teorth/sendov](https://github.com/teorth/sendov)) reports the build has "no `sorry` and no project-defined `axiom`," and Tao submitted it to [Palomar](https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/), a new Lean-FRO-backed verification registry, for mechanical typechecking — though Tao himself cautions such checks "fall well short of ... proper human peer review for novelty, interest, and accuracy." Notably, Tao's own Lean formalization was "essentially all written by Claude Opus 5," with no independent human review of that Lean source. On credit: mathematician Karim Adiprasito directly disputed the attribution in Tao's blog comments — "I don't think his name can reasonably be attached as main author without transparency... nice that chatgpt found a proof, even nicer that Terry digested it" — and no one in the thread defended sole-authorship framing for Mazur. Mathematician Teng Zhang engaged constructively, extending the result to a majorization/spectral formulation, without disputing correctness. No journal peer review yet, and ProofAtlas's own site still shows an inconsistent, seemingly stale "planned, not complete" note on Lean verification. Moving to partially-confirmed: credible independent mechanical verification exists, but no peer review and an active, unresolved credit dispute.
 - [x] **+1 month** (2026-09-16) — Further independent corroboration, no contradicting evidence found. Mathematician Senjian An posted [a follow-on paper](https://arxiv.org/html/2609.04246) (submitted 22 Aug 2026) that explicitly accepts the Mazur–Tao reductions as proven and replaces their remaining numerical-search step with an elementary scalar-optimization argument backed by a fixed, auditable 272-point rational-arithmetic certificate — a second, differently-trained researcher independently working through and extending the proof's internals is a stronger signal than passive endorsement. An's paper is itself LLM-assisted (ChatGPT, for proof architecture/algebra/code) but states "no language-model output is treated as mathematical evidence." ProofAtlas's own formalization page still explicitly disclaims "accepted-result" status, listing four still-open review categories (formal evidence review, statement alignment, result boundary, public wording) and confirms the Lean build has "no unfinished proof steps" and no extra axioms beyond the standard `propext`/`Classical.choice`/`Quot.sound`. No submission-to-Palomar completion or journal peer review found yet. The Tao-vs-Adiprasito authorship dispute from the prior review period has not resurfaced or been resolved either way. Holding at partially-confirmed: mathematics keeps checking out under independent scrutiny, but the process (peer review, Palomar acceptance, credit) that would move this to confirmed is still unresolved.
-- [ ] **+3 months** (2026-11-16) —
+- [x] **+3 months** (2026-11-16) — Two new, independent arXiv papers from
+  September 2026 both treat the Mazur/Tao result as settled foundation
+  rather than passive citation, which is a stronger signal than mere
+  endorsement: Teng Zhang's
+  ["Sendov's conjecture holds for every degree n ≥ 10^200000"](https://arxiv.org/pdf/2609.20256)
+  proves the conjecture for very high degrees via an independent,
+  non-AI-assisted route, and a separate paper,
+  ["Beyond Sendov's conjecture: the quadratic Tang–Zhang inequality"](https://arxiv.org/pdf/2609.19126),
+  extends the Mazur/Tao machinery further. [Wikipedia's Sendov's conjecture
+  article](https://en.wikipedia.org/wiki/Sendov%27s_conjecture) (as of its
+  17 September update) still describes it only as generated via GPT-5.6 Pro
+  and digested/formalized by Tao, with no mention of peer review, a journal
+  acceptance, or the Tao-vs-Adiprasito credit dispute being resolved either
+  way — nor did any resolution of that dispute turn up elsewhere. The
+  Palomar registry (Lean FRO + ICARM, opened 18 Aug 2026) lists Tao as
+  advisory-board/maintainer and confirms his Sendov formalization was
+  submitted, but we could not confirm its acceptance status (ProofAtlas's
+  own status page returned HTTP 403 on this check). No journal
+  peer-review or publication of either the original Mazur proof or Tao's
+  reformalization was found. Net: mathematics keeps checking out and is now
+  being actively built on by independent researchers, but the
+  process-level questions (formal peer review, Palomar completion, credit)
+  remain exactly where they were a month ago. Holding at
+  `partially-confirmed`; re-check at 6 months.
 - [ ] **+6 months** (2027-02-16) —
 - [ ] **+1 year** (2027-08-16) —
