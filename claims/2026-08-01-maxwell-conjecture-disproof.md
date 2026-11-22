@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-11-01
+next_review: 2027-02-01
 verdict:
 ---
 ## The claim
@@ -93,6 +93,16 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   relative to the authors' verification/write-up work. Overall reads as
   ordinary slow peer review for a niche result, not suppressed controversy —
   status unchanged, re-check at 3 months.
-- [ ] **+3 months** (2026-11-01) —
+- [x] **+3 months** (2026-11-01) — No change. Still only v1 on arXiv
+  ([arXiv:2607.27197](https://arxiv.org/abs/2607.27197)), no journal-ref, no
+  withdrawal, and no new preprints citing it. No electrostatics/critical-point
+  specialist (Gabrielov, Novikov, Shapiro, Edelsbrunner, Zolotov) has gone on
+  record about the specific 24-critical-point construction. Secondary coverage
+  ([DataCamp](https://www.datacamp.com/blog/gpt-5-6-sol-and-maxwell-conjecture),
+  [alphaXiv](https://www.alphaxiv.org/abs/2607.27197)) continues to restate the
+  original claim and GPT-5.6 Sol attribution without adding independent
+  verification. No dispute of the attribution has surfaced. Reads as ordinary
+  slow-moving niche preprint, not suppressed controversy — status unchanged,
+  re-check at 6 months.
 - [ ] **+6 months** (2027-02-01) —
 - [ ] **+1 year** (2027-08-01) —

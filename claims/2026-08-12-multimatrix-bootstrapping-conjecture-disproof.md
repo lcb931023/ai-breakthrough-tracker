@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-11-12
+next_review: 2027-02-12
 verdict:
 ---
 ## The claim
@@ -77,6 +77,14 @@ Specifics:
   commentary on this specific disproof turned up. The proof remains
   self-reported, self-verified, and untranscribed (image-only). Keeping status
   `unverified`.
-- [ ] **+3 months** (2026-11-12) —
+- [x] **+3 months** (2026-11-12) — Still no movement. No follow-up or
+  correction post found on the
+  [chillphysicsenjoyer Substack](https://chillphysicsenjoyer.substack.com/archive),
+  no response from Khalkhali, Pagliaroli, Parfeni, or Smith, and
+  [arXiv:2409.07565](https://arxiv.org/abs/2409.07565) remains at v2 with no
+  erratum. No independent preprint, MathOverflow thread, or outside commentary
+  on this specific disproof has surfaced. The proof remains self-reported,
+  self-verified, and untranscribed (image-only chat log). Keeping status
+  `unverified`.
 - [ ] **+6 months** (2027-02-12) —
 - [ ] **+1 year** (2027-08-12) —
