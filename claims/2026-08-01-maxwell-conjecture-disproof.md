@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-11-01
+next_review: 2027-02-01
 verdict:
 ---
 ## The claim
@@ -93,6 +93,18 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   relative to the authors' verification/write-up work. Overall reads as
   ordinary slow peer review for a niche result, not suppressed controversy —
   status unchanged, re-check at 3 months.
-- [ ] **+3 months** (2026-11-01) —
+- [x] **+3 months** (2026-11-01) — Still dormant. The paper
+  ([arXiv:2607.27197](https://arxiv.org/abs/2607.27197)) remains at v1, no
+  journal-ref, no new version. Search turns up only the same syndicated
+  secondary coverage already noted (a
+  [DataCamp post](https://www.datacamp.com/blog/gpt-5-6-sol-and-maxwell-conjecture)
+  and an
+  [officechai.com piece](https://officechai.com/ai/gpt-5-6-sol-helps-mathematicians-prove-that-150-year-old-maxwell-conjecture-is-false/),
+  both restating the original announcement). No response from Gabrielov,
+  Novikov, Shapiro, Edelsbrunner, or Zolotov, and no citing papers found. No
+  retraction, no endorsement, no peer review, no specialist engagement at all
+  after three months — this isn't contested (no pushback) or
+  partially-confirmed (no one has checked it), just quietly un-discussed.
+  Status unchanged, re-check at 6 months.
 - [ ] **+6 months** (2027-02-01) —
 - [ ] **+1 year** (2027-08-01) —

@@ -5,7 +5,7 @@ field: Biology / protein engineering
 outsider: false
 added: 2026-08-22
 status: partially-confirmed
-next_review: 2026-11-22
+next_review: 2027-02-22
 verdict:
 ---
 ## The claim
@@ -79,6 +79,27 @@ paper.
 ## Review log
 - [x] **+1 week** (2026-08-29) — No independent lab has yet run its own full campaign from Anthropic's released prompts, and no protein-design specialists (Baker lab or peers) have published an assessment. Coverage since launch mostly restates the original release; the substantive independent pushback remains Martin Shkreli's ([TechTimes](https://www.techtimes.com/articles/325081/20260820/claude-runs-autonomous-protein-design-campaign-wet-lab-confirms-twice-industry-hit-rate.htm)) point about low peptidic affinities and no intracellular targets. [Endpoints News](https://endpoints.news/analysis-what-anthropics-protein-study-says-about-its-life-sciences-aims/) confirms the work has not been through outside peer review and frames it more as a signal of Anthropic's life-sciences ambitions than a settled scientific result. The paper's own stated limitations stand unaddressed: no human-expert control campaign, binding only (no structures, no functional data), and each model/target combination run just once. Status unchanged.
 - [x] **+1 month** (2026-09-22) — Still no independent lab has rerun a full campaign from Anthropic's released HuggingFace prompts/data (the release itself notes a reproducer would need to recreate Anthropic's internal agent-harness infrastructure, so it isn't plug-and-play). The closest thing to specialist commentary is computational biologist Claus Wilke, who argues in two posts ([Sept 1](https://blog.genesmindsmachines.com/p/has-anthropic-solved-the-peptide), [Sept 3](https://blog.genesmindsmachines.com/p/anthropic-has-not-solved-the-peptide)) that Claude used existing tools with no new algorithms, that pooled 26.8% hides huge 0–90% per-target variance (statistically rejecting a single hit-rate model, p≈1.8×10⁻⁶³), and that much of the apparent gain traces to Claude's choice of the newer ESMFold2 scoring model rather than superior science — a point a UW Institute for Protein Design biochemist, Brandon Frenz, independently corroborated on the narrow technical question of ESMFold2's accuracy (not an endorsement of the headline claim). A separate reanalysis on [Towards AI](https://towardsai.com/p/machine-learning/claudes-protein-design-hit-rate-was-26-8-one-target-returned-0-for-90) (Sept 1) shows Claude's own confidence scores didn't distinguish the MBP/BBF-14 failures from successes. Still no preprint or journal submission — only the original Anthropic post/PDF, unofficially mirrored on alphaXiv. Anthropic has since published further (non-independent) work: a biomolecular-modeling speedup post and a Life Sciences Verification Program (Sept 17), a physical AI-run wet lab (Sept 18), and a pre-committed $1M Anthropic×Adaptyv design competition. Net effect: no rebuttal of the raw hit-rate numbers, but mounting skeptical technical commentary that the "AI scientist" framing overstates what happened versus smart tool selection. Status unchanged.
-- [ ] **+3 months** (2026-11-22) —
+- [x] **+3 months** (2026-11-22) — Still no independent reproduction or
+  specialist peer assessment. No outside lab (Baker lab, Institute for
+  Protein Design, or peers) has reproduced a campaign from Anthropic's
+  released HuggingFace prompts/data. Still no preprint or journal
+  submission — the work remains a self-hosted
+  [Anthropic technical report](https://www-cdn.anthropic.com/30bf50e22a01388bb29bf077ee3f244531594b7a.pdf).
+  Claus Wilke's September critique (pooled-rate variance, ESMFold2 confound)
+  appears unanswered but hasn't escalated into a broader rebuttal. The $1M
+  Anthropic×Adaptyv design competition ran five weekly challenges
+  (Sept 28–Oct 31) but results aren't due on Proteinbase until 15 Dec 2026 —
+  after this review window, so no signal yet
+  ([competition guide](https://intuitionlabs.ai/articles/anthropic-adaptyv-protein-design-competition-guide)).
+  Anthropic has since published two more self-reported follow-ups in the same
+  program, neither independently verified: a
+  [scorpion-antivenom minibinder run](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design)
+  (318,484 designs generated, only 17 confirmed single-toxin binders out of
+  211 tested — explicitly not an antivenom) and a
+  [biomolecular-modeling speedup post](https://anthropic.com/research/claude-uplifts-biomolecular-modeling).
+  These reinforce the existing pattern — impressive-sounding, vendor-reported,
+  modest verified payoff — rather than adding confirmation of the original
+  354/1,320 numbers. Status unchanged; re-check at 6 months, when the Dec 15
+  Proteinbase competition results should be available.
 - [ ] **+6 months** (2027-02-22) —
 - [ ] **+1 year** (2027-08-22) —

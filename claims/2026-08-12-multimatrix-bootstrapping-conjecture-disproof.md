@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-11-12
+next_review: 2027-02-12
 verdict:
 ---
 ## The claim
@@ -77,6 +77,20 @@ Specifics:
   commentary on this specific disproof turned up. The proof remains
   self-reported, self-verified, and untranscribed (image-only). Keeping status
   `unverified`.
-- [ ] **+3 months** (2026-11-12) —
+- [x] **+3 months** (2026-11-12) — No movement anywhere. The
+  [substack archive](https://chillphysicsenjoyer.substack.com/archive) through
+  mid-November 2026 shows the author has moved on entirely — posts since
+  September cover beer brewing, growing algae, chicken transparency, and other
+  unrelated topics; none revisit the
+  [matrix-model conjecture post](https://chillphysicsenjoyer.substack.com/p/i-possibly-resolved-a-conjecture)
+  or mention Khalkhali, Pagliaroli, Parfeni, or Smith. No correction,
+  retraction, or "I was wrong" disclosure has appeared, despite the author's
+  original promise to post one if the proof failed. The source paper
+  [arXiv:2409.07565](https://arxiv.org/abs/2409.07565) remains at v2 (26 Feb
+  2025) — no v3, no erratum. No MathOverflow, Hacker News, or X discussion of
+  this specific disproof surfaced. The proof itself is still only an
+  untranscribed image of a ChatGPT conversation. This reads less like an
+  unresolved controversy and more like a claim quietly expiring from lack of
+  engagement — status unchanged (`unverified`), re-check at 6 months.
 - [ ] **+6 months** (2027-02-12) —
 - [ ] **+1 year** (2027-08-12) —
