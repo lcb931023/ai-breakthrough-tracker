@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-11-12
+next_review: 2027-02-12
 verdict:
 ---
 ## The claim
@@ -77,6 +77,19 @@ Specifics:
   commentary on this specific disproof turned up. The proof remains
   self-reported, self-verified, and untranscribed (image-only). Keeping status
   `unverified`.
-- [ ] **+3 months** (2026-11-12) —
+- [x] **+3 months** (2026-11-12) — Still no movement. The
+  [substack archive](https://chillphysicsenjoyer.substack.com/archive) shows no
+  follow-up or correction post about the Conjecture 2 disproof since the
+  original (the author's recent posts, e.g. Nov 16 "Chemistry is Actually
+  Geometry," Oct 3 "Merging With An LLM," are unrelated).
+  [arXiv:2409.07565](https://arxiv.org/abs/2409.07565) remains at v2 (26 Feb
+  2025) with no erratum or update addressing Conjecture 2. No response from
+  Khalkhali, Pagliaroli, Parfeni, or Smith found; no citing paper,
+  MathOverflow thread, or community commentary referencing a disproof of the
+  string-susceptibility conjecture turned up. The chat-log proof remains
+  untranscribed (image-only) and self-verified only. Evidence is exactly as
+  thin as at logging, and after three consecutive checkpoints with zero
+  outside engagement this may simply never get checked by anyone with
+  matrix-model expertise — status unchanged, re-check at 6 months.
 - [ ] **+6 months** (2027-02-12) —
 - [ ] **+1 year** (2027-08-12) —
