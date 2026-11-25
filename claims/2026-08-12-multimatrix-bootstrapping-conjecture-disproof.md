@@ -5,7 +5,7 @@ field: Mathematical / theoretical physics (random matrix theory)
 outsider: true
 added: 2026-08-12
 status: unverified
-next_review: 2026-11-12
+next_review: 2027-02-12
 verdict:
 ---
 ## The claim
@@ -77,6 +77,6 @@ Specifics:
   commentary on this specific disproof turned up. The proof remains
   self-reported, self-verified, and untranscribed (image-only). Keeping status
   `unverified`.
-- [ ] **+3 months** (2026-11-12) —
+- [x] **+3 months** (2026-11-12) — Still no movement. The [substack archive](https://chillphysicsenjoyer.substack.com/archive) shows no correction or follow-up post on Conjecture 2 through mid-November 2026; the author has since moved on to unrelated posts (chemistry, biology, home-lab topics). [arXiv:2409.07565](https://arxiv.org/abs/2409.07565) remains at v2 (26 Feb 2025) with no erratum or comment addressing the conjecture. No response from Khalkhali, Pagliaroli, Parfeni, or Smith has surfaced, and no MathOverflow, X, or Hacker News discussion of this specific disproof turned up. The proof is still self-reported, self-verified, and untranscribed (image-only). Keeping status `unverified`.
 - [ ] **+6 months** (2027-02-12) —
 - [ ] **+1 year** (2027-08-12) —

@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-11-01
+next_review: 2027-02-01
 verdict:
 ---
 ## The claim
@@ -93,6 +93,6 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   relative to the authors' verification/write-up work. Overall reads as
   ordinary slow peer review for a niche result, not suppressed controversy —
   status unchanged, re-check at 3 months.
-- [ ] **+3 months** (2026-11-01) —
+- [x] **+3 months** (2026-11-01) — No change since the 1-month check. [arXiv:2607.27197](https://arxiv.org/abs/2607.27197) remains at v1 (29 July 2026), with no journal-ref and no revisions. No citing papers or specialist commentary (Gabrielov, Novikov, Shapiro, Edelsbrunner, Zolotov) were found engaging with the specific 24-critical-point, 5-charge construction. The Gabrielov–Novikov–Shapiro concurrent preprint ([arXiv:2607.28785](https://arxiv.org/abs/2607.28785)) still doesn't reference or respond to this refutation. The GPT-5.6 Sol attribution remains sourced only to the paper's own disclosure; coverage otherwise splits between aggregator sites that credit the AI prominently in their framing (e.g. a DataCamp writeup) and the arXiv/AlphaXiv record itself, which lists only the three human authors and gives the AI no visible credit in the abstract. No new Hacker News/X/MathOverflow technical discussion surfaced beyond the thread already noted at the 1-month mark. Reads as ordinary slow/absent peer review for a niche preprint, not suppressed controversy — status unchanged, re-check at 6 months.
 - [ ] **+6 months** (2027-02-01) —
 - [ ] **+1 year** (2027-08-01) —
