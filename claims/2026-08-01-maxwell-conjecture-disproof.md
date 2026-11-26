@@ -5,7 +5,7 @@ field: Mathematical physics / electrostatics
 outsider: false
 added: 2026-08-01
 status: unverified
-next_review: 2026-11-01
+next_review: 2027-02-01
 verdict:
 ---
 ## The claim
@@ -93,6 +93,18 @@ Reported via [arXiv:2607.27197](https://arxiv.org/abs/2607.27197)
   relative to the authors' verification/write-up work. Overall reads as
   ordinary slow peer review for a niche result, not suppressed controversy —
   status unchanged, re-check at 3 months.
-- [ ] **+3 months** (2026-11-01) —
+- [x] **+3 months** (2026-11-01) — Still only arXiv v1 (29 Jul 2026)
+  [arXiv:2607.27197](https://arxiv.org/abs/2607.27197), no journal publication,
+  no citing papers found, and no response or commentary from
+  Gabrielov/Novikov/Shapiro or Edelsbrunner/Fillmore/Oliveira has surfaced. The
+  one new development: Wolfram's
+  [MathWorld](https://mathworld.wolfram.com/MaxwellConjecture.html) has added
+  an entry for the Maxwell conjecture that cites this preprint as the current
+  disproof — a respected reference treating it as the state of knowledge,
+  though it still flags it as an arXiv preprint rather than a peer-reviewed
+  result, and offers no independent mathematical vetting of its own. No new
+  movement on the GPT-5.6 Sol attribution question. Reads as continued slow
+  obscurity rather than either vindication or pushback — status unchanged,
+  re-check at 6 months.
 - [ ] **+6 months** (2027-02-01) —
 - [ ] **+1 year** (2027-08-01) —
